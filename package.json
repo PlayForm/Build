@@ -1,6 +1,6 @@
 {
 	"name": "baxast",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"homepage": "https://github.com/baxast/baxast#readme",
 	"bugs": {
 		"url": "https://github.com/baxast/baxast/issues"
@@ -21,13 +21,13 @@
 	"dependencies": {
 		"commander": "11.0.0",
 		"deepmerge-ts": "5.1.0",
-		"esbuild": "0.18.20",
+		"esbuild": "0.19.0",
 		"esbuild-plugin-copy": "2.1.1",
 		"fast-glob": "3.3.1",
 		"typescript": "5.1.6"
 	},
 	"devDependencies": {
-		"@types/node": "20.4.8",
-		"ts-node": "10.9.1"
+		"@types/node": "latest",
+		"ts-node": "latest"
 	}
 }
