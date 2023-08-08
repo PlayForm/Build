@@ -1,0 +1,1 @@
+import{Command as o}from"commander";import r from"./Command/Build.js";import t from"./Library/JSON.js";try{const{version:i}=await t("../package.json",import.meta.url);new o().name("baxast").version(i).description("Builds files").argument("<Files...>","Files to build").option("-ts, --TypeScript <File>","TypeScript configuration file").action(r).parse()}catch(i){console.log(i)}
