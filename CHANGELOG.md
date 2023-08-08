@@ -2,6 +2,10 @@
 
 -   Cleanup
 
+## 0.0.6
+
+-   Cleanup
+
 ## 0.0.5
 
 -   Cleanup
