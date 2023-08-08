@@ -1,6 +1,6 @@
 {
 	"name": "baxast",
-	"version": "0.0.8",
+	"version": "0.0.9",
 	"homepage": "https://github.com/baxast/baxast#readme",
 	"bugs": {
 		"url": "https://github.com/baxast/baxast/issues"
@@ -27,7 +27,7 @@
 		"typescript": "5.1.6"
 	},
 	"devDependencies": {
-		"@types/node": "latest",
-		"ts-node": "latest"
+		"@types/node": "20.4.9",
+		"ts-node": "10.9.1"
 	}
 }
