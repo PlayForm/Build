@@ -2,6 +2,6 @@
   "version": 3,
   "sources": ["../../Source/Library/JSON.ts"],
   "sourcesContent": ["import { readFile as _File } from \"fs/promises\";\nimport { dirname as Dir } from \"path\";\nimport { fileURLToPath as Path } from \"url\";\n\nexport default async (File: string, From: string = import.meta.url) =>\n\tJSON.parse(\n\t\t(\n\t\t\tawait _File(\n\t\t\t\t`${Dir(Path(From ?? import.meta.url))}/${File}`,\n\t\t\t\t\"utf-8\"\n\t\t\t)\n\t\t).toString()\n\t);\n"],
-  "mappings": "AAAA,OAAS,YAAYA,MAAa,cAClC,OAAS,WAAWC,MAAW,OAC/B,OAAS,iBAAiBC,MAAY,MAEtC,IAAOC,EAAQ,MAAOC,EAAcC,EAAe,YAAY,MAC9D,KAAK,OAEH,MAAML,EACL,GAAGC,EAAIC,EAAKG,GAAQ,YAAY,GAAG,CAAC,CAAC,IAAID,CAAI,GAC7C,OACD,GACC,SAAS,CACZ",
-  "names": ["_File", "Dir", "Path", "JSON_default", "File", "From"]
+  "mappings": "AAAA,SAAS,YAAY,aAAa;AAClC,SAAS,WAAW,WAAW;AAC/B,SAAS,iBAAiB,YAAY;AAEtC,IAAO,eAAQ,OAAO,MAAc,OAAe,YAAY,QAC9D,KAAK;AAAA,GAEH,MAAM;AAAA,IACL,GAAG,IAAI,KAAK,QAAQ,YAAY,GAAG,CAAC,CAAC,IAAI,IAAI;AAAA,IAC7C;AAAA,EACD,GACC,SAAS;AACZ;",
+  "names": []
 }

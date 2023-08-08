@@ -2,6 +2,6 @@
   "version": 3,
   "sources": ["../Source/Index.ts"],
   "sourcesContent": ["import { Command } from \"commander\";\nimport Build from \"./Command/Build.js\";\nimport _JSON from \"./Library/JSON.js\";\n\ntry {\n\tconst { version } = await _JSON(\"../package.json\", import.meta.url);\n\n\tnew Command()\n\t\t.name(\"baxast\")\n\t\t.version(version)\n\t\t.description(\"Builds files\")\n\t\t.argument(\"<Files...>\", \"Files to build\")\n\t\t.option(\"-ts, --TypeScript <File>\", \"TypeScript configuration file\")\n\t\t.action(Build)\n\t\t.parse();\n} catch (_Error) {\n\tconsole.log(_Error);\n}\n"],
-  "mappings": "AAAA,OAAS,WAAAA,MAAe,YACxB,OAAOC,MAAW,qBAClB,OAAOC,MAAW,oBAElB,GAAI,CACH,KAAM,CAAE,QAAAC,CAAQ,EAAI,MAAMD,EAAM,kBAAmB,YAAY,GAAG,EAElE,IAAIF,EAAQ,EACV,KAAK,QAAQ,EACb,QAAQG,CAAO,EACf,YAAY,cAAc,EAC1B,SAAS,aAAc,gBAAgB,EACvC,OAAO,2BAA4B,+BAA+B,EAClE,OAAOF,CAAK,EACZ,MAAM,CACT,OAASG,EAAQ,CAChB,QAAQ,IAAIA,CAAM,CACnB",
-  "names": ["Command", "Build", "_JSON", "version", "_Error"]
+  "mappings": "AAAA,SAAS,eAAe;AACxB,OAAO,WAAW;AAClB,OAAO,WAAW;AAElB,IAAI;AACH,QAAM,EAAE,QAAQ,IAAI,MAAM,MAAM,mBAAmB,YAAY,GAAG;AAElE,MAAI,QAAQ,EACV,KAAK,QAAQ,EACb,QAAQ,OAAO,EACf,YAAY,cAAc,EAC1B,SAAS,cAAc,gBAAgB,EACvC,OAAO,4BAA4B,+BAA+B,EAClE,OAAO,KAAK,EACZ,MAAM;AACT,SAAS,QAAQ;AAChB,UAAQ,IAAI,MAAM;AACnB;",
+  "names": []
 }

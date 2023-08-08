@@ -1,3 +1,3 @@
 #!/usr/bin/env node
-import"./Index.js";
+import "./Index.js";
 //# sourceMappingURL=Bin.js.map

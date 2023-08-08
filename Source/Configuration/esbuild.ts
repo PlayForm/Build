@@ -6,7 +6,7 @@ const Out = "Target";
 
 export default {
 	format: "esm",
-	minify: true,
+	minify: false,
 	outdir: Out,
 	platform: "node",
 	target: "esnext",
