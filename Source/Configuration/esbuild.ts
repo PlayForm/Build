@@ -6,12 +6,12 @@ const Out = "Target";
 
 export default {
 	format: "esm",
-	minify: false,
+	minify: true,
 	outdir: Out,
 	platform: "node",
 	target: "esnext",
 	write: true,
-	sourcemap: true,
+	sourcemap: false,
 	plugins: [
 		{
 			name: "Target",
