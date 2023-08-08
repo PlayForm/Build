@@ -1,0 +1,33 @@
+{
+	"name": "baxast",
+	"version": "0.0.2",
+	"homepage": "https://github.com/baxast/baxast#readme",
+	"bugs": {
+		"url": "https://github.com/baxast/baxast/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/baxast/baxast.git"
+	},
+	"type": "module",
+	"main": "./Target/Index.js",
+	"types": "./Target/Index.d.ts",
+	"bin": {
+		"baxast": "./Target/Bin.js"
+	},
+	"scripts": {
+		"prepublishOnly": "node --no-warnings --loader ts-node/esm Source/Index.ts 'Source/**/*.ts'"
+	},
+	"dependencies": {
+		"commander": "11.0.0",
+		"deepmerge-ts": "5.1.0",
+		"esbuild": "0.18.19",
+		"esbuild-plugin-copy": "2.1.1",
+		"fast-glob": "3.3.1",
+		"typescript": "5.1.6"
+	},
+	"devDependencies": {
+		"@types/node": "20.4.8",
+		"ts-node": "10.9.1"
+	}
+}
