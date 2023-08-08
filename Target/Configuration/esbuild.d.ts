@@ -1,6 +1,6 @@
 declare const _default: {
     format: "esm";
-    minify: false;
+    minify: true;
     outdir: string;
     platform: "node";
     target: string;

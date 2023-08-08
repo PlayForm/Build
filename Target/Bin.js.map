@@ -2,6 +2,6 @@
   "version": 3,
   "sources": ["../Source/Bin.ts"],
   "sourcesContent": ["#!/usr/bin/env node\n\nimport \"./Index.js\";\n"],
-  "mappings": ";AAEA,OAAO;",
+  "mappings": ";AAEA,MAAO",
   "names": []
 }
