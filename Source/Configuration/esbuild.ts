@@ -1,6 +1,6 @@
 import type { BuildOptions, PluginBuild } from "esbuild";
-import { rm as Remove } from "fs/promises";
 import { copy as Copy } from "esbuild-plugin-copy";
+import { rm as Remove } from "fs/promises";
 
 const Out = "Target";
 
