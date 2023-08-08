@@ -11,6 +11,7 @@ export default {
 	platform: "node",
 	target: "esnext",
 	write: true,
+	sourcemap: true,
 	plugins: [
 		{
 			name: "Target",
