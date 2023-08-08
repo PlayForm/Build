@@ -1,10 +1,11 @@
-<<<<<<< HEAD
+## 0.0.4
+
+-   Cleanup
+
 ## 0.0.3
 
 -   Cleanup
 
-=======
->>>>>>> 69f8879 (Initial commit)
 ## 0.0.2
 
 -   Cleanup

@@ -1,10 +1,6 @@
 {
 	"name": "baxast",
-<<<<<<< HEAD
-	"version": "0.0.3",
-=======
-	"version": "0.0.2",
->>>>>>> 69f8879 (Initial commit)
+	"version": "0.0.4",
 	"homepage": "https://github.com/baxast/baxast#readme",
 	"bugs": {
 		"url": "https://github.com/baxast/baxast/issues"
@@ -17,7 +13,7 @@
 	"main": "./Target/Index.js",
 	"types": "./Target/Index.d.ts",
 	"bin": {
-		"baxast": "./Target/Bin.js"
+		"baxast": "Target/Bin.js"
 	},
 	"scripts": {
 		"prepublishOnly": "node --no-warnings --loader ts-node/esm Source/Index.ts 'Source/**/*.ts'"
