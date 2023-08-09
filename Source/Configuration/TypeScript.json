@@ -23,7 +23,7 @@
 		"lib": [
 			"ESNext"
 		],
-		"module": "ESNext",
+		"module": "NodeNext",
 		"moduleResolution": "NodeNext",
 		"noFallthroughCasesInSwitch": true,
 		"noImplicitOverride": true,
