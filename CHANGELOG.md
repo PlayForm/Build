@@ -1,3 +1,7 @@
+## 0.1.0
+
+-   Custom esbuild file
+
 ## 0.0.11
 
 -   Cleanup

@@ -23,7 +23,7 @@
 		"lib": [
 			"ESNext"
 		],
-		"module": "NodeNext",
+		"module": "ESNext",
 		"moduleResolution": "NodeNext",
 		"noFallthroughCasesInSwitch": true,
 		"noImplicitOverride": true,
@@ -40,7 +40,8 @@
 		"strictNullChecks": true,
 		"target": "ESNext",
 		"types": [
-			"node"
+			"node",
+			"@types/node"
 		],
 		"verbatimModuleSyntax": true
 	},
