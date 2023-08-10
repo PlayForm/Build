@@ -5,7 +5,6 @@ declare const _default: {
     platform: "node";
     target: string;
     write: true;
-    sourcemap: false;
     plugins: any[];
 };
 export default _default;

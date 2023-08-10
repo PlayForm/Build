@@ -4,11 +4,15 @@ import type { BuildOptions } from "esbuild";
 import { build as Build } from "esbuild";
 import type { Pattern } from "fast-glob";
 import Glob from "fast-glob";
-import esbuild from "../Configuration/esbuild.js";
+import _esbuild from "../Configuration/esbuild.js";
+import File from "../Library/File.js";
 
 export type Pipe = string[];
 
-export default async (Files: Pattern[], Options?: { TypeScript?: string }) => {
+export default async (
+	Files: Pattern[],
+	Options?: { esbuild?: string; TypeScript?: string }
+) => {
 	const Pipe: Pipe = [];
 
 	for (const File of Files) {
@@ -21,18 +25,19 @@ export default async (Files: Pattern[], Options?: { TypeScript?: string }) => {
 
 	Pipe.reverse();
 
+	const esbuild = Merge(_esbuild, {
+		entryPoints: Object.fromEntries(
+			Pipe.map((File) => [
+				File.replace("Source/", "").split(".").slice(0, -1.0).join("."),
+				File,
+			])
+		),
+	} satisfies BuildOptions);
+
 	await Build(
-		Merge(esbuild, {
-			entryPoints: Object.fromEntries(
-				Pipe.map((File) => [
-					File.replace("Source/", "")
-						.split(".")
-						.slice(0, -1.0)
-						.join("."),
-					File,
-				])
-			),
-		} satisfies BuildOptions)
+		Options?.esbuild
+			? Merge(esbuild, await File(Options?.esbuild))
+			: esbuild
 	);
 
 	if (Options?.TypeScript) {

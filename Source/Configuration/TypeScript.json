@@ -20,10 +20,8 @@
 		"forceConsistentCasingInFileNames": true,
 		"isolatedModules": true,
 		"jsx": "preserve",
-		"lib": [
-			"ESNext"
-		],
-		"module": "NodeNext",
+		"lib": ["ESNext"],
+		"module": "ESNext",
 		"moduleResolution": "NodeNext",
 		"noFallthroughCasesInSwitch": true,
 		"noImplicitOverride": true,
@@ -39,9 +37,7 @@
 		"strictFunctionTypes": true,
 		"strictNullChecks": true,
 		"target": "ESNext",
-		"types": [
-			"node"
-		],
+		"types": ["node", "@types/node"],
 		"verbatimModuleSyntax": true
 	},
 	"ts-node": {
