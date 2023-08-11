@@ -1,13 +1,13 @@
 {
 	"name": "baxast",
 	"version": "0.1.0",
-	"homepage": "https://github.com/baxast/baxast#readme",
+	"homepage": "https://github.com/NikolaRHristov/baxast#readme",
 	"bugs": {
-		"url": "https://github.com/baxast/baxast/issues"
+		"url": "https://github.com/NikolaRHristov/baxast/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/baxast/baxast.git"
+		"url": "git+https://github.com/NikolaRHristov/baxast.git"
 	},
 	"type": "module",
 	"main": "./Target/Index.js",
