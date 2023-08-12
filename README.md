@@ -29,12 +29,12 @@ or with a custom esbuild config file:
 ```json
 {
 	"scripts": {
-		"prepublishOnly": "baxast 'Source/**/*.ts' -es ESBuild.ts"
+		"prepublishOnly": "baxast 'Source/**/*.ts' -es esbuild.ts"
 	}
 }
 ```
 
-#### See an example of a config file in [ESBuild.ts](Source/Configuration/esbuild.ts)
+#### See an example of a config file in [esbuild.ts](Source/Configuration/esbuild.ts)
 
 `tsconfig.json`
 
