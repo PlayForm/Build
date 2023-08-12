@@ -24,7 +24,7 @@ npm install -D -E baxast
 }
 ```
 
-or with a custom esbuild config file:
+#### or with a custom esbuild config file:
 
 ```json
 {
