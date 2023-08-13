@@ -27,7 +27,7 @@ jobs:
             - uses: actions/setup-node@v3.7.0
               with:
                   node-version: "18"
-                  registry-url: https://npm.pkg.github.com/
+                  registry-url: "https://registry.npmjs.org"
 
             - run: npm install -g npm
 
@@ -38,4 +38,4 @@ jobs:
                   npm install --legacy-peer-deps
                   npm publish --legacy-peer-deps --provenance
               env:
-                  NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
