@@ -1,6 +1,6 @@
 {
-	"name": "javascriptbuild",
-	"version": "0.1.4",
+	"name": "tsbundle",
+	"version": "0.1.5",
 	"private": false,
 	"description": "🧑🏻‍💻 Builds all JavaScript files from TypeScript within a given folder using esbuild.",
 	"keywords": [
@@ -8,13 +8,13 @@
 		"typescript",
 		"esbuild"
 	],
-	"homepage": "https://github.com/NikolaRHristov/JavaScriptBuild#readme",
+	"homepage": "https://github.com/NikolaRHristov/TSBundle#readme",
 	"bugs": {
-		"url": "https://github.com/NikolaRHristov/JavaScriptBuild/issues"
+		"url": "https://github.com/NikolaRHristov/TSBundle/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/NikolaRHristov/JavaScriptBuild.git",
+		"url": "git+https://github.com/NikolaRHristov/TSBundle.git",
 		"directory": "NPM"
 	},
 	"license": "MIT",
@@ -22,7 +22,7 @@
 	"main": "./Target/Index.js",
 	"types": "./Target/Index.d.ts",
 	"bin": {
-		"JavaScriptBuild": "Target/Bin.js"
+		"TSBundle": "Target/Bin.js"
 	},
 	"scripts": {
 		"prepublishOnly": "node --no-warnings --loader ts-node/esm Source/Index.ts 'Source/**/*.ts'"

@@ -1,19 +1,19 @@
 {
-	"name": "javascriptbuild-web",
+	"name": "tsbundle-web",
 	"version": "2.0.0",
 	"private": false,
-	"description": "📄 Starter template for AstroJS.",
+	"description": "",
 	"keywords": [
 		"astro",
 		"starter"
 	],
-	"homepage": "https://github.com/NikolaRHristov/JavaScriptBuild#readme",
+	"homepage": "https://github.com/NikolaRHristov/TSBundle#readme",
 	"bugs": {
-		"url": "https://github.com/NikolaRHristov/JavaScriptBuild/issues"
+		"url": "https://github.com/NikolaRHristov/TSBundle/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/NikolaRHristov/JavaScriptBuild.git",
+		"url": "git+https://github.com/NikolaRHristov/TSBundle.git",
 		"directory": "website"
 	},
 	"scripts": {

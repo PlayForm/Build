@@ -1,14 +1,13 @@
-# [JavaScript Build] 🧑🏻‍💻
+# [TSBundle] 🧑🏻‍💻
 
-This utility builds all JavaScript files from TypeScript within a given folder
-using esbuild.
+Builds all your TypeScript files into JavaScript.
 
 ## Installation
 
 Add configuration and setup scripts:
 
 ```sh
-npm install -D -E javascriptbuild
+npm install -D -E tsbundle
 ```
 
 ## Usage
@@ -19,10 +18,10 @@ npm install -D -E javascriptbuild
 {
 	"name": "my-awesome-package",
 	"scripts": {
-		"prepublishOnly": "JavaScriptBuild 'Source/**/*.ts'"
+		"prepublishOnly": "TSBundle 'Source/**/*.ts'"
 	},
 	"dependencies": {
-		"javascriptbuild": "0.1.4"
+		"tsbundle": "0.1.5"
 	}
 }
 ```
@@ -32,7 +31,7 @@ npm install -D -E javascriptbuild
 ```json
 {
 	"scripts": {
-		"prepublishOnly": "JavaScriptBuild 'Source/**/*.ts' -es esbuild.ts"
+		"prepublishOnly": "TSBundle 'Source/**/*.ts' -es esbuild.ts"
 	}
 }
 ```
@@ -54,5 +53,5 @@ npm install -D -E javascriptbuild
 The script will now automatically compile your build files with [esbuild] and
 add TypeScript types.
 
-[JavaScript Build]: https://npmjs.org/javascriptbuild
+[TSBundle]: https://npmjs.org/tsbundle
 [esbuild]: https://npmjs.org/esbuild
