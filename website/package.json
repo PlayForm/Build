@@ -1,5 +1,5 @@
 {
-	"name": "tsbundle-web",
+	"name": "syclone-web",
 	"version": "2.0.0",
 	"private": false,
 	"description": "",
@@ -7,13 +7,13 @@
 		"astro",
 		"starter"
 	],
-	"homepage": "https://github.com/NikolaRHristov/TSBundle#readme",
+	"homepage": "https://github.com/NikolaRHristov/Syclone#readme",
 	"bugs": {
-		"url": "https://github.com/NikolaRHristov/TSBundle/issues"
+		"url": "https://github.com/NikolaRHristov/Syclone/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/NikolaRHristov/TSBundle.git",
+		"url": "git+https://github.com/NikolaRHristov/Syclone.git",
 		"directory": "website"
 	},
 	"scripts": {

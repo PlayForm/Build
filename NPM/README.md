@@ -1,4 +1,4 @@
-# [TSBundle] 🌀
+# [Syclone] 🌀
 
 Builds all your TypeScript files into JavaScript.
 
@@ -7,7 +7,7 @@ Builds all your TypeScript files into JavaScript.
 Add configuration and setup scripts:
 
 ```sh
-npm install -D -E @nikolarhristov/tsbundle
+npm install -D -E syclone
 ```
 
 ## Usage
@@ -18,10 +18,10 @@ npm install -D -E @nikolarhristov/tsbundle
 {
 	"name": "my-awesome-package",
 	"scripts": {
-		"prepublishOnly": "TSBundle 'Source/**/*.ts'"
+		"prepublishOnly": "Syclone 'Source/**/*.ts'"
 	},
 	"dependencies": {
-		"@nikolarhristov/tsbundle": "0.1.5"
+		"syclone": "0.1.5"
 	}
 }
 ```
@@ -31,7 +31,7 @@ npm install -D -E @nikolarhristov/tsbundle
 ```json
 {
 	"scripts": {
-		"prepublishOnly": "TSBundle 'Source/**/*.ts' -es esbuild.ts"
+		"prepublishOnly": "Syclone 'Source/**/*.ts' -es esbuild.ts"
 	}
 }
 ```
@@ -53,5 +53,5 @@ npm install -D -E @nikolarhristov/tsbundle
 The script will now automatically compile your build files with [esbuild] and
 add TypeScript types.
 
-[TSBundle]: https://npmjs.org/@nikolarhristov/tsbundle
+[Syclone]: https://npmjs.org/syclone
 [esbuild]: https://npmjs.org/esbuild

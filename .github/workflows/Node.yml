@@ -80,7 +80,6 @@ jobs:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
                   cache-dependency-path: ./NPM/pnpm-lock.yaml
-                  scope: "@nikolarhristov"
 
             - run: pnpm install
               working-directory: ./NPM
