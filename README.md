@@ -5,7 +5,7 @@
 Add configuration and setup scripts:
 
 ```sh
-npm install -D -E baxast
+npm install -D -E typescriptbuild
 ```
 
 ## Usage
@@ -16,10 +16,10 @@ npm install -D -E baxast
 {
 	"name": "my-awesome-package",
 	"scripts": {
-		"prepublishOnly": "baxast 'Source/**/*.ts'"
+		"prepublishOnly": "TypeScriptBuild 'Source/**/*.ts'"
 	},
 	"dependencies": {
-		"baxast": "latest"
+		"typescriptbuild": "0.1.2"
 	}
 }
 ```
@@ -29,7 +29,7 @@ npm install -D -E baxast
 ```json
 {
 	"scripts": {
-		"prepublishOnly": "baxast 'Source/**/*.ts' -es esbuild.ts"
+		"prepublishOnly": "TypeScriptBuild 'Source/**/*.ts' -es esbuild.ts"
 	}
 }
 ```
@@ -51,5 +51,5 @@ npm install -D -E baxast
 The script will now automatically compile your build files with [esbuild] and
 add TypeScript types.
 
-[baxast]: https://npmjs.org/baxast
+[typescriptbuild]: https://npmjs.org/typescriptbuild
 [esbuild]: https://npmjs.org/esbuild
