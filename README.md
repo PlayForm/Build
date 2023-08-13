@@ -1,4 +1,4 @@
-# [Syclone] 🌀
+# [TypeScriptBuild] 🌀
 
 Builds all your TypeScript files into JavaScript.
 
@@ -18,7 +18,7 @@ npm install -D -E syclone
 {
 	"name": "package",
 	"scripts": {
-		"prepublishOnly": "Syclone 'Source/**/*.ts'"
+		"prepublishOnly": "TypeScriptBuild 'Source/**/*.ts'"
 	},
 	"dependencies": {
 		"syclone": "0.1.6"
@@ -31,7 +31,7 @@ npm install -D -E syclone
 ```json
 {
 	"scripts": {
-		"prepublishOnly": "Syclone 'Source/**/*.ts' -es esbuild.ts"
+		"prepublishOnly": "TypeScriptBuild 'Source/**/*.ts' -es esbuild.ts"
 	}
 }
 ```
@@ -53,5 +53,5 @@ npm install -D -E syclone
 The script will now automatically compile your build files with [esbuild] and
 add TypeScript types.
 
-[Syclone]: https://npmjs.org/syclone
+[TypeScriptBuild]: https://npmjs.org/typescript-build
 [esbuild]: https://npmjs.org/esbuild

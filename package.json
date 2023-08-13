@@ -8,13 +8,13 @@
 		"typescript",
 		"esbuild"
 	],
-	"homepage": "https://github.com/NikolaRHristov/Syclone#readme",
+	"homepage": "https://github.com/NikolaRHristov/TypeScriptBuild#readme",
 	"bugs": {
-		"url": "https://github.com/NikolaRHristov/Syclone/issues"
+		"url": "https://github.com/NikolaRHristov/TypeScriptBuild/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/NikolaRHristov/Syclone.git",
+		"url": "git+https://github.com/NikolaRHristov/TypeScriptBuild.git",
 		"directory": "NPM"
 	},
 	"license": "MIT",
@@ -22,7 +22,7 @@
 	"main": "./Target/Index.js",
 	"types": "./Target/Index.d.ts",
 	"bin": {
-		"Syclone": "Target/Bin.js"
+		"TypeScriptBuild": "Target/Bin.js"
 	},
 	"scripts": {
 		"prepublishOnly": "node --no-warnings --loader ts-node/esm Source/Index.ts 'Source/**/*.ts'"
