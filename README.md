@@ -21,7 +21,7 @@ npm install -D -E syclone
 		"prepublishOnly": "TypeScriptBuild 'Source/**/*.ts'"
 	},
 	"dependencies": {
-		"syclone": "0.1.6"
+		"typescript-build": "0.1.6"
 	}
 }
 ```
@@ -45,7 +45,7 @@ npm install -D -E syclone
 	"compilerOptions": {
 		"outDir": "Target"
 	},
-	"extends": "syclone/Target/Configuration/TypeScript",
+	"extends": "typescript-build/Target/Configuration/TypeScript",
 	"include": ["Source"]
 }
 ```
