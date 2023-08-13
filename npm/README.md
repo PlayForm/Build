@@ -22,7 +22,7 @@ npm install -D -E javascriptbuild
 		"prepublishOnly": "JavaScriptBuild 'Source/**/*.ts'"
 	},
 	"dependencies": {
-		"javascriptbuild": "0.1.3"
+		"javascriptbuild": "0.1.4"
 	}
 }
 ```
