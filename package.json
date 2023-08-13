@@ -1,6 +1,6 @@
 {
 	"name": "typescript-esbuild",
-	"version": "0.1.7",
+	"version": "0.1.8",
 	"private": false,
 	"description": "🌀 Builds all JavaScript files from TypeScript within a given folder using esbuild.",
 	"keywords": [
@@ -14,8 +14,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/NikolaRHristov/TypeScriptESBuild.git",
-		"directory": "NPM"
+		"url": "git+https://github.com/NikolaRHristov/TypeScriptESBuild.git"
 	},
 	"license": "MIT",
 	"type": "module",
