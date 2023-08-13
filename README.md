@@ -7,7 +7,7 @@ Builds all your TypeScript files into JavaScript.
 Add configuration and setup scripts:
 
 ```sh
-npm install -D -E syclone
+npm install -D -E typescript-build
 ```
 
 ## Usage
