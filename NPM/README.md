@@ -7,7 +7,7 @@ Builds all your TypeScript files into JavaScript.
 Add configuration and setup scripts:
 
 ```sh
-npm install -D -E tsbundle
+npm install -D -E @nikolarhristov/tsbundle
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ npm install -D -E tsbundle
 		"prepublishOnly": "TSBundle 'Source/**/*.ts'"
 	},
 	"dependencies": {
-		"tsbundle": "0.1.5"
+		"@nikolarhristov/tsbundle": "0.1.5"
 	}
 }
 ```
@@ -53,5 +53,5 @@ npm install -D -E tsbundle
 The script will now automatically compile your build files with [esbuild] and
 add TypeScript types.
 
-[TSBundle]: https://npmjs.org/tsbundle
+[TSBundle]: https://npmjs.org/@nikolarhristov/tsbundle
 [esbuild]: https://npmjs.org/esbuild
