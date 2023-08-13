@@ -41,6 +41,7 @@
 		"ts-node": "10.9.1"
 	},
 	"publishConfig": {
-		"access": "public"
+		"access": "public",
+		"@NikolaRHristov:registry": "https://npm.pkg.github.com"
 	}
 }
