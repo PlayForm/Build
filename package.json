@@ -1,6 +1,8 @@
 {
 	"name": "typescriptbuild",
 	"version": "0.1.2",
+	"private": false,
+	"description": "🧑🏻‍💻 Builds all TypeScript files within a given directory with esbuild.",
 	"homepage": "https://github.com/NikolaRHristov/TypeScriptBuild#readme",
 	"bugs": {
 		"url": "https://github.com/NikolaRHristov/TypeScriptBuild/issues"
@@ -30,5 +32,8 @@
 	"devDependencies": {
 		"@types/node": "20.4.10",
 		"ts-node": "10.9.1"
+	},
+	"publishConfig": {
+		"access": "public"
 	}
 }
