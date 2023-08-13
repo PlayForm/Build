@@ -4,7 +4,7 @@ import _JSON from "./Library/JSON.js";
 
 try {
 	new Command()
-		.name("JavaScriptBuild")
+		.name("Syclone")
 		.version((await _JSON("../package.json", import.meta.url))?.version)
 		.description("Builds files")
 		.argument("<Files...>", "Files to build")
