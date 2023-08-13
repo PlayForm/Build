@@ -1,6 +1,7 @@
 # [JavaScript Build] 🧑🏻‍💻
 
-This utility builds all JavaScript files from TypeScript with esbuild in a given folder.
+This utility builds all JavaScript files from TypeScript within a given folder
+using esbuild.
 
 ## Installation
 
