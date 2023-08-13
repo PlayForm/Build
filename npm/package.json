@@ -14,7 +14,8 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/NikolaRHristov/JavaScriptBuild.git"
+		"url": "git+https://github.com/NikolaRHristov/JavaScriptBuild.git",
+		"directory": "NPM"
 	},
 	"license": "MIT",
 	"type": "module",
