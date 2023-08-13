@@ -50,8 +50,5 @@ npm install -D -E typescript-esbuild
 }
 ```
 
-The script will now automatically compile your build files with [esbuild] and
-add TypeScript types.
-
 [TypeScriptESBuild]: https://npmjs.org/typescript-esbuild
 [esbuild]: https://npmjs.org/esbuild
