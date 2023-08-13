@@ -45,7 +45,7 @@ npm install -D -E syclone
 	"compilerOptions": {
 		"outDir": "Target"
 	},
-	"extends": "./Source/Configuration/TypeScript",
+	"extends": "syclone/Target/Configuration/TypeScript",
 	"include": ["Source"]
 }
 ```
