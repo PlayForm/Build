@@ -7,13 +7,14 @@
 		"astro",
 		"starter"
 	],
-	"homepage": "https://github.com/Lightrix/astro-starter-template#readme",
+	"homepage": "https://github.com/NikolaRHristov/JavaScriptBuild#readme",
 	"bugs": {
-		"url": "https://github.com/Lightrix/astro-starter-template/issues"
+		"url": "https://github.com/NikolaRHristov/JavaScriptBuild/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Lightrix/astro-starter-template.git"
+		"url": "git+https://github.com/NikolaRHristov/JavaScriptBuild.git",
+		"directory": "website"
 	},
 	"scripts": {
 		"build": "astro check && astro build",
