@@ -7,7 +7,7 @@ This utility deletes all deployments older than 7 days in your Cloudflare Pages 
 Add configuration and setup scripts:
 
 ```sh
-npm install -D -E typescriptbuild
+npm install -D -E javascriptbuild
 ```
 
 ## Usage
@@ -18,10 +18,10 @@ npm install -D -E typescriptbuild
 {
 	"name": "my-awesome-package",
 	"scripts": {
-		"prepublishOnly": "TypeScriptBuild 'Source/**/*.ts'"
+		"prepublishOnly": "JavaScriptBuild 'Source/**/*.ts'"
 	},
 	"dependencies": {
-		"typescriptbuild": "0.1.2"
+		"javascriptbuild": "0.1.2"
 	}
 }
 ```
@@ -31,7 +31,7 @@ npm install -D -E typescriptbuild
 ```json
 {
 	"scripts": {
-		"prepublishOnly": "TypeScriptBuild 'Source/**/*.ts' -es esbuild.ts"
+		"prepublishOnly": "JavaScriptBuild 'Source/**/*.ts' -es esbuild.ts"
 	}
 }
 ```
@@ -53,5 +53,5 @@ npm install -D -E typescriptbuild
 The script will now automatically compile your build files with [esbuild] and
 add TypeScript types.
 
-[TypeScript Build]: https://npmjs.org/typescriptbuild
+[TypeScript Build]: https://npmjs.org/javascriptbuild
 [esbuild]: https://npmjs.org/esbuild
