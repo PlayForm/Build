@@ -16,7 +16,7 @@ npm install -D -E syclone
 
 ```json
 {
-	"name": "my-awesome-package",
+	"name": "package",
 	"scripts": {
 		"prepublishOnly": "Syclone 'Source/**/*.ts'"
 	},
