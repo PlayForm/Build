@@ -1,6 +1,6 @@
-# [TypeScript Build] 🧑🏻‍💻
+# [JavaScript Build] 🧑🏻‍💻
 
-This utility deletes all deployments older than 7 days in your Cloudflare Pages account.
+This utility builds all JavaScript files from TypeScript with esbuild in a given folder.
 
 ## Installation
 
@@ -53,5 +53,5 @@ npm install -D -E javascriptbuild
 The script will now automatically compile your build files with [esbuild] and
 add TypeScript types.
 
-[TypeScript Build]: https://npmjs.org/javascriptbuild
+[JavaScript Build]: https://npmjs.org/javascriptbuild
 [esbuild]: https://npmjs.org/esbuild
