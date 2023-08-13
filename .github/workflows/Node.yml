@@ -79,32 +79,15 @@ jobs:
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
-                  cache-dependency-path: ./NPM/pnpm-lock.yaml
+                  cache-dependency-path: ./pnpm-lock.yaml
 
             - run: pnpm install
-              working-directory: ./NPM
+              working-directory: .
 
             - run: pnpm run prepublishOnly
-              working-directory: ./NPM
+              working-directory: .
 
             - uses: actions/upload-artifact@v3.1.2
               with:
                   name: .-NPM-Node-${{ matrix.node-version }}-Target
-                  path: ./NPM/Target
-
-            - uses: actions/setup-node@v3.7.0
-              with:
-                  node-version: ${{ matrix.node-version }}
-                  cache: "pnpm"
-                  cache-dependency-path: ./website/pnpm-lock.yaml
-
-            - run: pnpm install
-              working-directory: ./website
-
-            - run: pnpm run prepublishOnly
-              working-directory: ./website
-
-            - uses: actions/upload-artifact@v3.1.2
-              with:
-                  name: .-website-Node-${{ matrix.node-version }}-Target
-                  path: ./website/Target
+                  path: ./Target
