@@ -1,7 +1,6 @@
-# [TSBundle] 🧑🏻‍💻
+# [TSBundle] 🌀
 
-This utility builds all JavaScript files from TypeScript within a given folder
-using esbuild.
+Builds all your TypeScript files into JavaScript.
 
 ## Installation
 

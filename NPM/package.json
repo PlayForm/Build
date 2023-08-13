@@ -2,7 +2,7 @@
 	"name": "tsbundle",
 	"version": "0.1.5",
 	"private": false,
-	"description": "🧑🏻‍💻 Builds all JavaScript files from TypeScript within a given folder using esbuild.",
+	"description": "🌀 Builds all JavaScript files from TypeScript within a given folder using esbuild.",
 	"keywords": [
 		"javascript",
 		"typescript",
