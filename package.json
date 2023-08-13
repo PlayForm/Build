@@ -1,5 +1,5 @@
 {
-	"name": "typescript-build",
+	"name": "typescript-esbuild",
 	"version": "0.1.7",
 	"private": false,
 	"description": "🌀 Builds all JavaScript files from TypeScript within a given folder using esbuild.",
@@ -8,13 +8,13 @@
 		"typescript",
 		"esbuild"
 	],
-	"homepage": "https://github.com/NikolaRHristov/TypeScriptBuild#readme",
+	"homepage": "https://github.com/NikolaRHristov/TypeScriptESBuild#readme",
 	"bugs": {
-		"url": "https://github.com/NikolaRHristov/TypeScriptBuild/issues"
+		"url": "https://github.com/NikolaRHristov/TypeScriptESBuild/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/NikolaRHristov/TypeScriptBuild.git",
+		"url": "git+https://github.com/NikolaRHristov/TypeScriptESBuild.git",
 		"directory": "NPM"
 	},
 	"license": "MIT",
@@ -22,7 +22,7 @@
 	"main": "./Target/Index.js",
 	"types": "./Target/Index.d.ts",
 	"bin": {
-		"TypeScriptBuild": "Target/Bin.js"
+		"TypeScriptESBuild": "Target/Bin.js"
 	},
 	"scripts": {
 		"prepublishOnly": "node --no-warnings --loader ts-node/esm Source/Index.ts 'Source/**/*.ts'"

@@ -1,4 +1,4 @@
-# [TypeScriptBuild] 🌀
+# [TypeScriptESBuild] 🌀
 
 Builds all your TypeScript files into JavaScript.
 
@@ -7,7 +7,7 @@ Builds all your TypeScript files into JavaScript.
 Add configuration and setup scripts:
 
 ```sh
-npm install -D -E typescript-build
+npm install -D -E typescript-esbuild
 ```
 
 ## Usage
@@ -18,10 +18,10 @@ npm install -D -E typescript-build
 {
 	"name": "package",
 	"scripts": {
-		"prepublishOnly": "TypeScriptBuild 'Source/**/*.ts'"
+		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'"
 	},
 	"dependencies": {
-		"typescript-build": "0.1.6"
+		"typescript-esbuild": "0.1.6"
 	}
 }
 ```
@@ -31,7 +31,7 @@ npm install -D -E typescript-build
 ```json
 {
 	"scripts": {
-		"prepublishOnly": "TypeScriptBuild 'Source/**/*.ts' -es esbuild.ts"
+		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts' -es esbuild.ts"
 	}
 }
 ```
@@ -45,7 +45,7 @@ npm install -D -E typescript-build
 	"compilerOptions": {
 		"outDir": "Target"
 	},
-	"extends": "typescript-build/Target/Configuration/TypeScript",
+	"extends": "typescript-esbuild/Target/Configuration/TypeScript",
 	"include": ["Source"]
 }
 ```
@@ -53,5 +53,5 @@ npm install -D -E typescript-build
 The script will now automatically compile your build files with [esbuild] and
 add TypeScript types.
 
-[TypeScriptBuild]: https://npmjs.org/typescript-build
+[TypeScriptESBuild]: https://npmjs.org/typescript-esbuild
 [esbuild]: https://npmjs.org/esbuild
