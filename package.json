@@ -2,7 +2,7 @@
 	"name": "javascriptbuild",
 	"version": "0.1.4",
 	"private": false,
-	"description": "🧑🏻‍💻 Builds JavaScript files from TypeScript with esbuild.",
+	"description": "🧑🏻‍💻 Builds all JavaScript files from TypeScript within a given folder using esbuild.",
 	"keywords": [
 		"javascript",
 		"typescript",
