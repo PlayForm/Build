@@ -41,9 +41,7 @@ export default async (
 	} satisfies Option);
 
 	await Build(
-		Option?.ESBuild
-			? Merge(ESBuild, await File(Option?.ESBuild))
-			: ESBuild
+		Option?.ESBuild ? Merge(ESBuild, await File(Option?.ESBuild)) : ESBuild
 	);
 
 	if (Option?.TypeScript) {
