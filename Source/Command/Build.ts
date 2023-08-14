@@ -4,7 +4,7 @@ import type { BuildOptions as Option } from "esbuild";
 import { build as Build } from "esbuild";
 import type { Pattern } from "fast-glob";
 import Glob from "fast-glob";
-import _ESBuild from "../Configuration/esbuild.js";
+import _ESBuild from "../Configuration/ESBuild.js";
 import File from "../Library/File.js";
 
 export type Pipe = string[];
