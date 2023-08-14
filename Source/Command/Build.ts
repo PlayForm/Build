@@ -1,10 +1,10 @@
 import { exec as Exec } from "child_process";
 import { deepmerge as Merge } from "deepmerge-ts";
-import type { BuildOptions } from "esbuild";
+import type { BuildOptions as Option } from "esbuild";
 import { build as Build } from "esbuild";
 import type { Pattern } from "fast-glob";
 import Glob from "fast-glob";
-import _esbuild from "../Configuration/esbuild.js";
+import _ESBuild from "../Configuration/esbuild.js";
 import File from "../Library/File.js";
 
 export type Pipe = string[];
@@ -13,11 +13,11 @@ export type Pipe = string[];
  * The `Build` function compiles and builds TypeScript files using esbuild and TypeScript compiler.
  * @param {Pattern[]} Files - An array of file patterns to be processed. Each pattern can include
  * wildcards (*) to match multiple files.
- * @param [Options] - The `Options` parameter is an optional object that can contain two properties:
+ * @param [Option] - The `Option` parameter is an optional object that can contain two properties:
  */
 export default async (
 	Files: Pattern[],
-	Options?: { esbuild?: string; TypeScript?: string }
+	Option?: { ESBuild?: string; TypeScript?: string }
 ) => {
 	const Pipe: Pipe = [];
 
@@ -31,23 +31,23 @@ export default async (
 
 	Pipe.reverse();
 
-	const esbuild = Merge(_esbuild, {
+	const ESBuild = Merge(_ESBuild, {
 		entryPoints: Object.fromEntries(
 			Pipe.map((File) => [
 				File.replace("Source/", "").split(".").slice(0, -1.0).join("."),
 				File,
 			])
 		),
-	} satisfies BuildOptions);
+	} satisfies Option);
 
 	await Build(
-		Options?.esbuild
-			? Merge(esbuild, await File(Options?.esbuild))
-			: esbuild
+		Option?.ESBuild
+			? Merge(ESBuild, await File(Option?.ESBuild))
+			: ESBuild
 	);
 
-	if (Options?.TypeScript) {
-		Exec(`tsc -p ${Options?.TypeScript}`);
+	if (Option?.TypeScript) {
+		Exec(`tsc -p ${Option?.TypeScript}`);
 	} else {
 		Exec("tsc");
 	}
