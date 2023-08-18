@@ -1,6 +1,6 @@
 {
 	"name": "typescript-esbuild",
-	"version": "0.1.13",
+	"version": "0.1.14",
 	"private": false,
 	"description": "🌀 Builds all JavaScript files from TypeScript within a given folder using esbuild.",
 	"keywords": [
