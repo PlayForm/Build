@@ -23,8 +23,6 @@
 		"url": "https://nikolahristov.tech"
 	},
 	"type": "module",
-	"main": "./Target/Index.js",
-	"types": "./Target/Index.d.ts",
 	"bin": {
 		"TypeScriptESBuild": "Target/Bin.js"
 	},
