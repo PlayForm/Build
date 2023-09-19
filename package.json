@@ -27,7 +27,7 @@
 		"TypeScriptESBuild": "Target/Bin.js"
 	},
 	"scripts": {
-		"prepublishOnly": "node --no-warnings --loader ts-node/esm Source/Index.ts 'Source/**/*.ts'"
+		"prepublishOnly": "node --no-warnings --loader ts-node/esm Source/Bin.ts 'Source/**/*.ts'"
 	},
 	"dependencies": {
 		"@types/node": "20.6.2",

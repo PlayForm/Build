@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-import"./Index.js";
+import o from"./Command/Build.js";import e from"./Library/JSON.js";import{Command as r}from"commander";try{new r().name("TypeScriptESBuild").version((await e("../package.json",import.meta.url))?.version).description("Builds files").argument("<Files...>","Files to build").option("-es, --ESBuild <File>","esbuild configuration file").option("-ts, --TypeScript <File>","TypeScript configuration file").action(o).parse()}catch(i){console.log(i)}
