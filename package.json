@@ -30,7 +30,7 @@
 		"prepublishOnly": "node --no-warnings --loader ts-node/esm Source/Bin.ts 'Source/**/*.ts'"
 	},
 	"dependencies": {
-		"@types/node": "20.6.2",
+		"@types/node": "20.6.3",
 		"commander": "11.0.0",
 		"deepmerge-ts": "5.1.0",
 		"esbuild": "0.19.3",
@@ -39,7 +39,7 @@
 		"typescript": "5.2.2"
 	},
 	"devDependencies": {
-		"@types/node": "20.6.2",
+		"@types/node": "20.6.3",
 		"ts-node": "10.9.1"
 	},
 	"publishConfig": {
