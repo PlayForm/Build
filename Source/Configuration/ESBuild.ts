@@ -1,9 +1,6 @@
 import type { PluginBuild as Build, BuildOptions as Option } from "esbuild";
 import { copy as Copy } from "esbuild-plugin-copy";
 import {
-	access as Access,
-	constants as Constant,
-	mkdir as Make,
 	rm as Remove,
 } from "fs/promises";
 
@@ -25,7 +22,9 @@ export default {
 						await Remove(Out, {
 							recursive: true,
 						});
-					} catch (_Error) {}
+					} catch (_Error) {
+						console.log(_Error);
+					}
 				});
 			},
 		},
