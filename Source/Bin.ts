@@ -14,7 +14,7 @@ try {
 		.option("-es, --ESBuild <File>", "esbuild configuration file")
 		.option("-ts, --TypeScript <File>", "TypeScript configuration file")
 		.action(Build)
-		.parse();	
+		.parse();
 } catch (_Error) {
 	console.log(_Error);
 }
