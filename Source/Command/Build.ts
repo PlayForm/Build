@@ -38,7 +38,7 @@ export default async (
 				File,
 			])
 		),
-	} satisfies Option);
+	} satisfies Option) as Option;
 
 	await Build(
 		Option?.ESBuild ? Merge(ESBuild, await File(Option?.ESBuild)) : ESBuild

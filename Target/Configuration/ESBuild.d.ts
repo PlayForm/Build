@@ -1,10 +1,3 @@
-declare const _default: {
-    format: "esm";
-    minify: true;
-    outdir: string;
-    platform: "node";
-    target: string;
-    write: true;
-    plugins: any[];
-};
+import type { BuildOptions as Option } from "esbuild";
+declare const _default: Option;
 export default _default;
