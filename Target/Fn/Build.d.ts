@@ -1,5 +1,4 @@
 import type { Pattern } from "fast-glob";
-export type Pipe = string[];
 /**
  * The `Build` function compiles and builds TypeScript files using esbuild and TypeScript compiler.
  * @param {Pattern[]} Files - An array of file patterns to be processed. Each pattern can include

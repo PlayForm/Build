@@ -9,8 +9,6 @@ import { exec as Exec } from "child_process";
 import { deepmerge as Merge } from "deepmerge-ts";
 import { build as Build } from "esbuild";
 
-export type Pipe = string[];
-
 /**
  * The `Build` function compiles and builds TypeScript files using esbuild and TypeScript compiler.
  * @param {Pattern[]} Files - An array of file patterns to be processed. Each pattern can include
@@ -21,7 +19,7 @@ export default async (
 	Files: Pattern[],
 	Option?: { ESBuild?: string; TypeScript?: string }
 ) => {
-	const Pipe: Pipe = [];
+	const Pipe: string[] = [];
 
 	for (const File of Files) {
 		for (const _File of await Glob(
