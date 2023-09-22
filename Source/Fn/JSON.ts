@@ -2,6 +2,8 @@ import { readFile as _File } from "fs/promises";
 import { dirname as Dir } from "path";
 import { fileURLToPath as Path } from "url";
 
+
+
 /**
  * The function `JSON` is a TypeScript function that reads a JSON file and returns its parsed content.
  * @param {string} File - The `File` parameter is a string that represents the name or path of the JSON
