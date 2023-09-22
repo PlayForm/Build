@@ -1,7 +1,8 @@
+import _JSON from "./JSON.js";
+
 import { readFile as _File, writeFile as File } from "fs/promises";
 import TypeScript from "typescript";
 import { pathToFileURL as URL } from "url";
-import _JSON from "./JSON.js";
 
 /**
  * The function takes a file path as input, checks if it is a TypeScript file, converts the TypeScript

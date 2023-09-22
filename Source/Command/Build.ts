@@ -1,11 +1,13 @@
-import { exec as Exec } from "child_process";
-import { deepmerge as Merge } from "deepmerge-ts";
 import type { BuildOptions as Option } from "esbuild";
-import { build as Build } from "esbuild";
 import type { Pattern } from "fast-glob";
+
 import Glob from "fast-glob";
 import _ESBuild from "../Configuration/ESBuild.js";
 import File from "../Library/File.js";
+
+import { exec as Exec } from "child_process";
+import { deepmerge as Merge } from "deepmerge-ts";
+import { build as Build } from "esbuild";
 
 export type Pipe = string[];
 
