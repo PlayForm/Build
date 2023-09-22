@@ -6,5 +6,5 @@
  * from which the JSON file will be loaded. It is set to `import.meta.url` by default, which refers to
  * the URL of the current module. However, if a different source URL or file path is provided,
  */
-declare const _default: (File: string, From?: string) => Promise<any>;
+declare const _default: (File: string) => Promise<any>;
 export default _default;

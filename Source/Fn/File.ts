@@ -14,8 +14,7 @@ import { pathToFileURL as URL } from "url";
 export default async (Path: string) => {
 	if (Path.split(".").pop() === "ts") {
 		const { options } = TypeScript.convertCompilerOptionsFromJson(
-			(await _JSON("../Notation/TypeScript.json", import.meta.url))
-				?.compilerOptions,
+			(await _JSON("../Notation/TypeScript.json"))?.compilerOptions,
 			"."
 		);
 

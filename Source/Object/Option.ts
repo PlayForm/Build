@@ -3,6 +3,8 @@ import type { PluginBuild as Build, BuildOptions as Option } from "esbuild";
 import { copy as Copy } from "esbuild-plugin-copy";
 import { rm as Remove } from "fs/promises";
 
+import _JSON from "../Fn/JSON.js";
+
 const Out = "Target";
 
 export default {
@@ -17,14 +19,11 @@ export default {
 			name: "Target",
 			setup(Build: Build) {
 				Build.onStart(async () => {
-					console.log(Out)
 					try {
 						await Remove(Out, {
 							recursive: true,
 						});
-					} catch (_Error) {
-						console.log(_Error);
-					}
+					} catch (_Error) {}
 				});
 			},
 		},
@@ -38,4 +37,8 @@ export default {
 			],
 		}),
 	],
+	define: {
+		"process.env.VERSION_PACKAGE": `'${(await _JSON("package.json"))
+			?.version}'`,
+	},
 } satisfies Option as Option;
