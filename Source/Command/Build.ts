@@ -2,7 +2,7 @@ import type { BuildOptions as Option } from "esbuild";
 import type { Pattern } from "fast-glob";
 
 import Glob from "fast-glob";
-import _ESBuild from "../Configuration/ESBuild.js";
+import _ESBuild from "../Configuration/ESBuild2.js";
 import File from "../Library/File.js";
 
 import { exec as Exec } from "child_process";
