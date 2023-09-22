@@ -17,6 +17,7 @@ export default {
 			name: "Target",
 			setup(Build: Build) {
 				Build.onStart(async () => {
+					console.log(Out)
 					try {
 						await Remove(Out, {
 							recursive: true,

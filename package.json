@@ -24,10 +24,10 @@
 	},
 	"type": "module",
 	"bin": {
-		"TypeScriptESBuild": "Target/Bin.js"
+		"TypeScriptESBuild": "Target/Execution/TypeScriptESBuild.js"
 	},
 	"scripts": {
-		"prepublishOnly": "node --no-warnings --loader ts-node/esm Source/Bin.ts 'Source/**/*.ts'"
+		"prepublishOnly": "node --no-warnings --loader ts-node/esm Source/Execution/TypeScriptESBuild.ts 'Source/**/*.ts'"
 	},
 	"dependencies": {
 		"@types/node": "20.6.3",
