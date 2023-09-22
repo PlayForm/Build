@@ -36,7 +36,7 @@ npm install -D -E typescript-esbuild
 }
 ```
 
-#### See an example of a config file in [ESBuild.ts](Source/Configuration/ESBuild.ts)
+#### See an example of a configuration file in [Configuration.ts](Source/Object/Configuration.ts)
 
 `tsconfig.json`
 
