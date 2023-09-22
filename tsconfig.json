@@ -2,6 +2,6 @@
 	"compilerOptions": {
 		"outDir": "Target"
 	},
-	"extends": "./Source/Configuration/TypeScript",
+	"extends": "./Source/Notation/TypeScript",
 	"include": ["Source"]
 }

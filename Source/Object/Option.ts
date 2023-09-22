@@ -31,8 +31,8 @@ export default {
 			resolveFrom: "out",
 			assets: [
 				{
-					from: "./Source/Configuration/TypeScript.json",
-					to: "./Configuration/",
+					from: "./Source/Notation/TypeScript.json",
+					to: "./Notation/",
 				},
 			],
 		}),

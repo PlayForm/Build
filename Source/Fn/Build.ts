@@ -1,10 +1,10 @@
 import type { BuildOptions as Option } from "esbuild";
 import type { Pattern } from "fast-glob";
 
-import Glob from "fast-glob";
-import _ESBuild from "../Configuration/ESBuild2.js";
-import File from "../Library/File.js";
+import File from "../Fn/File.js";
+import Default from "../Object/Option.js";
 
+import Glob from "fast-glob";
 import { exec as Exec } from "child_process";
 import { deepmerge as Merge } from "deepmerge-ts";
 import { build as Build } from "esbuild";
@@ -33,7 +33,7 @@ export default async (
 
 	Pipe.reverse();
 
-	const ESBuild = Merge(_ESBuild, {
+	const _Configuration = Merge(Default, {
 		entryPoints: Object.fromEntries(
 			Pipe.map((File) => [
 				File.replace("Source/", "").split(".").slice(0, -1.0).join("."),
@@ -43,7 +43,9 @@ export default async (
 	} satisfies Option) as Option;
 
 	await Build(
-		Option?.ESBuild ? Merge(ESBuild, await File(Option?.ESBuild)) : ESBuild
+		Option?.ESBuild
+			? Merge(_Configuration, await File(Option?.ESBuild))
+			: _Configuration
 	);
 
 	if (Option?.TypeScript) {

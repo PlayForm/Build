@@ -22,7 +22,7 @@
 		"jsx": "preserve",
 		"lib": ["ESNext"],
 		"module": "ESNext",
-		"moduleResolution": "NodeNext",
+		"moduleResolution": "Bundler",
 		"noFallthroughCasesInSwitch": true,
 		"noImplicitOverride": true,
 		"noImplicitReturns": true,

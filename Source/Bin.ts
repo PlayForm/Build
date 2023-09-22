@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import Build from "./Command/Build.js";
-import _JSON from "./Library/JSON.js";
+import Build from "./Fn/Build.js";
+import _JSON from "./Fn/JSON.js";
 
 import { Command } from "commander";
 
