@@ -14,6 +14,7 @@ export default {
 	platform: "node",
 	target: "esnext",
 	write: true,
+	metafile: true,
 	plugins: [
 		{
 			name: "Target",
