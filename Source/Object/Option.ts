@@ -8,13 +8,15 @@ import _JSON from "../Fn/JSON.js";
 const Out = "Target";
 
 export default {
+	color: true,
 	format: "esm",
+	metafile: true,
 	minify: true,
 	outdir: Out,
 	platform: "node",
 	target: "esnext",
 	write: true,
-	metafile: true,
+	logLevel: "debug",
 	plugins: [
 		{
 			name: "Target",

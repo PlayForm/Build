@@ -4,10 +4,10 @@ import type { Pattern } from "fast-glob";
 import File from "../Fn/File.js";
 import Default from "../Object/Option.js";
 
-import Glob from "fast-glob";
 import { exec as Exec } from "child_process";
 import { deepmerge as Merge } from "deepmerge-ts";
-import { build as Build } from "esbuild";
+import { build as Build, analyzeMetafile } from "esbuild";
+import Glob from "fast-glob";
 
 /**
  * The `Build` function compiles and builds TypeScript files using esbuild and TypeScript compiler.
@@ -40,10 +40,18 @@ export default async (
 		),
 	} satisfies Option) as Option;
 
-	await Build(
+	const Result = await Build(
 		Option?.ESBuild
 			? Merge(_Configuration, await File(Option?.ESBuild))
 			: _Configuration
+	);
+
+	console.log(
+		Result.metafile
+			? await analyzeMetafile(Result.metafile, {
+					verbose: true,
+			  })
+			: {}
 	);
 
 	if (Option?.TypeScript) {
