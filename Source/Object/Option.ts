@@ -3,8 +3,6 @@ import type { PluginBuild as Build, BuildOptions as Option } from "esbuild";
 import { copy as Copy } from "esbuild-plugin-copy";
 import { rm as Remove } from "fs/promises";
 
-import _JSON from "../Fn/JSON.js";
-
 const Out = "Target";
 
 export default {
@@ -41,7 +39,8 @@ export default {
 		}),
 	],
 	define: {
-		"process.env.VERSION_PACKAGE": `'${(await _JSON("package.json"))
-			?.version}'`,
+		"process.env.VERSION_PACKAGE": `'${(
+			await (await import("../Fn/JSON.js")).default("package.json")
+		)?.version}'`,
 	},
-} satisfies Option as Option;
+} satisfies Option;

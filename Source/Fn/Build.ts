@@ -38,7 +38,7 @@ export default async (
 				File,
 			])
 		),
-	} satisfies Option) as Option;
+	} satisfies Option);
 
 	const Result = await Build(
 		Option?.ESBuild
