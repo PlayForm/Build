@@ -10,6 +10,7 @@
 		"allowUnusedLabels": false,
 		"alwaysStrict": true,
 		"assumeChangesOnlyAffectDirectDependencies": true,
+		"baseUrl": "./",
 		"checkJs": true,
 		"declaration": true,
 		"disableReferencedProjectLoad": false,
