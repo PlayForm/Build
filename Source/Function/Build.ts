@@ -1,7 +1,7 @@
 import type { BuildOptions as Option } from "esbuild";
 import type { Pattern } from "fast-glob";
 
-import File from "../Fn/File.js";
+import File from "../Function/File.js";
 import Default from "../Object/Option.js";
 
 import { exec as Exec } from "child_process";
