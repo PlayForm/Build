@@ -1,9 +1,3 @@
-import _JSON from "./JSON.js";
-
-import { readFile as _File, writeFile as File } from "fs/promises";
-import TypeScript from "typescript";
-import { pathToFileURL as URL } from "url";
-
 /**
  * The function takes a file path as input, checks if it is a TypeScript file, converts the TypeScript
  * code to JavaScript, and then imports and returns the default export of the JavaScript file.
@@ -13,26 +7,44 @@ import { pathToFileURL as URL } from "url";
  */
 export default async (Path: string) => {
 	if (Path.split(".").pop() === "ts") {
-		const { options } = TypeScript.convertCompilerOptionsFromJson(
-			(await _JSON("../Notation/TypeScript.json", import.meta.url))
-				?.compilerOptions,
+		const { options } = (
+			await import("typescript")
+		).convertCompilerOptionsFromJson(
+			(
+				await (
+					await import("./JSON.js")
+				).default("../Notation/TypeScript.json", import.meta.url)
+			)?.compilerOptions,
 			"."
 		);
 
-		TypeScript.createProgram(
-			[Path],
-			options,
-			TypeScript.createCompilerHost(options)
-		).emit();
+		(await import("typescript"))
+			.createProgram(
+				[Path],
+				options,
+				(await import("typescript")).createCompilerHost(options)
+			)
+			.emit();
 
-		await File(
+		await (
+			await import("fs/promises")
+		).writeFile(
 			Path.replace(".ts", ".js"),
-			TypeScript.transpile(
-				(await _File(Path, "utf-8")).toString(),
+			(await import("typescript")).transpile(
+				(
+					await (await import("fs/promises")).readFile(Path, "utf-8")
+				).toString(),
 				options
 			)
 		);
 	}
 
-	return (await import(URL(Path).toString().replace(".ts", ".js"))).default;
+	return (
+		await import(
+			(await import("url"))
+				.fileURLToPath(Path)
+				.toString()
+				.replace(".ts", ".js")
+		)
+	).default;
 };
