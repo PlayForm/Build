@@ -1,7 +1,3 @@
-import { readFile as _File } from "fs/promises";
-import { dirname as Dir } from "path";
-import { fileURLToPath as Path } from "url";
-
 /**
  * The function 'JSON' is a TypeScript function that reads a JSON file and returns its
  * parsed content.
@@ -15,8 +11,18 @@ import { fileURLToPath as Path } from "url";
 export default async (File: string, From?: string) =>
 	JSON.parse(
 		(
-			await _File(
-				`${From ? Dir(Path(From ?? import.meta.url)) : "."}/${File}`,
+			await (
+				await import("fs/promises")
+			).readFile(
+				`${
+					From
+						? (await import("path")).dirname(
+								(await import("url")).fileURLToPath(
+									From ?? import.meta.url
+								)
+						  )
+						: "."
+				}/${File}`,
 				"utf-8"
 			)
 		).toString()

@@ -1,13 +1,9 @@
 import type { BuildOptions as Option } from "esbuild";
 import type { Pattern } from "fast-glob";
 
-import File from "../Function/File.js";
-import Default from "../Object/Option.js";
+export const { exec } = await import("child_process");
 
-import { exec as Exec } from "child_process";
-import { deepmerge as Merge } from "deepmerge-ts";
-import { build as Build, analyzeMetafile } from "esbuild";
-import Glob from "fast-glob";
+export const { deepmerge } = await import("deepmerge-ts");
 
 /**
  * The `Build` function compiles and builds TypeScript files using esbuild and TypeScript compiler.
@@ -22,41 +18,72 @@ export default async (
 	const Pipe: string[] = [];
 
 	for (const File of Files) {
-		for (const _File of await Glob(
-			File.replaceAll("'", "").replaceAll('"', "")
-		)) {
+		for (const _File of await (
+			await import("fast-glob")
+		).default(File.replaceAll("'", "").replaceAll('"', ""))) {
 			Pipe.push(_File);
 		}
 	}
 
 	Pipe.reverse();
 
-	const _Configuration = Merge(Default, {
-		entryPoints: Object.fromEntries(
-			Pipe.map((File) => [
-				File.replace("Source/", "").split(".").slice(0, -1.0).join("."),
-				File,
-			])
-		),
-	} satisfies Option);
+	const Configuration = deepmerge(
+		(await import("../Object/Option.js")).default,
+		{
+			entryPoints: Object.fromEntries(
+				Pipe.map((File) => [
+					File.replace("Source/", "")
+						.split(".")
+						.slice(0, -1.0)
+						.join("."),
+					File,
+				])
+			),
+		} satisfies Option
+	);
 
-	const Result = await Build(
+	const Result = await (
+		await import("esbuild")
+	).build(
 		Option?.ESBuild
-			? Merge(_Configuration, await File(Option?.ESBuild))
-			: _Configuration
+			? deepmerge(
+					Configuration,
+					await (
+						await import("../Function/File.js")
+					).default(Option?.ESBuild)
+			  )
+			: Configuration
 	);
 
 	console.log(
 		Result.metafile
-			? await analyzeMetafile(Result.metafile, {
+			? await (
+					await import("esbuild")
+			  ).analyzeMetafile(Result.metafile, {
 					verbose: true,
 			  })
 			: {}
 	);
 
 	if (Option?.TypeScript) {
-		Exec(`tsc -p ${Option?.TypeScript}`);
+		exec(`tsc -p ${Option?.TypeScript}`);
 	} else {
-		Exec("tsc");
+		exec("tsc");
 	}
+
+	exec(
+		`typedoc \
+			--out ./Documentation \
+			--plugin typedoc-plugin-mdn-links \
+			--plugin typedoc-plugin-zod \
+			--plugin @mxssfd/typedoc-theme \
+			--plugin typedoc-plugin-merge-modules \
+			--theme my-theme \
+			--entryPointStrategy expand \
+			--mergeModulesRenameDefaults \
+			--mergeModulesMergeMode module \
+			--entryPoints ${Object.values(Configuration.entryPoints).join(
+				" --entryPoints "
+			)}`
+	);
 };
