@@ -1,16 +1,9 @@
-import type { PluginBuild as Build, BuildOptions as Option } from "esbuild";
-
-import { copy as Copy } from "esbuild-plugin-copy";
-import { rm as Remove } from "fs/promises";
-
-const Out = "Target";
-
 export default {
 	color: true,
 	format: "esm",
 	metafile: true,
 	minify: true,
-	outdir: Out,
+	outdir: "Target",
 	platform: "node",
 	target: "esnext",
 	write: true,
@@ -18,17 +11,19 @@ export default {
 	plugins: [
 		{
 			name: "Target",
-			setup(Build: Build) {
-				Build.onStart(async () => {
-					try {
-						await Remove(Out, {
-							recursive: true,
-						});
-					} catch (_Error) {}
-				});
+			setup({ onStart, initialOptions: { outdir } }) {
+				onStart(async () =>
+					outdir
+						? await (
+								await import("fs/promises")
+						  ).rm(outdir, {
+								recursive: true,
+						  })
+						: {}
+				);
 			},
 		},
-		Copy({
+		(await import("esbuild-plugin-copy")).copy({
 			resolveFrom: "out",
 			assets: [
 				{
@@ -43,4 +38,6 @@ export default {
 			await (await import("../Function/JSON.js")).default("package.json")
 		)?.version}'`,
 	},
-} satisfies Option;
+} satisfies BuildOptions as BuildOptions;
+
+import type { BuildOptions } from "esbuild";

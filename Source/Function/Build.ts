@@ -28,7 +28,7 @@ export default async (
 	Pipe.reverse();
 
 	const Configuration = deepmerge(
-		(await import("../Object/Option.js")).default,
+		(await import("../Object/ESBuild.js")).default,
 		{
 			entryPoints: Object.fromEntries(
 				Pipe.map((File) => [
@@ -73,7 +73,7 @@ export default async (
 
 	exec(
 		`typedoc \
-			--out ./Documentation \
+			--out Documentation \
 			--plugin typedoc-plugin-mdn-links \
 			--plugin typedoc-plugin-zod \
 			--plugin @mxssfd/typedoc-theme \
