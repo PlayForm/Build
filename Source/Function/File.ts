@@ -42,7 +42,7 @@ export default async (Path: string) => {
 	return (
 		await import(
 			(await import("url"))
-				.fileURLToPath(Path)
+				.pathToFileURL(Path)
 				.toString()
 				.replace(".ts", ".js")
 		)

@@ -73,7 +73,7 @@ export default async (
 
 	exec(
 		`typedoc \
-			--out Documentation \
+			--out ./Documentation \
 			--plugin typedoc-plugin-mdn-links \
 			--plugin typedoc-plugin-zod \
 			--plugin @mxssfd/typedoc-theme \
