@@ -1,7 +1,7 @@
 import type { BuildOptions as Option } from "esbuild";
 import type { Pattern } from "fast-glob";
 
-export const { exec } = await import("child_process");
+export const { default: Exec } = await import("../Function/Exec.js");
 
 export const { deepmerge } = await import("deepmerge-ts");
 
@@ -66,20 +66,21 @@ export default async (
 	);
 
 	if (Option?.TypeScript) {
-		exec(`tsc -p ${Option?.TypeScript}`);
+		Exec(`tsc -p ${Option?.TypeScript}`);
 	} else {
-		exec("tsc");
+		Exec("tsc");
 	}
 
-	exec(
+	Exec(
 		`typedoc \
+			--includeVersion \
 			--out ./Documentation \
 			--plugin typedoc-plugin-mdn-links \
 			--plugin typedoc-plugin-zod \
 			--plugin @mxssfd/typedoc-theme \
 			--plugin typedoc-plugin-merge-modules \
 			--theme my-theme \
-			--entryPointStrategy expand \
+			--entryPointStrategy expand ./Target \
 			--mergeModulesRenameDefaults \
 			--mergeModulesMergeMode module \
 			--entryPoints ${Object.values(Configuration.entryPoints).join(

@@ -1,6 +1,5 @@
-/// <reference types="node" />
 import type { Pattern } from "fast-glob";
-export declare const exec: typeof import("child_process").exec;
+export declare const Exec: (Command: string, Echo?: false | ((Return: any) => void)) => Promise<void>;
 export declare const deepmerge: typeof import("deepmerge-ts").deepmerge;
 /**
  * The `Build` function compiles and builds TypeScript files using esbuild and TypeScript compiler.
