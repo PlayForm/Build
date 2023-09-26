@@ -1,5 +1,6 @@
 :root {
 	--color-background: #000;
+	--color-background-secondary: #000;
 }
 
 .tsd-navigation.settings {

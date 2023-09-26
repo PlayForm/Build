@@ -32,6 +32,10 @@ export default {
 					from: "./Source/Notation/TypeScript.json",
 					to: "./Notation/",
 				},
+				{
+					from: "./Source/Sheet/TypeDoc.css",
+					to: "./Sheet/",
+				},
 			],
 		}),
 	],

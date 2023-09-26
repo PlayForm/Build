@@ -63,7 +63,11 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 
 	Exec(
 		`typedoc \
-			--customCss ./Source/Sheet/TypeDoc.css \
+			--customCss ${(await import("path")).resolve(
+				`${(await import("url")).fileURLToPath(
+					(await import("path")).dirname(import.meta.url)
+				)}/../Sheet/TypeDoc.css`
+			)} \
 			--includeVersion \
 			--out ./Documentation \
 			--plugin typedoc-plugin-mdn-links \
