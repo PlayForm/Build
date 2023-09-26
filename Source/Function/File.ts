@@ -1,15 +1,8 @@
 /**
- * The function takes a file path as input, checks if it is a TypeScript file, converts the TypeScript
- * code to JavaScript, and then imports and returns the default export of the JavaScript file.
- *
  * @module File
  *
- * @param {string} Path - The `Path` parameter is a string that represents the file path of the file
- * you want to process.
- *
- * @returns the default export of the module that is imported using the provided `Path`.
  */
-export default async (Path: string) => {
+export default (async (...[Path]: Parameters<Type>) => {
 	if (Path.split(".").pop() === "ts") {
 		const { options } = (
 			await import("typescript")
@@ -51,4 +44,6 @@ export default async (Path: string) => {
 				.replace(".ts", ".js")
 		)
 	).default;
-};
+}) satisfies Type as Type;
+
+import type Type from "../Interface/File.js";
