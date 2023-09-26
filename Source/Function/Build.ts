@@ -75,7 +75,7 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 			--plugin @mxssfd/typedoc-theme \
 			--plugin typedoc-plugin-merge-modules \
 			--theme my-theme \
-			--entryPointStrategy expand Source/ \
+			--entryPointStrategy expand \
 			--mergeModulesRenameDefaults \
 			--mergeModulesMergeMode module \
 			--entryPoints ${Object.values(Configuration.entryPoints).join(
