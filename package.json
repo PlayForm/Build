@@ -24,10 +24,10 @@
 	},
 	"type": "module",
 	"bin": {
-		"TypeScriptESBuild": "Target/Execution/TypeScriptESBuild.js"
+		"TypeScriptESBuild": "Target/Class/TypeScriptESBuild.js"
 	},
 	"scripts": {
-		"prepublishOnly": "node --no-warnings --loader ts-node/esm Source/Execution/TypeScriptESBuild.ts 'Source/**/*.ts'"
+		"prepublishOnly": "node --no-warnings --loader ts-node/esm Source/Class/TypeScriptESBuild.ts 'Source/**/*.ts'"
 	},
 	"dependencies": {
 		"@mxssfd/typedoc-theme": "1.1.3",

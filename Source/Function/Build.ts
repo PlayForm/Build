@@ -1,20 +1,10 @@
-import type { BuildOptions as Option } from "esbuild";
-import type { Pattern } from "fast-glob";
-
-export const { default: Exec } = await import("../Function/Exec.js");
-
-export const { deepmerge } = await import("deepmerge-ts");
-
 /**
  * The `Build` function compiles and builds TypeScript files using esbuild and TypeScript compiler.
- * @param {Pattern[]} Files - An array of file patterns to be processed. Each pattern can include
- * wildcards (*) to match multiple files.
- * @param [Option] - The `Option` parameter is an optional object that can contain two properties:
+ *
+ * @module Build
+ *
  */
-export default async (
-	Files: Pattern[],
-	Option?: { ESBuild?: string; TypeScript?: string }
-) => {
+export default (async (...[Files, Option]: Parameters<Type>) => {
 	const Pipe: string[] = [];
 
 	for (const File of Files) {
@@ -87,4 +77,11 @@ export default async (
 				" --entryPoints "
 			)}`
 	);
-};
+}) satisfies Type as Type;
+
+import type { BuildOptions as Option } from "esbuild";
+import type Type from "../Interface/Build.js";
+
+export const { default: Exec } = await import("../Function/Exec.js");
+
+export const { deepmerge } = await import("deepmerge-ts");
