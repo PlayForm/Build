@@ -1,0 +1,13 @@
+:root {
+	--color-background: #000;
+}
+
+.tsd-navigation.settings {
+	display: none !important;
+}
+
+#tsd-search .field label {
+	left: 50%;
+	margin-left: -20px;
+	z-index: 1;
+}

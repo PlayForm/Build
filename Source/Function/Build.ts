@@ -1,19 +1,19 @@
 /**
- * The `Build` function compiles and builds TypeScript files using esbuild and TypeScript compiler.
+ * The `Build` function compiles and builds TypeScript files using esbuild and the TypeScript compiler.
  *
  * @module Build
  *
  */
-export default (async (...[Files, Option]: Parameters<Type>) => {
+export default (async (...[File, Option]: Parameters<Type>) => {
 	const Pipe: string[] = [];
 
-	for (const File of Files) {
-		for (const _File of await (
-			await import("fast-glob")
-		).default(File.replaceAll("'", "").replaceAll('"', ""))) {
-			Pipe.push(_File);
-		}
-	}
+	File.forEach(async (File) =>
+		(
+			await (
+				await import("fast-glob")
+			).default(File.replaceAll("'", "").replaceAll('"', ""))
+		).forEach((File) => Pipe.push(File))
+	);
 
 	Pipe.reverse();
 
@@ -63,6 +63,7 @@ export default (async (...[Files, Option]: Parameters<Type>) => {
 
 	Exec(
 		`typedoc \
+			--customCss ./Source/Sheet/TypeDoc.css \
 			--includeVersion \
 			--out ./Documentation \
 			--plugin typedoc-plugin-mdn-links \
@@ -70,7 +71,7 @@ export default (async (...[Files, Option]: Parameters<Type>) => {
 			--plugin @mxssfd/typedoc-theme \
 			--plugin typedoc-plugin-merge-modules \
 			--theme my-theme \
-			--entryPointStrategy expand ./Target \
+			--entryPointStrategy expand \
 			--mergeModulesRenameDefaults \
 			--mergeModulesMergeMode module \
 			--entryPoints ${Object.values(Configuration.entryPoints).join(

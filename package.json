@@ -23,6 +23,8 @@
 		"url": "https://nikolahristov.tech"
 	},
 	"type": "module",
+	"main": "./Target/Class/TypeScriptESBuild.js",
+	"types": "./Target/Class/TypeScriptESBuild.d.ts",
 	"bin": {
 		"TypeScriptESBuild": "Target/Class/TypeScriptESBuild.js"
 	},
