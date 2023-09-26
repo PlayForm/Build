@@ -86,6 +86,6 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 
 import type Type from "../Interface/Build.js";
 
-export const { default: Exec } = await import("../Function/Exec.js");
+const { default: Exec } = await import("../Function/Exec.js");
 
-export const { deepmerge } = await import("deepmerge-ts");
+const { deepmerge } = await import("deepmerge-ts");

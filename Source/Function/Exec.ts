@@ -1,6 +1,6 @@
 /**
  * @module Exec
- *
+ * 
  */
 export default (async (
 	...[Command, Echo = (Return) => console.log(Return)]: Parameters<Type>
