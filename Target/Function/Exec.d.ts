@@ -7,7 +7,7 @@
  * @param {string} Command - The `Command` parameter is a string that represents the
  * command you want to execute. It can be any valid command that can be executed in a
  * terminal or command prompt.
- *
  */
-declare const _default: (Command: string, Echo?: false | ((Return: any) => void)) => Promise<void>;
+declare const _default: Type;
 export default _default;
+import type Type from "../Interface/Exec.js";

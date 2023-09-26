@@ -8,7 +8,6 @@
  * you want to process.
  *
  * @returns the default export of the module that is imported using the provided `Path`.
- *
  */
 declare const _default: (Path: string) => Promise<any>;
 export default _default;

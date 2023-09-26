@@ -1,6 +1,4 @@
 /**
- * The `Build` function compiles and builds TypeScript files using esbuild and the TypeScript compiler.
- *
  * @module Build
  *
  */
@@ -29,7 +27,7 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 					File,
 				])
 			),
-		} satisfies Option
+		}
 	);
 
 	const Result = await (
@@ -70,12 +68,14 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 			)} \
 			--includeVersion \
 			--out ./Documentation \
+			--plugin typedoc-plugin-remove-references \
+			--plugin typedoc-plugin-rename-defaults \
 			--plugin typedoc-plugin-mdn-links \
 			--plugin typedoc-plugin-zod \
 			--plugin @mxssfd/typedoc-theme \
 			--plugin typedoc-plugin-merge-modules \
 			--theme my-theme \
-			--entryPointStrategy expand \
+			--entryPointStrategy expand Source/ \
 			--mergeModulesRenameDefaults \
 			--mergeModulesMergeMode module \
 			--entryPoints ${Object.values(Configuration.entryPoints).join(
@@ -84,7 +84,6 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 	);
 }) satisfies Type as Type;
 
-import type { BuildOptions as Option } from "esbuild";
 import type Type from "../Interface/Build.js";
 
 export const { default: Exec } = await import("../Function/Exec.js");

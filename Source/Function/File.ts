@@ -8,7 +8,6 @@
  * you want to process.
  *
  * @returns the default export of the module that is imported using the provided `Path`.
- *
  */
 export default async (Path: string) => {
 	if (Path.split(".").pop() === "ts") {
