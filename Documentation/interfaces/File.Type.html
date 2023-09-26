@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>JSON | typescript-esbuild - v0.1.16</title><meta name="description" content="Documentation for typescript-esbuild"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><link rel="stylesheet" href="../assets/my-theme.css"/><link rel="stylesheet" href="../assets/custom.css"/><script defer src="../assets/main.js"></script><script async src="../assets/search.js" id="search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script></head><body><script>console.log(`Loaded ${location.href}`)</script><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>Type | typescript-esbuild - v0.1.16</title><meta name="description" content="Documentation for typescript-esbuild"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><link rel="stylesheet" href="../assets/my-theme.css"/><link rel="stylesheet" href="../assets/custom.css"/><script defer src="../assets/main.js"></script><script async src="../assets/search.js" id="search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script></head><body><script>console.log(`Loaded ${location.href}`)</script><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
 <div class="tsd-toolbar-contents container">
 <div class="table-cell" id="tsd-search" data-base="..">
 <div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div>
@@ -26,37 +26,40 @@
 <div class="tsd-page-title">
 <ul class="tsd-breadcrumb">
 <li><a href="../index.html">typescript-esbuild</a></li>
-<li><a href="../modules/Function_JSON.html">Function/JSON</a></li>
-<li><a href="Function_JSON.JSON.html">JSON</a></li></ul>
-<h1>Function JSON</h1></div>
+<li><a href="../modules/File.html">File</a></li>
+<li><a href="File.Type.html">Type</a></li></ul>
+<h1>Interface Type</h1></div>
+<section class="tsd-panel tsd-hierarchy">
+<h4>Hierarchy</h4>
+<ul class="tsd-hierarchy">
+<li><span class="target">Type</span></li></ul></section>
 <section class="tsd-panel">
 <ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="JSON"><span class="tsd-kind-call-signature">JSON</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">File</span>, <span class="tsd-kind-parameter">From</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" class="tsd-signature-type external" target="_blank">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><a href="#JSON" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="Type"><span class="tsd-kind-call-signature">Type</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">Path</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" class="tsd-signature-type external" target="_blank">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><a href="#Type" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>The function &#39;JSON&#39; is a TypeScript function that reads a JSON file and returns its
-parsed content.</p>
+<div class="tsd-comment tsd-typography"><p>This function asynchronously processes a file located at the given path. If the file is a TypeScript
+(.ts) file, it performs the following steps:</p>
+<ol>
+<li>Converts TypeScript code to JavaScript.</li>
+<li>Creates a JavaScript module and emits it.</li>
+<li>Writes the transpiled JavaScript code to a new file with a .js extension.</li>
+</ol>
+<p>Finally, it imports and returns the default export of the processed JavaScript module.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">File</span>: <span class="tsd-signature-type">string</span></h5>
-<div class="tsd-comment tsd-typography"><p>The <code>File</code> parameter is a string that represents the name or
-path of the JSON file that you want to parse.</p>
-</div>
-<div class="tsd-comment tsd-typography"></div></li>
-<li>
-<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">From</span>: <span class="tsd-signature-type">string</span></h5>
-<div class="tsd-comment tsd-typography"><p>The <code>From</code> parameter is an optional string that represents
-the directory path from which the JSON file should be loaded. If <code>From</code> is provided,
-it will be used as the base directory path. If <code>From</code> is not provided, the current
-directory will be used as the base directory path.</p>
+<h5><span class="tsd-kind-parameter">Path</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>The &#39;Path&#39; parameter is a string that represents the file path of the file
+you want to process.</p>
 </div>
 <div class="tsd-comment tsd-typography"></div></li></ul></div>
-<h4 class="tsd-returns-title">Returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" class="tsd-signature-type external" target="_blank">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+<h4 class="tsd-returns-title">Returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" class="tsd-signature-type external" target="_blank">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4><p>A promise that resolves with the default export of the module imported using the provided &#39;Path&#39;.</p>
+
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/NikolaRHristov/TypeScriptESBuild/blob/9da18a7/Source/Function/JSON.ts#L11">Application/NikolaRHristov/NPM/TypeScriptESBuild/Source/Function/JSON.ts:11</a></li></ul></aside></li></ul></section></div>
+<li>Defined in <a href="https://github.com/NikolaRHristov/TypeScriptESBuild/blob/9da18a7/Source/Interface/File.ts#L21">Application/NikolaRHristov/NPM/TypeScriptESBuild/Source/Interface/File.ts:21</a></li></ul></aside></li></ul></section></div>
 <div class="col-sidebar">
 <div class="page-menu"></div>
 <div class="site-menu">
@@ -68,16 +71,16 @@ directory will be used as the base directory path.</p>
 <div>Build</div></a></summary>
 <div class="tsd-accordion-details">
 <ul class="tsd-nested-navigation">
-<li><a href="../interfaces/Build.Type.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-256"></use></svg>
+<li><a href="Build.Type.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-256"></use></svg>
 <div>Type
 <div class="menu-item-desc">Represents a function that processes file patterns.</div></div></a></li>
-<li><a href="Build.Build.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>
+<li><a href="../functions/Build.Build.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>
 <div>Build
 <div class="menu-item-desc">Represents a function that processes file patterns.</div></div></a></li>
-<li><a href="Build.Exec.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>
+<li><a href="../functions/Build.Exec.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>
 <div>Exec
 <div class="menu-item-desc">The &#39;Exec&#39; function is an asynchronous function that executes a command and logs the</div></div></a></li>
-<li><a href="Build.deepmerge.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>
+<li><a href="../functions/Build.deepmerge.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>
 <div>deepmerge
 <div class="menu-item-desc">Deeply merge objects.</div></div></a></li></ul></div></details></li>
 <li>
@@ -85,29 +88,29 @@ directory will be used as the base directory path.</p>
 <div>Exec</div></a></summary>
 <div class="tsd-accordion-details">
 <ul class="tsd-nested-navigation">
-<li><a href="../interfaces/Exec.Type.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-256"></use></svg>
+<li><a href="Exec.Type.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-256"></use></svg>
 <div>Type
 <div class="menu-item-desc">The &#39;Exec&#39; function is an asynchronous function that executes a command and logs the</div></div></a></li>
-<li><a href="Exec.Exec.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>
+<li><a href="../functions/Exec.Exec.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>
 <div>Exec
 <div class="menu-item-desc">The &#39;Exec&#39; function is an asynchronous function that executes a command and logs the</div></div></a></li></ul></div></details></li>
 <li>
-<details class="tsd-index-accordion" data-key="File"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="#icon-chevronDown"></use></svg><a href="../modules/File.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>
+<details class="tsd-index-accordion" open data-key="File"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="#icon-chevronDown"></use></svg><a href="../modules/File.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>
 <div>File</div></a></summary>
 <div class="tsd-accordion-details">
 <ul class="tsd-nested-navigation">
-<li><a href="../interfaces/File.Type.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-256"></use></svg>
+<li><a href="File.Type.html" class="current"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-256"></use></svg>
 <div>Type
 <div class="menu-item-desc">This function asynchronously processes a file located at the given path. If the file is a TypeScript</div></div></a></li>
-<li><a href="File.File.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>
+<li><a href="../functions/File.File.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>
 <div>File
 <div class="menu-item-desc">This function asynchronously processes a file located at the given path. If the file is a TypeScript</div></div></a></li></ul></div></details></li>
 <li>
-<details class="tsd-index-accordion" open data-key="Function/JSON"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="#icon-chevronDown"></use></svg><a href="../modules/Function_JSON.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>
+<details class="tsd-index-accordion" data-key="Function/JSON"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="#icon-chevronDown"></use></svg><a href="../modules/Function_JSON.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>
 <div>Function/JSON</div></a></summary>
 <div class="tsd-accordion-details">
 <ul class="tsd-nested-navigation">
-<li><a href="Function_JSON.JSON.html" class="current"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>
+<li><a href="../functions/Function_JSON.JSON.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>
 <div>JSON
 <div class="menu-item-desc">The function &#39;JSON&#39; is a TypeScript function that reads a JSON file and returns its</div></div></a></li></ul></div></details></li>
 <li>
