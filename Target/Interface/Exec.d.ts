@@ -1,3 +1,7 @@
+/**
+ * @module Exec
+ *
+ */
 export default interface Type {
     /**
      * The 'Exec' function is an asynchronous function that executes a command and logs the
