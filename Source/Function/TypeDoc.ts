@@ -11,6 +11,8 @@ export const load = (app: Application) => {
 			}
 		}
 	);
+
+	console.log(app.renderer);
 };
 
 export default load;

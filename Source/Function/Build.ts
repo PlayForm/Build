@@ -63,7 +63,7 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 		`typedoc \
 			--commentStyle all \
 			--gitRevision main \
-			--customCss ${(await import("path")).(
+			--customCss ${(await import("path")).resolve(
 				`${Current}/../Sheet/TypeDoc.css`
 			)} \
 			--includeVersion \
