@@ -61,6 +61,7 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 
 	Exec(
 		`typedoc \
+			--disableGit \
 			--customCss ${(await import("path")).resolve(
 				`${(await import("url")).fileURLToPath(
 					(await import("path")).dirname(import.meta.url)
