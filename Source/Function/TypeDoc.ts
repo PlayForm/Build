@@ -1,18 +1,23 @@
-import { Application, Context, Converter, ParameterType } from "typedoc";
+export class Context extends DefaultThemeRenderContext {}
 
 export const load = (app: Application) => {
-	app.options.addDeclaration({
-		name: "plugin-option",
-		help: "Displayed when --help is passed",
-		type: ParameterType.String, // The default
-		defaultValue: "", // The default
-	});
-
-	app.converter.on(Converter.EVENT_RESOLVE, (_Context: Context) => {
-		if (app.options.getValue("plugin-option") === "something") {
-			// ...
+	app.renderer.defineTheme(
+		"TypeScriptESBuild",
+		class extends DefaultTheme {
+			override getRenderContext(
+				pageEvent: PageEvent<Reflection>
+			): ThemeContext {
+				return new ThemeContext(
+					this,
+					pageEvent,
+					this.application.options
+				);
+			}
 		}
-	});
+	);
 };
 
 export default load;
+
+import type { Application } from "typedoc";
+import { DefaultTheme, DefaultThemeRenderContext } from "typedoc";
