@@ -1,5 +1,4 @@
-export class Context extends DefaultThemeRenderContext {}
-
+// @TODO: Monitor this and rename outputs
 export const load = (app: Application) => {
 	app.options.addDeclaration({
 		name: "TypeScriptESBuild",
@@ -11,4 +10,4 @@ export const load = (app: Application) => {
 
 export default load;
 
-import { Application, DefaultThemeRenderContext, ParameterType } from "typedoc";
+import { Application, ParameterType } from "typedoc";
