@@ -1,6 +1,15 @@
 export class Context extends DefaultThemeRenderContext {}
 
 export const load = (app: Application) => {
+	console.log("----- PLUGIN ----- ");
+
+	app.options.addDeclaration({
+		name: "TypeScriptESBuild",
+		help: "",
+		type: ParameterType.String, // The default
+		defaultValue: "", // The default
+	});
+
 	app.renderer.defineTheme(
 		"TypeScriptESBuild",
 		class extends DefaultTheme {
@@ -11,11 +20,15 @@ export const load = (app: Application) => {
 			}
 		}
 	);
-
-	console.log(app.renderer);
 };
 
 export default load;
 
-import type { Application, PageEvent, Reflection } from "typedoc";
-import { DefaultTheme, DefaultThemeRenderContext } from "typedoc";
+import {
+	Application,
+	DefaultTheme,
+	DefaultThemeRenderContext,
+	PageEvent,
+	ParameterType,
+	Reflection,
+} from "typedoc";
