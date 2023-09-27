@@ -6,12 +6,8 @@ export const load = (app: Application) => {
 		class extends DefaultTheme {
 			override getRenderContext(
 				pageEvent: PageEvent<Reflection>
-			): ThemeContext {
-				return new ThemeContext(
-					this,
-					pageEvent,
-					this.application.options
-				);
+			): Context {
+				return new Context(this, pageEvent, this.application.options);
 			}
 		}
 	);
@@ -19,5 +15,5 @@ export const load = (app: Application) => {
 
 export default load;
 
-import type { Application } from "typedoc";
+import type { Application, PageEvent, Reflection } from "typedoc";
 import { DefaultTheme, DefaultThemeRenderContext } from "typedoc";
