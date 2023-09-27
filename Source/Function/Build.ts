@@ -61,6 +61,7 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 
 	Exec(
 		`typedoc \
+			--commentStyle all \
 			--gitRevision main \
 			--disableGit \
 			--customCss ${(await import("path")).resolve(
