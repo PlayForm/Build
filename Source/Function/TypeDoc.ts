@@ -7,17 +7,6 @@ export const load = (app: Application) => {
 		type: ParameterType.String, // The default
 		defaultValue: "", // The default
 	});
-
-	// app.renderer.defineTheme(
-	// 	"TypeScriptESBuild",
-	// 	class extends DefaultTheme {
-	// 		override getRenderContext(
-	// 			pageEvent: PageEvent<Reflection>
-	// 		): Context {
-	// 			return new Context(this, pageEvent, this.application.options);
-	// 		}
-	// 	}
-	// );
 };
 
 export default load;
