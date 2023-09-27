@@ -71,7 +71,7 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 			--plugin @mxssfd/typedoc-theme \
 			--plugin typedoc-plugin-merge-modules \
 			--plugin ${resolve(`${Current}/../../Target/Function/TypeDoc.js`)} \
-			--theme TypeScriptESBuild \
+			--theme my-theme \
 			--entryPointStrategy expand \
 			--mergeModulesRenameDefaults \
 			--mergeModulesMergeMode module \
