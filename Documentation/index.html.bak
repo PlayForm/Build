@@ -122,7 +122,7 @@
 <ul class="tsd-nested-navigation">
 <li><a href="functions/Function_TypeDoc.load.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>
 <div>load
-<div class="menu-item-desc">@TODO: Monitor this and rename outputs</div></div></a></li></ul></div></details></li>
+<div class="menu-item-desc">@TODO: Monitor this and rename outputs from `functions` to `Function` the private property mappings in</div></div></a></li></ul></div></details></li>
 <li>
 <details class="tsd-index-accordion" data-key="Object/ESBuild"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="#icon-chevronDown"></use></svg><a href="modules/Object_ESBuild.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>
 <div>Object/ESBuild</div></a></summary>
