@@ -45,7 +45,7 @@ npm install -D -E typescript-esbuild
 	"compilerOptions": {
 		"outDir": "Target"
 	},
-	"extends": "typescript-esbuild/Target/Configuration/TypeScript",
+	"extends": "typescript-esbuild/Target/Notation/TypeScript",
 	"include": ["Source"]
 }
 ```
