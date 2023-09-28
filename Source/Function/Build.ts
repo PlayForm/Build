@@ -79,6 +79,13 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 				" --entryPoints "
 			)}`
 	);
+
+	setTimeout(() => {
+		Exec("mv ./Documentation/functions ./Documentation/Function");
+
+		Exec(`find ./Documentation -type f -name '*.html' \
+			| xargs sed -i.bak --regexp-extended 's:(href="[^"]+)functions/:\\1Function/:g'`);
+	}, 3000);
 }) satisfies Type as Type;
 
 import type Type from "../Interface/Build.js";

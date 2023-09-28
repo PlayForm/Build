@@ -1,1 +1,1 @@
-class p extends a{}const t=e=>{e.options.addDeclaration({name:"TypeScriptESBuild",help:"",type:o.String,defaultValue:""})};var l=t;import{DefaultThemeRenderContext as a,ParameterType as o}from"typedoc";export{p as Context,l as default,t as load};
+const e=t=>{t.options.addDeclaration({name:"TypeScriptESBuild",help:"",type:p.String,defaultValue:""})};var a=e;import{ParameterType as p}from"typedoc";export{a as default,e as load};
