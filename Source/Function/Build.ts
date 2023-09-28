@@ -85,7 +85,7 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 
 		Exec(
 			`find ./Documentation -type f -name '*.html' \
-					| xargs sed -i.bak --regexp-extended 's:(href="([^"]+)?)functions/:\\1Function/:g'`
+					| xargs sed -i '' -e --regexp-extended 's:(href="([^"]+)?)functions/:\\1Function/:g'`
 		);
 	}, 5000);
 }) satisfies Type as Type;
