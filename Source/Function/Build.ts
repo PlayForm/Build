@@ -77,14 +77,11 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 			--mergeModulesMergeMode module \
 			--entryPoints ${Object.values(Configuration.entryPoints).join(
 				" --entryPoints "
-			)}`
-	);
-
-	Exec("mv ./Documentation/functions ./Documentation/Function");
-
-	Exec(
-		`find ./Documentation -type f -name '*.html' \
-				| xargs sed -i.bak --regexp-extended 's:(href="([^"]+)?)functions/:\\1Function/:g'`
+			)}; \
+			mv ./Documentation/functions ./Documentation/Function ; \
+			find ./Documentation -type f -name '*.html' \
+			| xargs sed -i.bak --regexp-extended 's:(href="([^"]+)?)functions/:\\1Function/:g'
+			`
 	);
 }) satisfies Type as Type;
 
