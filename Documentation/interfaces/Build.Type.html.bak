@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>ESBuild | typescript-esbuild - v0.1.16</title><meta name="description" content="Documentation for typescript-esbuild"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><link rel="stylesheet" href="../assets/my-theme.css"/><link rel="stylesheet" href="../assets/custom.css"/><script defer src="../assets/main.js"></script><script async src="../assets/search.js" id="search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script></head><body><script>console.log(`Loaded ${location.href}`)</script><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>Type | typescript-esbuild - v0.1.16</title><meta name="description" content="Documentation for typescript-esbuild"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><link rel="stylesheet" href="../assets/my-theme.css"/><link rel="stylesheet" href="../assets/custom.css"/><script defer src="../assets/main.js"></script><script async src="../assets/search.js" id="search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script></head><body><script>console.log(`Loaded ${location.href}`)</script><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
 <div class="tsd-toolbar-contents container">
 <div class="table-cell" id="tsd-search" data-base="..">
 <div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div>
@@ -26,12 +26,48 @@
 <div class="tsd-page-title">
 <ul class="tsd-breadcrumb">
 <li><a href="../index.html">typescript-esbuild</a></li>
-<li><a href="../modules/Object_ESBuild.html">Object/ESBuild</a></li>
-<li><a href="Object_ESBuild.ESBuild.html">ESBuild</a></li></ul>
-<h1>Variable ESBuild</h1></div>
-<div class="tsd-signature"><span class="tsd-kind-variable">ESBuild</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">BuildOptions</span></div><aside class="tsd-sources">
+<li><a href="../modules/Build.html">Build</a></li>
+<li><a href="Build.Type.html">Type</a></li></ul>
+<h1>Interface Type</h1></div>
+<section class="tsd-panel tsd-hierarchy">
+<h4>Hierarchy</h4>
+<ul class="tsd-hierarchy">
+<li><span class="target">Type</span></li></ul></section>
+<section class="tsd-panel">
+<ul class="tsd-signatures">
+<li class="tsd-signature tsd-anchor-link" id="Type"><span class="tsd-kind-call-signature">Type</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">File</span>, <span class="tsd-kind-parameter">Option</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" class="tsd-signature-type external" target="_blank">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><a href="#Type" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Represents a function that processes file patterns.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><span class="tsd-kind-parameter">File</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+<div class="tsd-comment tsd-typography"><p>An array of file patterns to be processed. Each pattern can include wildcards (*) to match multiple files.</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li>
+<li>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">Option</span>: <span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">ESBuild</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">TypeScript</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span></h5>
+<div class="tsd-comment tsd-typography"><p>An optional object that can contain two properties.</p>
+</div>
+<div class="tsd-comment tsd-typography"></div>
+<ul class="tsd-parameters">
+<li class="tsd-parameter">
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-property">ESBuild</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>A string representing the ESBuild option.</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li>
+<li class="tsd-parameter">
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-property">Type<wbr/>Script</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>A string representing the TypeScript option.</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" class="tsd-signature-type external" target="_blank">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4><p>A promise that resolves when the processing is complete.</p>
+
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/NikolaRHristov/TypeScriptESBuild/blob/main/Source/Object/ESBuild.ts#L1">Application/NikolaRHristov/NPM/TypeScriptESBuild/Source/Object/ESBuild.ts:1</a></li></ul></aside></div>
+<li>Defined in <a href="https://github.com/NikolaRHristov/TypeScriptESBuild/blob/main/Source/Interface/Build.ts#L15">Application/NikolaRHristov/NPM/TypeScriptESBuild/Source/Interface/Build.ts:15</a></li></ul></aside></li></ul></section></div>
 <div class="col-sidebar">
 <div class="page-menu"></div>
 <div class="site-menu">
@@ -39,27 +75,27 @@
 <div>typescript-<wbr/>esbuild -<wbr/> v0.1.16</div></a>
 <ul class="tsd-small-nested-navigation">
 <li>
-<details class="tsd-index-accordion" data-key="Build"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="#icon-chevronDown"></use></svg><a href="../modules/Build.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>
+<details class="tsd-index-accordion" open data-key="Build"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="#icon-chevronDown"></use></svg><a href="../modules/Build.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>
 <div>Build</div></a></summary>
 <div class="tsd-accordion-details">
 <ul class="tsd-nested-navigation">
-<li><a href="../interfaces/Build.Type.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-256"></use></svg>
+<li><a href="Build.Type.html" class="current"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-256"></use></svg>
 <div>Type
 <div class="menu-item-desc">Represents a function that processes file patterns.</div></div></a></li>
-<li><a href="Build.Current.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-32"></use></svg>
+<li><a href="../variables/Build.Current.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-32"></use></svg>
 <div>Current</div></a></li>
-<li><a href="Build.Pipe.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-32"></use></svg>
+<li><a href="../variables/Build.Pipe.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-32"></use></svg>
 <div>Pipe</div></a></li>
-<li><a href="../Function/Build.Build.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>
+<li><a href="../functions/Build.Build.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>
 <div>Build
 <div class="menu-item-desc">Represents a function that processes file patterns.</div></div></a></li>
-<li><a href="../Function/Build.Exec.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>
+<li><a href="../functions/Build.Exec.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>
 <div>Exec
 <div class="menu-item-desc">The &#39;Exec&#39; function is an asynchronous function that executes a command and logs the</div></div></a></li>
-<li><a href="../Function/Build.deepmerge.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>
+<li><a href="../functions/Build.deepmerge.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>
 <div>deepmerge
 <div class="menu-item-desc">Deeply merge objects.</div></div></a></li>
-<li><a href="../Function/Build.resolve.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>
+<li><a href="../functions/Build.resolve.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>
 <div>resolve
 <div class="menu-item-desc">The right-most parameter is considered {to}. Other parameters are considered an array of {from}.</div></div></a></li></ul></div></details></li>
 <li>
@@ -67,10 +103,10 @@
 <div>Exec</div></a></summary>
 <div class="tsd-accordion-details">
 <ul class="tsd-nested-navigation">
-<li><a href="../interfaces/Exec.Type.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-256"></use></svg>
+<li><a href="Exec.Type.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-256"></use></svg>
 <div>Type
 <div class="menu-item-desc">The &#39;Exec&#39; function is an asynchronous function that executes a command and logs the</div></div></a></li>
-<li><a href="../Function/Exec.Exec.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>
+<li><a href="../functions/Exec.Exec.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>
 <div>Exec
 <div class="menu-item-desc">The &#39;Exec&#39; function is an asynchronous function that executes a command and logs the</div></div></a></li></ul></div></details></li>
 <li>
@@ -78,10 +114,10 @@
 <div>File</div></a></summary>
 <div class="tsd-accordion-details">
 <ul class="tsd-nested-navigation">
-<li><a href="../interfaces/File.Type.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-256"></use></svg>
+<li><a href="File.Type.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-256"></use></svg>
 <div>Type
 <div class="menu-item-desc">rome-ignore lint/suspicious/noExplicitAny: &lt;explanation&gt;</div></div></a></li>
-<li><a href="../Function/File.File.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>
+<li><a href="../functions/File.File.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>
 <div>File
 <div class="menu-item-desc">rome-ignore lint/suspicious/noExplicitAny: &lt;explanation&gt;</div></div></a></li></ul></div></details></li>
 <li>
@@ -89,7 +125,7 @@
 <div>Function/JSON</div></a></summary>
 <div class="tsd-accordion-details">
 <ul class="tsd-nested-navigation">
-<li><a href="../Function/Function_JSON.JSON.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>
+<li><a href="../functions/Function_JSON.JSON.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>
 <div>JSON
 <div class="menu-item-desc">The function &#39;JSON&#39; is a TypeScript function that reads a JSON file and returns its</div></div></a></li></ul></div></details></li>
 <li>
@@ -97,22 +133,22 @@
 <div>Function/<wbr/>Type<wbr/>Doc</div></a></summary>
 <div class="tsd-accordion-details">
 <ul class="tsd-nested-navigation">
-<li><a href="../Function/Function_TypeDoc.load.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>
+<li><a href="../functions/Function_TypeDoc.load.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>
 <div>load
 <div class="menu-item-desc">@TODO: Monitor this and rename outputs from `functions` to `Function` the private property mappings in</div></div></a></li></ul></div></details></li>
 <li>
-<details class="tsd-index-accordion" open data-key="Object/ESBuild"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="#icon-chevronDown"></use></svg><a href="../modules/Object_ESBuild.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>
+<details class="tsd-index-accordion" data-key="Object/ESBuild"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="#icon-chevronDown"></use></svg><a href="../modules/Object_ESBuild.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>
 <div>Object/ESBuild</div></a></summary>
 <div class="tsd-accordion-details">
 <ul class="tsd-nested-navigation">
-<li><a href="Object_ESBuild.ESBuild.html" class="current"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-32"></use></svg>
+<li><a href="../variables/Object_ESBuild.ESBuild.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-32"></use></svg>
 <div>ESBuild</div></a></li></ul></div></details></li>
 <li>
 <details class="tsd-index-accordion" data-key="TypeScriptESBuild"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="#icon-chevronDown"></use></svg><a href="../modules/TypeScriptESBuild.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>
 <div>Type<wbr/>ScriptESBuild</div></a></summary>
 <div class="tsd-accordion-details">
 <ul class="tsd-nested-navigation">
-<li><a href="TypeScriptESBuild.TypeScriptESBuild.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-32"></use></svg>
+<li><a href="../variables/TypeScriptESBuild.TypeScriptESBuild.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-32"></use></svg>
 <div>Type<wbr/>ScriptESBuild</div></a></li></ul></div></details></li></ul></nav></div></div></div>
 <div class="tsd-generator">
 <p>Generated using <a href="https://typedoc.org/" rel="noopener" target="_blank">TypeDoc</a></p></div>

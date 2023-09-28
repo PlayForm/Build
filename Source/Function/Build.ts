@@ -77,11 +77,17 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 			--mergeModulesMergeMode module \
 			--entryPoints ${Object.values(Configuration.entryPoints).join(
 				" --entryPoints "
-			)} ; \
-			mv ./Documentation/functions ./Documentation/Function ; \
-			find ./Documentation -type f -name '*.html' \
-			| xargs sed -i.bak --regexp-extended 's:(href="([^"]+)?)functions/:\\1Function/:g'`
+			)}`
 	);
+
+	setTimeout(() => {
+		Exec("mv ./Documentation/functions ./Documentation/Function");
+
+		Exec(
+			`find ./Documentation -type f -name '*.html' \
+					| xargs sed -i.bak --regexp-extended 's:(href="([^"]+)?)functions/:\\1Function/:g'`
+		);
+	}, 5000);
 }) satisfies Type as Type;
 
 import type Type from "../Interface/Build.js";
