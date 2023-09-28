@@ -87,7 +87,7 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 			`find ./Documentation -type f -name '*.html' \
 					| xargs sed -i '' -e --regexp-extended 's:(href="([^"]+)?)functions/:\\1Function/:g'`
 		);
-	}, 5000);
+	}, 10000);
 }) satisfies Type as Type;
 
 import type Type from "../Interface/Build.js";
