@@ -1,3 +1,8 @@
+## 0.2.0
+
+-   Refactor
+-   Introduces Documentation
+
 ## 0.1.16
 
 -   Cleanup
