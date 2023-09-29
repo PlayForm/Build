@@ -15,7 +15,6 @@ export default interface Type {
      * @param {string} Path - The 'Path' parameter is a string that represents the file path of the file
      * you want to process.
      *
-     * @returns {Promise<any>} A promise that resolves with the default export of the module imported using the provided 'Path'.
      */
     (Path: string): Promise<any>;
 }

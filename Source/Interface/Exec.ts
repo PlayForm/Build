@@ -16,7 +16,6 @@ export default interface Type {
 	 * to a function, the function will be called with the stdout data as a parameter for custom
 	 * logging. If not provided, stdout will be logged to the console by default.
 	 *
-	 * @returns {Promise<void>} A promise that resolves when the command execution is complete.
 	 */
 	(
 		Command: string,

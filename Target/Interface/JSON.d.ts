@@ -15,7 +15,6 @@ export default interface Type {
      * it will be used as the base directory path. If `From` is not provided, the current
      * directory will be used as the base directory path.
      *
-     * @returns {Promise<ReturnType<typeof JSON.parse>>}
      */
     (File: string, From?: string): Promise<ReturnType<typeof JSON.parse>>;
 }
