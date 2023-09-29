@@ -28,7 +28,7 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 		}
 	);
 
-	const Result = await (
+	const { metafile } = await (
 		await import("esbuild")
 	).build(
 		Option?.ESBuild
@@ -42,10 +42,10 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 	);
 
 	console.log(
-		Result.metafile
+		metafile
 			? await (
 					await import("esbuild")
-			  ).analyzeMetafile(Result.metafile, {
+			  ).analyzeMetafile(metafile, {
 					verbose: true,
 			  })
 			: {}
@@ -61,7 +61,9 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 		`typedoc \
 			--commentStyle all \
 			--gitRevision main \
-			--customCss ${resolve(`${Current}/../Sheet/TypeDoc.css`)} \
+			--customCss ${(await import("path")).resolve(
+				`${Current}/../Sheet/TypeDoc.css`
+			)} \
 			--includeVersion \
 			--out ./Documentation \
 			--plugin typedoc-plugin-remove-references \
@@ -70,7 +72,6 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 			--plugin typedoc-plugin-zod \
 			--plugin @mxssfd/typedoc-theme \
 			--plugin typedoc-plugin-merge-modules \
-			--plugin ${resolve(`${Current}/../../Target/Function/TypeDoc.js`)} \
 			--theme my-theme \
 			--entryPointStrategy expand \
 			--mergeModulesRenameDefaults \
@@ -94,8 +95,6 @@ import type Type from "../Interface/Build.js";
 export const { default: Exec } = await import("../Function/Exec.js");
 
 export const { deepmerge } = await import("deepmerge-ts");
-
-export const { resolve } = await import("path");
 
 export const Pipe: string[] = [];
 

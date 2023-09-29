@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-var i=new(await import("commander")).Command().name("TypeScriptESBuild").version("0.1.16").description("Builds files").argument("<Files...>","Files to build").option("-es, --ESBuild <File>","esbuild configuration file").option("-ts, --TypeScript <File>","TypeScript configuration file").action((await import("../Function/Build.js")).default).parse();export{i as default};
+var i=new(await import("commander")).Command().name("TypeScriptESBuild").version("0.2.0").description("Builds files").argument("<Files...>","Files to build").option("-es, --ESBuild <File>","esbuild configuration file").option("-ts, --TypeScript <File>","TypeScript configuration file").action((await import("../Function/Build.js")).default).parse();export{i as default};
