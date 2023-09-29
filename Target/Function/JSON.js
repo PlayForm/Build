@@ -1,1 +1,1 @@
-var i=async(a,t)=>JSON.parse((await(await import("fs/promises")).readFile(`${t?(await import("path")).dirname((await import("url")).fileURLToPath(t??import.meta.url)):"."}/${a}`,"utf-8")).toString());export{i as default};
+var e=async(...[t,a])=>JSON.parse((await(await import("fs/promises")).readFile(`${a?(await import("path")).dirname((await import("url")).fileURLToPath(a??import.meta.url)):"."}/${t}`,"utf-8")).toString());export{e as default};
