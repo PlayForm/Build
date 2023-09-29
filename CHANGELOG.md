@@ -1,3 +1,7 @@
+## 0.2.1
+
+-   Cleanup
+
 ## 0.2.0
 
 -   Refactor
