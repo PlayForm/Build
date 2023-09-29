@@ -32,7 +32,6 @@
 		"prepublishOnly": "node --no-warnings --loader ts-node/esm Source/Class/TypeScriptESBuild.ts 'Source/**/*.ts'"
 	},
 	"dependencies": {
-		"@mxssfd/typedoc-theme": "1.1.3",
 		"@types/node": "20.7.2",
 		"commander": "11.0.0",
 		"deepmerge-ts": "5.1.0",

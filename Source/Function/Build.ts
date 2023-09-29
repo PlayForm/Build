@@ -70,9 +70,7 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 			--plugin typedoc-plugin-rename-defaults \
 			--plugin typedoc-plugin-mdn-links \
 			--plugin typedoc-plugin-zod \
-			--plugin @mxssfd/typedoc-theme \
 			--plugin typedoc-plugin-merge-modules \
-			--theme my-theme \
 			--entryPointStrategy expand \
 			--mergeModulesRenameDefaults \
 			--mergeModulesMergeMode module \
