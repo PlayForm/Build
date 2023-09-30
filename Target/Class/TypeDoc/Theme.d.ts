@@ -1,8 +1,8 @@
+declare const default_base: typeof import("typedoc").DefaultTheme;
 /**
  * @module TypeDoc
  *
  */
-declare const default_base: typeof import("typedoc").DefaultTheme;
 export default class extends default_base implements Type {
     getRenderContext: (Event: import("typedoc").PageEvent<import("typedoc").Reflection>) => Context;
 }

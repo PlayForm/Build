@@ -1,1 +1,1 @@
-function m(...[o]){o.renderer.hooks.on("body.begin",t=>e.createElement("script",null,e.createElement(e.Raw,{html:"console.log(`Loaded ${location.href}`)"}))),o.renderer.defineTheme("TypeScriptESBuild",r)}import{JSX as e}from"typedoc";import r from"../Class/TypeDoc/Theme.js";export{m as load};
+const o=(...[e])=>e.renderer.defineTheme("TypeScriptESBuild",r);import r from"../Class/TypeDoc/Theme.js";export{o as load};

@@ -21,3 +21,4 @@ export default class
 
 import type { DefaultTheme, Options, PageEvent, Reflection } from "typedoc";
 import type Type from "../../Interface/TypeDoc/Context.js";
+
