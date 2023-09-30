@@ -6,7 +6,11 @@ export default class
 	extends (await import("typedoc")).DefaultThemeRenderContext
 	implements Type
 {
-	constructor(...[Theme, Page, Option]: ConstructorParameters<Type>) {
+	constructor(
+		Theme: DefaultTheme,
+		Page: PageEvent<Reflection>,
+		Option: Options
+	) {
 		super(Theme, Page, Option);
 
 		this.init();
@@ -15,6 +19,6 @@ export default class
 	init() {}
 }
 
+import type { DefaultTheme, Options, PageEvent, Reflection } from "typedoc";
 import type Type from "../../Interface/TypeDoc/Context.js";
 
-export const { DefaultTheme } = await import("typedoc");
