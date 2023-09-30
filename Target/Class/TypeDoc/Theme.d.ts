@@ -5,13 +5,13 @@ declare const default_base: typeof DefaultTheme;
  */
 export default class extends default_base implements Type {
     getRenderContext: (Event: PageEvent<import("typedoc").Reflection>) => Context;
-    buildUrls(...[Reflection, URLs]: Parameters<Type["buildURLs"]>): UrlMapping<any>[];
-    _getMapping: (Reflection: DeclarationReflection) => Mapping | undefined;
+    buildUrls(...[Reflection, URLs]: Parameters<Type["buildURLs"]>): any;
+    _Mapping: (Reflection: DeclarationReflection) => Mapping | undefined;
     Mapping: Mapping[];
 }
 import type Context from "../../Interface/TypeDoc/Context.js";
 import type Type from "../../Interface/TypeDoc/Theme.js";
-import { DeclarationReflection, DefaultTheme, PageEvent, ReflectionKind, UrlMapping, type RenderTemplate } from "typedoc";
+import { DeclarationReflection, DefaultTheme, PageEvent, ReflectionKind, type RenderTemplate } from "typedoc";
 export declare const _Context: typeof import("./Context.js").default;
 /**
  * Defines a mapping of a {@link Models.Kind} to a template file.
