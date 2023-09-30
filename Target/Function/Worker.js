@@ -1,1 +1,1 @@
-var o={fetch:async(e,r)=>{const t=new URL(e.url);return t.pathname.startsWith("/functions/")?new n(t.pathname):r.ASSETS.fetch(e)}};import{Response as n}from"@cloudflare/workers-types";export{o as default};
+var r={fetch:async(e,n)=>{const t=new URL(e.url);return t.pathname.startsWith("/functions/")?new Response(t.pathname):n.ASSETS.fetch(e)}};export{r as default};
