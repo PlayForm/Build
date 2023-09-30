@@ -3,7 +3,7 @@ export default {
 		const url = new URL(request.url);
 
 		if (url.pathname.startsWith("/functions/")) {
-			return new Response(JSON.stringify(request));
+			return new Response(JSON.stringify(url));
 		}
 
 		// Otherwise, serve the static assets.
