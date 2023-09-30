@@ -74,7 +74,9 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 			--mergeModulesMergeMode module \
 			--entryPoints ${Object.values(Configuration.entryPoints).join(
 				" --entryPoints "
-			)}`
+			)} && \
+			mv ./Documentation/functions ./Documentation/Function && \
+			find ./Documentation/ -iname *.html -exec sed -i -E 's:(href=".*)functions/:\\1Function/:g' {} \;`
 	);
 }) satisfies Type as Type;
 
