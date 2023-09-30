@@ -61,9 +61,7 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 		`typedoc \
 			--commentStyle all \
 			--gitRevision main \
-			--customCss ${(await import("path")).resolve(
-				`${Current}/../Sheet/TypeDoc.css`
-			)} \
+			--customCss ${resolve(`${Current}/../Sheet/TypeDoc.css`)} \
 			--includeVersion \
 			--out ./Documentation \
 			--plugin typedoc-plugin-remove-references \
@@ -79,13 +77,11 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 			)}`
 	);
 
-	// setTimeout(() => {
-	// 	Exec("mv ./Documentation/functions ./Documentation/Function");
-
-	// 	Exec(
-	// 		`find ./Documentation -type f -name '*.html' -exec sed -i -E --regexp-extended 's:(href="([^"]+)?)functions/:\\1Function/:g' {} \;`
-	// 	);
-	// }, 10000);
+	Exec(
+		`mv ${resolve(
+			`${Current}/../../Target/Function/Worker.js`
+		)} ./Documentation/_worker.js`
+	);
 }) satisfies Type as Type;
 
 import type Type from "../Interface/Build.js";
@@ -93,6 +89,8 @@ import type Type from "../Interface/Build.js";
 export const { default: Exec } = await import("../Function/Exec.js");
 
 export const { deepmerge } = await import("deepmerge-ts");
+
+export const { resolve } = await import("path");
 
 export const Pipe: string[] = [];
 

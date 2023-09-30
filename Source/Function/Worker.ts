@@ -6,8 +6,8 @@ export default <ExportedHandler<Environment>>{
 	fetch: (request: Request, env: Environment) => {
 		const url = new URL(request.url);
 
-		if (url.pathname.startsWith("/api/")) {
-			return new Response("Ok");
+		if (url.pathname.startsWith("/functions/")) {
+			return new Response(url.pathname);
 		}
 
 		return env.ASSETS.fetch(request);
@@ -20,3 +20,4 @@ import type {
 	Request,
 } from "@cloudflare/workers-types";
 import { Response } from "@cloudflare/workers-types";
+
