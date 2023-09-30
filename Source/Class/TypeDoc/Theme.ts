@@ -11,18 +11,18 @@ export default class
 	): Context => new _Context(this, Event, this.application.options);
 
 	override buildUrls(...[Reflection, URLs]: Parameters<Type["buildUrls"]>) {
-		const Mapping = this._Mapping(Reflection);
+		const { Directory, Template } = this._Mapping(Reflection) ?? {};
 
-		if (Mapping) {
+		if (Directory && Template) {
 			if (
 				!Reflection.url ||
 				!DefaultTheme.URL_PREFIX.test(Reflection.url)
 			) {
 				const URL = [
-					Mapping.directory,
+					Directory,
 					`${DefaultTheme.getUrl(Reflection)}.html`,
 				].join("/");
-				URLs.push(new UrlMapping(URL, Reflection, Mapping.template));
+				URLs.push(new UrlMapping(URL, Reflection, Template));
 
 				Reflection.url = URL;
 				Reflection.hasOwnDocument = true;
@@ -44,43 +44,43 @@ export default class
 	}
 
 	_Mapping = (Reflection: DeclarationReflection) =>
-		this.Mapping.find((Mapping) => Reflection.kindOf(Mapping.kind));
+		this.Mapping.find((Mapping) => Reflection.kindOf(Mapping.Kind));
 
 	Mapping: Mapping[] = [
 		{
-			kind: [ReflectionKind.Class],
-			directory: "Class",
-			template: this.reflectionTemplate,
+			Kind: [ReflectionKind.Class],
+			Directory: "Class",
+			Template: this.reflectionTemplate,
 		},
 		{
-			kind: [ReflectionKind.Interface],
-			directory: "Interface",
-			template: this.reflectionTemplate,
+			Kind: [ReflectionKind.Interface],
+			Directory: "Interface",
+			Template: this.reflectionTemplate,
 		},
 		{
-			kind: [ReflectionKind.Enum],
-			directory: "Enum",
-			template: this.reflectionTemplate,
+			Kind: [ReflectionKind.Enum],
+			Directory: "Enum",
+			Template: this.reflectionTemplate,
 		},
 		{
-			kind: [ReflectionKind.Namespace, ReflectionKind.Module],
-			directory: "Module",
-			template: this.reflectionTemplate,
+			Kind: [ReflectionKind.Namespace, ReflectionKind.Module],
+			Directory: "Module",
+			Template: this.reflectionTemplate,
 		},
 		{
-			kind: [ReflectionKind.TypeAlias],
-			directory: "Type",
-			template: this.reflectionTemplate,
+			Kind: [ReflectionKind.TypeAlias],
+			Directory: "Type",
+			Template: this.reflectionTemplate,
 		},
 		{
-			kind: [ReflectionKind.Function],
-			directory: "Function",
-			template: this.reflectionTemplate,
+			Kind: [ReflectionKind.Function],
+			Directory: "Function",
+			Template: this.reflectionTemplate,
 		},
 		{
-			kind: [ReflectionKind.Variable],
-			directory: "Variable",
-			template: this.reflectionTemplate,
+			Kind: [ReflectionKind.Variable],
+			Directory: "Variable",
+			Template: this.reflectionTemplate,
 		},
 	];
 }
@@ -108,16 +108,16 @@ interface Mapping {
 	/**
 	 * {@link DeclarationReflection.kind} this rule applies to.
 	 */
-	kind: ReflectionKind[];
+	Kind: ReflectionKind[];
 
 	/**
 	 * The name of the directory the output files should be written to.
 	 */
-	directory: string;
+	Directory: string;
 
 	/**
 	 * The name of the template that should be used to render the reflection.
 	 */
 	// rome-ignore lint/suspicious/noExplicitAny:
-	template: RenderTemplate<PageEvent<any>>;
+	Template: RenderTemplate<PageEvent<any>>;
 }
