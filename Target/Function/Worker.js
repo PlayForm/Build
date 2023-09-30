@@ -1,1 +1,1 @@
-var r={fetch:async(e,n)=>{const t=new URL(e.url);return t.pathname.startsWith("/functions/")?new Response(t.pathname):n.ASSETS.fetch(e)}};export{r as default};
+var r={fetch:async(n,t)=>{const e=new URL(n.url);return e.pathname.startsWith("/functions/")?new Response(e.pathname):t.ASSETS.fetch(n)}};export{r as default};
