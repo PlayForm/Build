@@ -1,6 +1,7 @@
 {
 	"compilerOptions": {
-		"outDir": "Target"
+		"outDir": "Target",
+		"types": ["@cloudflare/workers-types/experimental"]
 	},
 	"extends": "./Source/Notation/TypeScript",
 	"include": ["Source"]
