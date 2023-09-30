@@ -73,7 +73,7 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 			--theme TypeScriptESBuild \
 			--entryPointStrategy expand \
 			--mergeModulesRenameDefaults \
-			--mergeModulesMergeMode module \
+			--mergeModulesMergeMode module-category \
 			--entryPoints ${Object.values(Configuration.entryPoints).join(
 				" --entryPoints "
 			)}`
