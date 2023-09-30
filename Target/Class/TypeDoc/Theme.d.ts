@@ -22,14 +22,14 @@ interface Mapping {
     /**
      * {@link DeclarationReflection.kind} this rule applies to.
      */
-    kind: ReflectionKind[];
+    Kind: ReflectionKind[];
     /**
      * The name of the directory the output files should be written to.
      */
-    directory: string;
+    Directory: string;
     /**
      * The name of the template that should be used to render the reflection.
      */
-    template: RenderTemplate<PageEvent<any>>;
+    Template: RenderTemplate<PageEvent<any>>;
 }
 export {};
