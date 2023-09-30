@@ -43,10 +43,10 @@ export default class
 		return URLs;
 	}
 
-	_Mapping = (Reflection: DeclarationReflection) =>
+	_Mapping = (...[Reflection]: Parameters<Type["_Mapping"]>) =>
 		this.Mapping.find((Mapping) => Reflection.kindOf(Mapping.Kind));
 
-	Mapping: Mapping[] = [
+	Mapping = [
 		{
 			Kind: [ReflectionKind.Class],
 			Directory: "Class",
@@ -91,33 +91,8 @@ import type Type from "../../Interface/TypeDoc/Theme.js";
 import {
 	DeclarationReflection,
 	DefaultTheme,
-	PageEvent,
 	ReflectionKind,
 	UrlMapping,
-	type RenderTemplate,
 } from "typedoc";
 
 export const { default: _Context } = await import("./Context.js");
-
-/**
- * Defines a mapping of a {@link Models.Kind} to a template file.
- *
- * Used by {@link DefaultTheme} to map reflections to output files.
- */
-interface Mapping {
-	/**
-	 * {@link DeclarationReflection.kind} this rule applies to.
-	 */
-	Kind: ReflectionKind[];
-
-	/**
-	 * The name of the directory the output files should be written to.
-	 */
-	Directory: string;
-
-	/**
-	 * The name of the template that should be used to render the reflection.
-	 */
-	// rome-ignore lint/suspicious/noExplicitAny:
-	Template: RenderTemplate<PageEvent<any>>;
-}

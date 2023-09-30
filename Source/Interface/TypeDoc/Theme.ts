@@ -11,8 +11,13 @@ export default interface Type {
 		URLs: UrlMapping<any>[]
 		// rome-ignore lint/suspicious/noExplicitAny:
 	) => UrlMapping<any>[];
+
+	_Mapping: (Reflection: DeclarationReflection) => Mapping;
+
+	Mapping: Mapping[];
 }
 
+import type Mapping from "../Mapping.js";
 import type Context from "./Context.js";
 
 import type {
