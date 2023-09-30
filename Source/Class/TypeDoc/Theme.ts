@@ -11,9 +11,9 @@ export default class
 	): Context => new _Context(this, Event, this.application.options);
 
 	override buildUrls(...[Reflection, URLs]: Parameters<Type["buildUrls"]>) {
-		const { Directory, Template } = this._Mapping(Reflection) ?? {};
+		const { Directory } = this._Mapping(Reflection) ?? {};
 
-		if (Directory && Template) {
+		if (Directory) {
 			if (
 				!Reflection.url ||
 				!DefaultTheme.URL_PREFIX.test(Reflection.url)
@@ -22,7 +22,10 @@ export default class
 					Directory,
 					`${DefaultTheme.getUrl(Reflection)}.html`,
 				].join("/");
-				URLs.push(new UrlMapping(URL, Reflection, Template));
+
+				URLs.push(
+					new UrlMapping(URL, Reflection, this.reflectionTemplate)
+				);
 
 				Reflection.url = URL;
 				Reflection.hasOwnDocument = true;
@@ -43,44 +46,37 @@ export default class
 		return URLs;
 	}
 
-	_Mapping = (...[Reflection]: Parameters<Type["_Mapping"]>) =>
-		this.Mapping.find((Mapping) => Reflection.kindOf(Mapping.Kind));
+	_Mapping = (...[{ kindOf }]: Parameters<Type["_Mapping"]>) =>
+		this.Mapping.find(({ Kind }) => kindOf(Kind));
 
 	Mapping: Mapping[] = [
 		{
 			Kind: [ReflectionKind.Class],
 			Directory: "Class",
-			Template: this.reflectionTemplate,
 		},
 		{
 			Kind: [ReflectionKind.Interface],
 			Directory: "Interface",
-			Template: this.reflectionTemplate,
 		},
 		{
 			Kind: [ReflectionKind.Enum],
 			Directory: "Enum",
-			Template: this.reflectionTemplate,
 		},
 		{
 			Kind: [ReflectionKind.Namespace, ReflectionKind.Module],
 			Directory: "Module",
-			Template: this.reflectionTemplate,
 		},
 		{
 			Kind: [ReflectionKind.TypeAlias],
 			Directory: "Type",
-			Template: this.reflectionTemplate,
 		},
 		{
 			Kind: [ReflectionKind.Function],
 			Directory: "Function",
-			Template: this.reflectionTemplate,
 		},
 		{
 			Kind: [ReflectionKind.Variable],
 			Directory: "Variable",
-			Template: this.reflectionTemplate,
 		},
 	];
 }
