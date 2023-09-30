@@ -1,10 +1,11 @@
-export const { DefaultTheme } = await import("typedoc");
-
 /**
  * @module TypeDoc
  *
  */
-export default class extends DefaultTheme implements Type {
+export default class
+	extends (await import("typedoc")).DefaultTheme
+	implements Type
+{
 	override getRenderContext = (
 		...[Event]: Parameters<Type["getRenderContext"]>
 	): Context => new _Context(this, Event, this.application.options);
@@ -21,7 +22,6 @@ export default class extends DefaultTheme implements Type {
 					Directory,
 					`${DefaultTheme.getUrl(Reflection)}.html`,
 				].join("/");
-
 				URLs.push(
 					new UrlMapping(URL, Reflection, this.reflectionTemplate)
 				);
@@ -36,7 +36,6 @@ export default class extends DefaultTheme implements Type {
 				} else {
 					DefaultTheme.applyAnchorUrl(Child, Reflection);
 				}
-
 				return true;
 			});
 		} else if (Reflection.parent) {
@@ -46,8 +45,8 @@ export default class extends DefaultTheme implements Type {
 		return URLs;
 	}
 
-	_Mapping = (...[{ kindOf }]: Parameters<Type["_Mapping"]>) =>
-		this.Mapping.find(({ Kind }) => kindOf(Kind));
+	_Mapping = (...[Reflection]: Parameters<Type["_Mapping"]>) =>
+		this.Mapping.find((Mapping) => Reflection.kindOf(Mapping.Kind));
 
 	Mapping: Mapping[] = [
 		{
@@ -85,6 +84,11 @@ import type Mapping from "../../Interface/Mapping.js";
 import type Context from "../../Interface/TypeDoc/Context.js";
 import type Type from "../../Interface/TypeDoc/Theme.js";
 
-import { DeclarationReflection, ReflectionKind, UrlMapping } from "typedoc";
+import {
+	DeclarationReflection,
+	DefaultTheme,
+	ReflectionKind,
+	UrlMapping,
+} from "typedoc";
 
 export const { default: _Context } = await import("./Context.js");
