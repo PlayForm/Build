@@ -69,6 +69,8 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 			--plugin typedoc-plugin-mdn-links \
 			--plugin typedoc-plugin-zod \
 			--plugin typedoc-plugin-merge-modules \
+			--plugin @mxssfd/typedoc-theme \
+			--theme my-theme \
 			--entryPointStrategy expand \
 			--mergeModulesRenameDefaults \
 			--mergeModulesMergeMode module \
