@@ -1,6 +1,7 @@
 # [TypeScriptESBuild] 🌀
 
-Builds all your TypeScript files into JavaScript.
+Builds all your TypeScript files into JavaScript and generates documentation for
+it using [TypeDoc][typedoc].
 
 ## Installation
 
@@ -54,5 +55,6 @@ See an example of a configuration file in [ESBuild.ts](Source/Object/ESBuild.ts)
 }
 ```
 
-[TypeScriptESBuild]: https://npmjs.org/typescript-esbuild
 [esbuild]: https://npmjs.org/esbuild
+[typedoc]: https://npmjs.org/typedoc
+[TypeScriptESBuild]: https://npmjs.org/typescript-esbuild
