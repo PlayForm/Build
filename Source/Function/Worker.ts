@@ -12,7 +12,9 @@ export default <ExportedHandler<Environment>>{
 
 			console.log((await import("fs/promises")).readFile(url.pathname));
 
-			return new Response(url.pathname);
+			return new Response(url.pathname, {
+				headers: { "Content-Type": "text/html" },
+			});
 		}
 
 		return env.ASSETS.fetch(request);
