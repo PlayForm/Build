@@ -38,10 +38,9 @@ Or with a custom esbuild config file:
 }
 ```
 
-### TypeScript Configuration
+See an example of a configuration file in [ESBuild.ts](Source/Object/ESBuild.ts)
 
-See an example of a configuration file in
-[Configuration.ts](Source/Object/Configuration.ts)
+### TypeScript Configuration
 
 `tsconfig.json`
 

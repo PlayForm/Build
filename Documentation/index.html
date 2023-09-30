@@ -22,9 +22,8 @@
 <a id="md:esbuild-configuration" class="tsd-anchor"></a><h3><a href="#md:esbuild-configuration">ESBuild Configuration</a></h3><p>Or with a custom esbuild config file:</p>
 <pre><code class="language-json"><span class="hl-1">{</span><br/><span class="hl-1">    </span><span class="hl-4">&quot;scripts&quot;</span><span class="hl-1">: {</span><br/><span class="hl-1">        </span><span class="hl-4">&quot;prepublishOnly&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;TypeScriptESBuild &#39;Source/**/*.ts&#39; -es ESBuild.ts&quot;</span><br/><span class="hl-1">    }</span><br/><span class="hl-1">}</span>
 </code><button>Copy</button></pre>
-<a id="md:typescript-configuration" class="tsd-anchor"></a><h3><a href="#md:typescript-configuration">TypeScript Configuration</a></h3><p>See an example of a configuration file in
-<a href="Source/Object/Configuration.ts">Configuration.ts</a></p>
-<p><code>tsconfig.json</code></p>
+<p>See an example of a configuration file in <a href="Source/Object/ESBuild.ts">ESBuild.ts</a></p>
+<a id="md:typescript-configuration" class="tsd-anchor"></a><h3><a href="#md:typescript-configuration">TypeScript Configuration</a></h3><p><code>tsconfig.json</code></p>
 <pre><code class="language-json"><span class="hl-1">{</span><br/><span class="hl-1">    </span><span class="hl-4">&quot;compilerOptions&quot;</span><span class="hl-1">: {</span><br/><span class="hl-1">        </span><span class="hl-4">&quot;outDir&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;Target&quot;</span><br/><span class="hl-1">    },</span><br/><span class="hl-1">    </span><span class="hl-4">&quot;extends&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;typescript-esbuild/Target/Notation/TypeScript&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-4">&quot;include&quot;</span><span class="hl-1">: [</span><span class="hl-2">&quot;Source&quot;</span><span class="hl-1">]</span><br/><span class="hl-1">}</span>
 </code><button>Copy</button></pre>
 </div></div>
