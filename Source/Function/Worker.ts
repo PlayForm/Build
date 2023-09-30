@@ -7,11 +7,13 @@ export default <ExportedHandler<Environment>>{
 		const url = new URL(request.url);
 
 		if (url.pathname.startsWith("/functions/")) {
-			const File = await import(url.pathname);
+			return await env.ASSETS.fetch(request);
 
-			console.log(process.cwd());
-
-			console.log(await (await import("fs/promises")).readFile(File));
+			// console.log(
+			// 	readFile(url.pathname, {
+			// 		encoding: "utf-8",
+			// 	})
+			// );
 
 			return new Response(url.pathname, {
 				headers: { "Content-Type": "text/html" },

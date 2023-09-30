@@ -1,1 +1,1 @@
-var o={fetch:async(t,n)=>{const e=new URL(t.url);if(e.pathname.startsWith("/functions/")){const a=await import(e.pathname);return console.log(process.cwd()),console.log(await(await import("fs/promises")).readFile(a)),new Response(e.pathname,{headers:{"Content-Type":"text/html"}})}return n.ASSETS.fetch(t)}};export{o as default};
+var r={fetch:async(e,t)=>{const n=new URL(e.url);return n.pathname.startsWith("/functions/")?(console.log(await t.ASSETS.fetch(e)),new Response(n.pathname,{headers:{"Content-Type":"text/html"}})):t.ASSETS.fetch(e)}};export{r as default};
