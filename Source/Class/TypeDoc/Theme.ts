@@ -10,33 +10,29 @@ export default class
 		...[Event]: Parameters<Type["getRenderContext"]>
 	): Context => new _Context(this, Event, this.application.options);
 
-	override buildUrls(
-		Reflection: DeclarationReflection,
-		// rome-ignore lint/suspicious/noExplicitAny:
-		URLs: UrlMapping<any>[]
-		// rome-ignore lint/suspicious/noExplicitAny:
-	): UrlMapping<any>[] {
-		const mapping = this._getMapping(Reflection);
-		if (mapping) {
+	override buildUrls(...[]): UrlMapping<any>[] {
+		const Mapping = this._getMapping(Reflection);
+
+		if (Mapping) {
 			if (
 				!Reflection.url ||
 				!DefaultTheme.URL_PREFIX.test(Reflection.url)
 			) {
-				const url = [
-					mapping.directory,
+				const URL = [
+					Mapping.directory,
 					`${DefaultTheme.getUrl(Reflection)}.html`,
 				].join("/");
-				URLs.push(new UrlMapping(url, Reflection, mapping.template));
+				URLs.push(new UrlMapping(URL, Reflection, Mapping.template));
 
-				Reflection.url = url;
+				Reflection.url = URL;
 				Reflection.hasOwnDocument = true;
 			}
 
-			Reflection.traverse((child) => {
-				if (child instanceof DeclarationReflection) {
-					this.buildUrls(child, URLs);
+			Reflection.traverse((Child) => {
+				if (Child instanceof DeclarationReflection) {
+					this.buildUrls(Child, URLs);
 				} else {
-					DefaultTheme.applyAnchorUrl(child, Reflection);
+					DefaultTheme.applyAnchorUrl(Child, Reflection);
 				}
 				return true;
 			});
