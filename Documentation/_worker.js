@@ -3,10 +3,7 @@ export default {
 		const url = new URL(request.url);
 
 		if (url.pathname.startsWith("/functions/")) {
-			// TODO: Add your custom /functions/* logic here.
-			console.log(JSON.stringify(request));
-			console.log(env);
-			return new Response("Ok");
+			return new Response(JSON.stringify(request));
 		}
 
 		// Otherwise, serve the static assets.
