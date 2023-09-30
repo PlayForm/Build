@@ -24,7 +24,7 @@ export default class
 			) {
 				const url = [
 					mapping.directory,
-					DefaultTheme.getUrl(Reflection) + ".html",
+					`${DefaultTheme.getUrl(Reflection)}.html`,
 				].join("/");
 				URLs.push(new UrlMapping(url, Reflection, mapping.template));
 
@@ -47,7 +47,8 @@ export default class
 		return URLs;
 	}
 
-	_getMapping = () => {};
+	_getMapping = (Reflection: DeclarationReflection) =>
+		this.Mapping.find((Mapping) => Reflection.kindOf(Mapping.kind));
 
 	Mapping: Mapping[] = [
 		{
