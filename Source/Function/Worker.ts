@@ -13,9 +13,3 @@ export default <ExportedHandler<Environment>>{
 		return env.ASSETS.fetch(request);
 	},
 };
-
-import type {
-	ExportedHandler,
-	Fetcher,
-	Request,
-} from "@cloudflare/workers-types";
