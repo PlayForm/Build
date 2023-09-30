@@ -1,5 +1,5 @@
 /**
- * @module Context
+ * @module TypeDoc
  *
  */
 export default interface Type extends DefaultThemeRenderContext {
