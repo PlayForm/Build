@@ -21,12 +21,14 @@ npm install -D -E typescript-esbuild
 		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'"
 	},
 	"devDependencies": {
-		"typescript-esbuild": "0.2.3"
+		"typescript-esbuild": "0.2.4"
 	}
 }
 ```
 
-#### or with a custom esbuild config file:
+### ESBuild Configuration
+
+Or with a custom esbuild config file:
 
 ```json
 {
@@ -36,7 +38,10 @@ npm install -D -E typescript-esbuild
 }
 ```
 
-#### See an example of a configuration file in [Configuration.ts](Source/Object/Configuration.ts)
+### TypeScript Configuration
+
+See an example of a configuration file in
+[Configuration.ts](Source/Object/Configuration.ts)
 
 `tsconfig.json`
 
