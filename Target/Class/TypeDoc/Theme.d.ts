@@ -5,7 +5,7 @@ declare const default_base: typeof DefaultTheme;
  */
 export default class extends default_base implements Type {
     getRenderContext: (Event: PageEvent<import("typedoc").Reflection>) => Context;
-    buildUrls(Reflection: DeclarationReflection, URLs: UrlMapping<any>[]): UrlMapping<any>[];
+    buildUrls(...[Reflection, URLs]: Parameters<Type["buildURLs"]>): UrlMapping<any>[];
     _getMapping: (Reflection: DeclarationReflection) => Mapping | undefined;
     Mapping: Mapping[];
 }

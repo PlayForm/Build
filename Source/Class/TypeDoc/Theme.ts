@@ -11,7 +11,7 @@ export default class
 	): Context => new _Context(this, Event, this.application.options);
 
 	override buildUrls(...[Reflection, URLs]: Parameters<Type["buildURLs"]>) {
-		const Mapping = this._getMapping(Reflection);
+		const Mapping = this._Mapping(Reflection);
 
 		if (Mapping) {
 			if (
@@ -43,7 +43,7 @@ export default class
 		return URLs;
 	}
 
-	_getMapping = (Reflection: DeclarationReflection) =>
+	_Mapping = (Reflection: DeclarationReflection) =>
 		this.Mapping.find((Mapping) => Reflection.kindOf(Mapping.kind));
 
 	Mapping: Mapping[] = [

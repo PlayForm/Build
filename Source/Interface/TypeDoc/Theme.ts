@@ -5,7 +5,7 @@
 export default interface Type {
 	getRenderContext: (Event: PageEvent<Reflection>) => Context;
 
-	buildURLs: (
+	buildUrls: (
 		Reflection: DeclarationReflection,
 		// rome-ignore lint/suspicious/noExplicitAny:
 		URLs: UrlMapping<any>[]
