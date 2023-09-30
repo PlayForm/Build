@@ -19,6 +19,6 @@ export default class
 	init() {}
 }
 
-import type { DefaultTheme, Options, PageEvent, Reflection } from "typedoc";
 import type Type from "../../Interface/TypeDoc/Context.js";
 
+import type { DefaultTheme, Options, PageEvent, Reflection } from "typedoc";
