@@ -12,7 +12,7 @@ export default interface Type {
 		// rome-ignore lint/suspicious/noExplicitAny:
 	) => UrlMapping<any>[];
 
-	_Mapping: (Reflection: DeclarationReflection) => Mapping;
+	_Mapping: (Reflection: DeclarationReflection) => Mapping | undefined;
 
 	Mapping: Mapping[];
 }

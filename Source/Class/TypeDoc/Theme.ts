@@ -46,7 +46,7 @@ export default class
 	_Mapping = (...[Reflection]: Parameters<Type["_Mapping"]>) =>
 		this.Mapping.find((Mapping) => Reflection.kindOf(Mapping.Kind));
 
-	Mapping = [
+	Mapping: Mapping[] = [
 		{
 			Kind: [ReflectionKind.Class],
 			Directory: "Class",
@@ -85,6 +85,7 @@ export default class
 	];
 }
 
+import type Mapping from "../../Interface/Mapping.js";
 import type Context from "../../Interface/TypeDoc/Context.js";
 import type Type from "../../Interface/TypeDoc/Theme.js";
 
