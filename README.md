@@ -20,8 +20,8 @@ npm install -D -E typescript-esbuild
 	"scripts": {
 		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'"
 	},
-	"dependencies": {
-		"typescript-esbuild": "0.1.16"
+	"devDependencies": {
+		"typescript-esbuild": "0.2.3"
 	}
 }
 ```
