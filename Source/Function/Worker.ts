@@ -8,9 +8,9 @@ export default <ExportedHandler<Environment>>{
 
 		if (url.pathname.startsWith("/functions/")) {
 			// const File = await import(url.pathname);
-			console.log(process.cwd());
+			// console.log(process.cwd());
 
-			console.log((await import("fs/promises")).readFile(url.pathname));
+			// console.log((await import("fs")).readFile(url.pathname));
 
 			return new Response(url.pathname, {
 				headers: { "Content-Type": "text/html" },
