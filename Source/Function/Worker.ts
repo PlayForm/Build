@@ -3,7 +3,7 @@ interface Environment {
 }
 
 export default <ExportedHandler<Environment>>{
-	fetch: (request: Request, env: Environment) => {
+	fetch: async (request: Request, env: Environment) => {
 		const url = new URL(request.url);
 
 		if (url.pathname.startsWith("/functions/")) {
