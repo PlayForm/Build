@@ -47,6 +47,7 @@
 		"typescript": "5.2.2"
 	},
 	"devDependencies": {
+		"@cloudflare/workers-types": "4.20230922.0",
 		"@types/node": "20.7.2",
 		"ts-node": "10.9.1"
 	},
