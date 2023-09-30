@@ -10,7 +10,7 @@ export default class
 		...[Event]: Parameters<Type["getRenderContext"]>
 	): Context => new _Context(this, Event, this.application.options);
 
-	override buildUrls(...[]): UrlMapping<any>[] {
+	override buildUrls(...[Reflection, URLs]: Parameters<Type["buildURLs"]>) {
 		const Mapping = this._getMapping(Reflection);
 
 		if (Mapping) {
