@@ -16,37 +16,37 @@ export default class
 	// override mappings = [
 	// 	{
 	// 		kind: [ReflectionKind.Class],
-	// 		directory: "classes",
+	// 		directory: "Class",
 	// 		template: this.reflectionTemplate,
 	// 	},
 	// 	{
 	// 		kind: [ReflectionKind.Interface],
-	// 		directory: "interfaces",
+	// 		directory: "Interface",
 	// 		template: this.reflectionTemplate,
 	// 	},
 	// 	{
 	// 		kind: [ReflectionKind.Enum],
-	// 		directory: "enums",
+	// 		directory: "Enum",
 	// 		template: this.reflectionTemplate,
 	// 	},
 	// 	{
 	// 		kind: [ReflectionKind.Namespace, ReflectionKind.Module],
-	// 		directory: "modules",
+	// 		directory: "Module",
 	// 		template: this.reflectionTemplate,
 	// 	},
 	// 	{
 	// 		kind: [ReflectionKind.TypeAlias],
-	// 		directory: "types",
+	// 		directory: "Type",
 	// 		template: this.reflectionTemplate,
 	// 	},
 	// 	{
 	// 		kind: [ReflectionKind.Function],
-	// 		directory: "functions",
+	// 		directory: "Function",
 	// 		template: this.reflectionTemplate,
 	// 	},
 	// 	{
 	// 		kind: [ReflectionKind.Variable],
-	// 		directory: "variables",
+	// 		directory: "Variable",
 	// 		template: this.reflectionTemplate,
 	// 	},
 	// ];
