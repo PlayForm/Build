@@ -1,8 +1,6 @@
 declare const default_base: typeof DefaultTheme;
 /**
  * @module TypeDoc
- * @name Theme
- * @alias Theme
  *
  */
 export default class extends default_base implements Type {
