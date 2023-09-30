@@ -69,8 +69,8 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 			--plugin typedoc-plugin-mdn-links \
 			--plugin typedoc-plugin-zod \
 			--plugin typedoc-plugin-merge-modules \
-			--plugin @mxssfd/typedoc-theme \
-			--theme my-theme \
+			--plugin ${resolve(`${Current}/../../Target/Function/TypeDoc.js`)} \
+			--theme TypeScriptESBuild \
 			--entryPointStrategy expand \
 			--mergeModulesRenameDefaults \
 			--mergeModulesMergeMode module \

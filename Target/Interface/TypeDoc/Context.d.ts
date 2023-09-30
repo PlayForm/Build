@@ -1,5 +1,4 @@
-import type { DefaultTheme, Options, PageEvent, Reflection } from "typedoc";
-export default interface Type {
-    constructor(Theme: DefaultTheme, Page: PageEvent<Reflection>, Option: Options): Type;
+export default interface Type extends DefaultThemeRenderContext {
     init: () => void;
 }
+import type { DefaultThemeRenderContext } from "typedoc";

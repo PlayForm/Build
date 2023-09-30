@@ -4,9 +4,9 @@ declare const default_base: typeof import("typedoc").DefaultThemeRenderContext;
  *
  */
 export default class extends default_base implements Type {
-    constructor(...[Theme, Page, Option]: Parameters<Type["constructor"]>);
+    constructor(Theme: DefaultTheme, Page: PageEvent<Reflection>, Option: Options);
     init(): void;
 }
+import type { DefaultTheme, Options, PageEvent, Reflection } from "typedoc";
 import type Type from "../../Interface/TypeDoc/Context.js";
-export declare const DefaultTheme: typeof import("typedoc").DefaultTheme;
 export {};

@@ -1,0 +1,1 @@
+class o extends(await import("typedoc")).DefaultTheme{getRenderContext=(...[e])=>new t(this,e,this.application.options)}const{default:t}=await import("./Context.js");export{t as _Context,o as default};
