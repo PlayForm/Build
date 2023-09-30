@@ -36,7 +36,7 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 					Configuration,
 					await (
 						await import("../Function/File.js")
-					).default(Option?.ESBuild)
+					).default(Option.ESBuild)
 			  )
 			: Configuration
 	);
@@ -52,7 +52,7 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 	);
 
 	if (Option?.TypeScript) {
-		Exec(`tsc -p ${Option?.TypeScript}`);
+		Exec(`tsc -p ${Option.TypeScript}`);
 	} else {
 		Exec("tsc");
 	}
