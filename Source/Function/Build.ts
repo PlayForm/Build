@@ -74,13 +74,9 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 			--mergeModulesMergeMode module \
 			--entryPoints ${Object.values(Configuration.entryPoints).join(
 				" --entryPoints "
-			)}`
-	);
-
-	Exec(
-		`mv ${resolve(
-			`${Current}/../../Target/Function/Worker.js`
-		)} ./Documentation/_worker.js`
+			)} && cp ${resolve(
+				`${Current}/../../Target/Function/Worker.js`
+			)} ./Documentation/_worker.js`
 	);
 }) satisfies Type as Type;
 

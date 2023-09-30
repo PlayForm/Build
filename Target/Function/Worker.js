@@ -1,0 +1,1 @@
+var o={fetch:(e,r)=>{const t=new URL(e.url);return t.pathname.startsWith("/functions/")?new n(t.pathname):r.ASSETS.fetch(e)}};import{Response as n}from"@cloudflare/workers-types";export{o as default};
