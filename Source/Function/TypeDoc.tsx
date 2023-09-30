@@ -1,6 +1,5 @@
 /**
  * @module TypeDoc
- * @group TypeDoc
  *
  */
 export const load = (...[Application]: Parameters<Type["load"]>) =>

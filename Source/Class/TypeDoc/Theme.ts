@@ -1,6 +1,5 @@
 /**
- * @module Theme
- * @group TypeDoc
+ * @module TypeDoc
  *
  */
 export default class

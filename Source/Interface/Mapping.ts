@@ -3,8 +3,7 @@
  *
  * Used by {@link DefaultTheme} to map reflections to output files.
  *
- * @module Mapping
- * @group TypeDoc
+ * @module TypeDoc
  *
  */
 export default interface Type {

@@ -1,6 +1,5 @@
 /**
- * @module Context
- * @group TypeDoc
+ * @module TypeDoc
  *
  */
 export default class

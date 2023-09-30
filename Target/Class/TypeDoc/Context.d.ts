@@ -1,7 +1,6 @@
 declare const default_base: typeof import("typedoc").DefaultThemeRenderContext;
 /**
- * @module Context
- * @group TypeDoc
+ * @module TypeDoc
  *
  */
 export default class extends default_base implements Type {

@@ -1,6 +1,5 @@
 /**
  * @module TypeDoc
- * @group TypeDoc
  *
  */
 export default interface Type {
