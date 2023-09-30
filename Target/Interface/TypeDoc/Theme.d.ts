@@ -5,7 +5,7 @@
 export default interface Type {
     getRenderContext: (Event: PageEvent<Reflection>) => Context;
     buildUrls: (Reflection: DeclarationReflection, URLs: UrlMapping<any>[]) => UrlMapping<any>[];
-    _Mapping: (Reflection: DeclarationReflection) => Mapping;
+    _Mapping: (Reflection: DeclarationReflection) => Mapping | undefined;
     Mapping: Mapping[];
 }
 import type Mapping from "../Mapping.js";

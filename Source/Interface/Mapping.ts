@@ -2,6 +2,9 @@
  * Defines a mapping of a {@link Models.Kind} to a template file.
  *
  * Used by {@link DefaultTheme} to map reflections to output files.
+ *
+ * @module TypeDoc
+ *
  */
 export default interface Type {
 	/**
