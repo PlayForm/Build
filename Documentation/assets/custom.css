@@ -15,7 +15,7 @@ body #tsd-search .field label {
 }
 
 body #tsd-search .field input {
-	z-index: 3;
+	z-index: 2;
 }
 
 body pre,
