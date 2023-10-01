@@ -7,18 +7,7 @@ export default (async (...[File, From]: Parameters<Type>) =>
 		(
 			await (
 				await import("fs/promises")
-			).readFile(
-				`${
-					From
-						? (await import("path")).dirname(
-								(await import("url")).fileURLToPath(
-									From ?? import.meta.url
-								)
-						  )
-						: "."
-				}/${File}`,
-				"utf-8"
-			)
+			).readFile(`${From ?? "."}/${File}`, "utf-8")
 		).toString()
 	)) satisfies Type as Type;
 

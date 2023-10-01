@@ -55,25 +55,35 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 	Exec(`tsc -p ${Option?.TypeScript ?? "tsconfig.json"}`);
 
 	Exec(
-		`typedoc \
-			--commentStyle all \
-			--gitRevision main \
-			--customCss ${resolve(`${Current}/../Sheet/TypeDoc.css`)} \
-			--includeVersion \
-			--out ./Documentation \
-			--plugin typedoc-plugin-remove-references \
-			--plugin typedoc-plugin-rename-defaults \
-			--plugin typedoc-plugin-mdn-links \
-			--plugin typedoc-plugin-zod \
-			--plugin typedoc-plugin-merge-modules \
-			--plugin ${resolve(`${Current}/../../Target/Function/TypeDoc.js`)} \
-			--theme TypeScriptESBuild \
-			--entryPointStrategy expand \
-			--mergeModulesRenameDefaults \
-			--mergeModulesMergeMode module-category \
-			--entryPoints ${Object.values(Configuration.entryPoints).join(
+		[
+			"typedoc",
+			"--commentStyle all",
+			"--gitRevision main",
+			`--customCss ${resolve(`${Current}/../Sheet/TypeDoc.css`)}`,
+			"--includeVersion",
+			"--out ./Documentation",
+			`--plugin ${resolve(
+				`${Current}/../../Target/Function/TypeDoc.js`
+			)}`,
+			"--plugin typedoc-plugin-remove-references",
+			"--plugin typedoc-plugin-rename-defaults",
+			"--plugin typedoc-plugin-mdn-links",
+			"--plugin typedoc-plugin-zod",
+			"--plugin typedoc-plugin-merge-modules",
+			"--plugin typedoc-plugin-keywords",
+			`--keywords ${(
+				await (
+					await import("../Function/JSON.js")
+				).default("package.json", process.cwd())
+			)?.keywords?.join(" --keywords ")}`,
+			"--theme TypeScriptESBuild",
+			"--entryPointStrategy expand",
+			"--mergeModulesRenameDefaults",
+			"--mergeModulesMergeMode module-category",
+			`--entryPoints ${Object.values(Configuration.entryPoints).join(
 				" --entryPoints "
-			)}`
+			)}`,
+		].join(" ")
 	);
 }) satisfies Type as Type;
 

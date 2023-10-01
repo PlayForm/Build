@@ -10,7 +10,12 @@ export default (async (...[Path]: Parameters<Type>) => {
 			(
 				await (
 					await import("./JSON.js")
-				).default("../Notation/TypeScript.json", import.meta.url)
+				).default(
+					"../Notation/TypeScript.json",
+					(await import("path")).dirname(
+						(await import("url")).fileURLToPath(import.meta.url)
+					)
+				)
 			)?.compilerOptions,
 			"."
 		);
