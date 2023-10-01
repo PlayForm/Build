@@ -19,6 +19,9 @@ export default class _Class
 	init() {
 		// rome-ignore lint/suspicious/noExplicitAny:
 		this.defaultLayout = Bind(Layout as any, this);
+
+		// rome-ignore lint/suspicious/noExplicitAny:
+		this.sidebar = Bind(Sidebar as any, this);
 	}
 }
 
@@ -33,4 +36,8 @@ export const Bind =
 
 export const { default: Layout } = await import(
 	"../../Function/TypeDoc/Layout.js"
+);
+
+export const { default: Sidebar } = await import(
+	"../../Function/TypeDoc/Sidebar.js"
 );
