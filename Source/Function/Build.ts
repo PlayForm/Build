@@ -71,15 +71,17 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 			"--plugin typedoc-plugin-zod",
 			"--plugin typedoc-plugin-merge-modules",
 			"--plugin typedoc-plugin-keywords",
-			`--keywords ${(
-				await (
-					await import("../Function/JSON.js")
-				).default("package.json", process.cwd())
-			)?.keywords?.join(" --keywords ")}`,
+			`--keywords ${
+				(
+					await (
+						await import("../Function/JSON.js")
+					).default("package.json", process.cwd())
+				)?.keywords?.join(" --keywords ") ?? " project "
+			}`,
 			"--theme TypeScriptESBuild",
 			"--entryPointStrategy expand",
 			"--mergeModulesRenameDefaults",
-			"--mergeModulesMergeMode module-category",
+			"--mergeModulesMergeMode module",
 			`--entryPoints ${Object.values(Configuration.entryPoints).join(
 				" --entryPoints "
 			)}`,
