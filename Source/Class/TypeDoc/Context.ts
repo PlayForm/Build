@@ -22,6 +22,9 @@ export default class _Class
 
 		// rome-ignore lint/suspicious/noExplicitAny:
 		this.sidebar = Bind(Sidebar as any, this);
+
+		// rome-ignore lint/suspicious/noExplicitAny:
+		this.navigation = Bind(Navigation as any, this);
 	}
 }
 
@@ -40,4 +43,8 @@ export const { default: Layout } = await import(
 
 export const { default: Sidebar } = await import(
 	"../../Function/TypeDoc/Sidebar.js"
+);
+
+export const { default: Navigation } = await import(
+	"../../Function/TypeDoc/Navigation.js"
 );
