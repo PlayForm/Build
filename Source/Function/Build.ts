@@ -28,34 +28,31 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 		}
 	);
 
-	const { metafile } = await (
-		await import("esbuild")
-	).build(
-		Option?.ESBuild
-			? deepmerge(
-					Configuration,
-					await (
-						await import("../Function/File.js")
-					).default(Option.ESBuild)
-			  )
-			: Configuration
-	);
-
 	console.log(
-		metafile
-			? await (
+		await (
+			await import("esbuild")
+		).analyzeMetafile(
+			(
+				await (
 					await import("esbuild")
-			  ).analyzeMetafile(metafile, {
-					verbose: true,
-			  })
-			: {}
+				).build(
+					Option?.ESBuild
+						? deepmerge(
+								Configuration,
+								await (
+									await import("../Function/File.js")
+								).default(Option.ESBuild)
+						  )
+						: Configuration
+				)
+			)?.metafile ?? "",
+			{
+				verbose: true,
+			}
+		)
 	);
 
-	if (Option?.TypeScript) {
-		Exec(`tsc -p ${Option.TypeScript}`);
-	} else {
-		Exec("tsc");
-	}
+	Exec(`tsc -p ${Option?.TypeScript ?? "tsconfig.json"}`);
 
 	Exec(
 		`typedoc \

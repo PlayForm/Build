@@ -17,7 +17,7 @@ export default interface Type {
 	Mapping: Mapping[];
 }
 
-import type Mapping from "../Mapping.js";
+import type Mapping from "./Mapping.js";
 import type Context from "./Context.js";
 
 import type {

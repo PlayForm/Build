@@ -8,6 +8,6 @@ export default interface Type {
     _Mapping: (Reflection: DeclarationReflection) => Mapping | undefined;
     Mapping: Mapping[];
 }
-import type Mapping from "../Mapping.js";
+import type Mapping from "./Mapping.js";
 import type Context from "./Context.js";
 import type { DeclarationReflection, PageEvent, Reflection, UrlMapping } from "typedoc";

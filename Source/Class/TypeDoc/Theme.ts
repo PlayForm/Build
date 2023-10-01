@@ -22,6 +22,7 @@ export default class
 					Directory,
 					`${DefaultTheme.getUrl(Reflection)}.html`,
 				].join("/");
+
 				URLs.push(
 					new UrlMapping(URL, Reflection, this.reflectionTemplate)
 				);
@@ -36,6 +37,7 @@ export default class
 				} else {
 					DefaultTheme.applyAnchorUrl(Child, Reflection);
 				}
+
 				return true;
 			});
 		} else if (Reflection.parent) {
@@ -80,8 +82,8 @@ export default class
 	];
 }
 
-import type Mapping from "../../Interface/Mapping.js";
 import type Context from "../../Interface/TypeDoc/Context.js";
+import type Mapping from "../../Interface/TypeDoc/Mapping.js";
 import type Type from "../../Interface/TypeDoc/Theme.js";
 
 import {
