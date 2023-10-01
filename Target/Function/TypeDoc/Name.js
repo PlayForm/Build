@@ -1,1 +1,0 @@
-var r=(...[e])=>`${e.name}${(e instanceof a||e instanceof t)&&e.packageVersion?` / v${e.packageVersion}`:""}`;const{DeclarationReflection:a,ProjectReflection:t}=await import("typedoc");export{a as DeclarationReflection,t as ProjectReflection,r as default};

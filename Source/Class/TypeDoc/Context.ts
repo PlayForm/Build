@@ -16,35 +16,9 @@ export default class _Class
 		this.init();
 	}
 
-	init() {
-		// rome-ignore lint/suspicious/noExplicitAny:
-		this.defaultLayout = Bind(Layout as any, this);
-
-		// rome-ignore lint/suspicious/noExplicitAny:
-		this.sidebar = Bind(Sidebar as any, this);
-
-		// rome-ignore lint/suspicious/noExplicitAny:
-		this.navigation = Bind(Navigation as any, this);
-	}
+	init() {}
 }
 
 import type Type from "../../Interface/TypeDoc/Context.js";
 
 import type { DefaultTheme, Options, PageEvent, Reflection } from "typedoc";
-
-export const Bind =
-	<F, L extends [], R>(fn: (f: F, ...a: L) => R, first: F) =>
-	(...r: L) =>
-		fn(first, ...r);
-
-export const { default: Layout } = await import(
-	"../../Function/TypeDoc/Layout.js"
-);
-
-export const { default: Sidebar } = await import(
-	"../../Function/TypeDoc/Sidebar.js"
-);
-
-export const { default: Navigation } = await import(
-	"../../Function/TypeDoc/Navigation.js"
-);

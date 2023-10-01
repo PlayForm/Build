@@ -9,8 +9,4 @@ export default class _Class extends _Class_base implements Type {
 }
 import type Type from "../../Interface/TypeDoc/Context.js";
 import type { DefaultTheme, Options, PageEvent, Reflection } from "typedoc";
-export declare const Bind: <F, L extends [], R>(fn: (f: F, ...a: L) => R, first: F) => (...r: L) => R;
-export declare const Layout: import("../../Interface/TypeDoc/Layout.js").default;
-export declare const Sidebar: import("../../Interface/TypeDoc/Sidebar.js").default;
-export declare const Navigation: import("../../Interface/TypeDoc/Navigation.js").default;
 export {};

@@ -31,3 +31,9 @@ body .tsd-page-navigation a {
 	padding: 0.5rem;
 	border-radius: 8px;
 }
+
+.tsd-signature,
+.tsd-signatures .tsd-signature {
+	border-radius: 12px;
+	border-width: 2px;
+}
