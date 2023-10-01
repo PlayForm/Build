@@ -1,1 +1,1 @@
-class n extends(await import("typedoc")).DefaultThemeRenderContext{constructor(e,t,o){super(e,t,o),this.init()}init(){}}export{n as default};
+class n extends(await import("typedoc")).DefaultThemeRenderContext{constructor(t,e,a){super(t,e,a),this.init()}init(){this.defaultLayout=i(s,this)}}const i=(o,t)=>(...e)=>o(t,...e),{default:s}=await import("../../Function/TypeDoc/Layout.js");export{i as Bind,s as Layout,n as default};

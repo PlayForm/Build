@@ -29,7 +29,7 @@
 		"TypeScriptESBuild": "Target/Class/TypeScriptESBuild.js"
 	},
 	"scripts": {
-		"prepublishOnly": "node --no-warnings --loader ts-node/esm Source/Class/TypeScriptESBuild.ts 'Source/**/*.ts'"
+		"prepublishOnly": "node --no-warnings --loader ts-node/esm Source/Class/TypeScriptESBuild.ts 'Source/**/*.ts' 'Source/**/*.tsx'"
 	},
 	"dependencies": {
 		"@types/node": "20.8.0",

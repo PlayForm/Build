@@ -1,0 +1,1 @@
+var o=(...[e])=>{let a="";return(e instanceof r||e instanceof t)&&e.packageVersion&&(a=` - v${e.packageVersion}`),`${e.name}${a}`};const{DeclarationReflection:r,ProjectReflection:t}=await import("typedoc");export{r as DeclarationReflection,t as ProjectReflection,o as default};
