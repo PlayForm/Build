@@ -1,6 +1,7 @@
 :root {
-	--color-background: #000;
-	--color-background-secondary: #000;
+	--dark-color-background: #000;
+	--dark-color-background-secondary: #000;
+	--dark-code-background: #040404;
 	--color-accent: #2463eb;
 }
 

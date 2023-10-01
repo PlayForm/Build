@@ -22,7 +22,7 @@ npm install -D -E typescript-esbuild
 		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'"
 	},
 	"devDependencies": {
-		"typescript-esbuild": "0.2.6"
+		"typescript-esbuild": "0.2.7"
 	}
 }
 ```
