@@ -2,7 +2,7 @@
  * @module TypeDoc
  *
  */
-export default class _Class
+export default class
 	extends (await import("typedoc")).DefaultThemeRenderContext
 	implements Type
 {
