@@ -37,8 +37,8 @@ export default {
 					to: "./Notation/",
 				},
 				{
-					from: "./Source/Sheet/TypeDoc.css",
-					to: "./Sheet/",
+					from: "./Source/Stylesheet/TypeDoc.css",
+					to: "./Stylesheet/",
 				},
 			],
 		}),

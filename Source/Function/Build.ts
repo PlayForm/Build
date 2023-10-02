@@ -59,7 +59,7 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 			"typedoc",
 			"--commentStyle all",
 			"--gitRevision main",
-			`--customCss ${resolve(`${Current}/../Sheet/TypeDoc.css`)}`,
+			`--customCss ${resolve(`${Current}/../Stylesheet/TypeDoc.css`)}`,
 			"--includeVersion",
 			"--out ./Documentation",
 			`--plugin ${resolve(
