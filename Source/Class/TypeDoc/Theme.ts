@@ -6,10 +6,6 @@ export default class
 	extends (await import("typedoc")).DefaultTheme
 	implements Type
 {
-	override getRenderContext = (
-		...[Event]: Parameters<Type["getRenderContext"]>
-	): Context => new _Context(this, Event, this.application.options);
-
 	override buildUrls(...[Reflection, URLs]: Parameters<Type["buildUrls"]>) {
 		const { Directory } = this._Mapping(Reflection) ?? {};
 
@@ -82,7 +78,6 @@ export default class
 	];
 }
 
-import type Context from "../../Interface/TypeDoc/Context.js";
 import type Mapping from "../../Interface/TypeDoc/Mapping.js";
 import type Type from "../../Interface/TypeDoc/Theme.js";
 
@@ -92,5 +87,3 @@ import {
 	ReflectionKind,
 	UrlMapping,
 } from "typedoc";
-
-export const { default: _Context } = await import("./Context.js");

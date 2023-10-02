@@ -3,8 +3,6 @@
  *
  */
 export default interface Type {
-	getRenderContext: (Event: PageEvent<Reflection>) => Context;
-
 	buildUrls: (
 		Reflection: DeclarationReflection,
 		// rome-ignore lint/suspicious/noExplicitAny:
@@ -18,11 +16,5 @@ export default interface Type {
 }
 
 import type Mapping from "./Mapping.js";
-import type Context from "./Context.js";
 
-import type {
-	DeclarationReflection,
-	PageEvent,
-	Reflection,
-	UrlMapping,
-} from "typedoc";
+import type { DeclarationReflection, UrlMapping } from "typedoc";
