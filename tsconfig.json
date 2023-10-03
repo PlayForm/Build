@@ -1,9 +1,6 @@
 {
 	"compilerOptions": {
-		"outDir": "Target",
-		"jsx": "react",
-		"jsxFactory": "JSX.createElement",
-		"jsxFragmentFactory": "JSX.Fragment"
+		"outDir": "Target"
 	},
 	"extends": "./Source/Notation/TypeScript",
 	"include": ["Source"]
