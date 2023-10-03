@@ -1,8 +1,8 @@
 /**
- * @module TypeDoc
+ * @module Load
  *
  */
 export default interface Type {
-    load: (Application: Application) => void;
+    (Application: Application): void;
 }
 import type { Application } from "typedoc";

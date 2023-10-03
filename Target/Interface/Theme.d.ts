@@ -1,5 +1,5 @@
 /**
- * @module TypeDoc
+ * @module Theme
  *
  */
 export default interface Type {

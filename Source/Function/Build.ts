@@ -59,23 +59,23 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 			"typedoc",
 			"--commentStyle all",
 			"--gitRevision main",
+			`--customCss ${resolve(`${Current}/../Stylesheet/Theme.css`)}`,
 			"--includeVersion",
 			"--out ./Documentation",
-			"--plugin typedoc-plugin-remove-references",
+			`--plugin ${resolve(`${Current}/../../Target/Function/Load.js`)}`,
 			"--plugin typedoc-plugin-rename-defaults",
 			"--plugin typedoc-plugin-mdn-links",
 			"--plugin typedoc-plugin-zod",
 			"--plugin typedoc-plugin-merge-modules",
 			"--plugin typedoc-plugin-keywords",
-			"--plugin typedoc-plugin-cloudflare",
-			"--theme TypeDocCloudflare",
 			`--keywords ${
 				(
 					await (
 						await import("../Function/JSON.js")
 					).default("package.json", process.cwd())
-				)?.keywords?.join(" --keywords ") ?? " project "
+				)?.keywords?.join(" --keywords ") ?? " typescript-esbuild "
 			}`,
+			"--theme TypeScriptESBuild",
 			"--entryPointStrategy expand",
 			"--mergeModulesRenameDefaults",
 			"--mergeModulesMergeMode module",
@@ -92,4 +92,10 @@ export const { default: Exec } = await import("../Function/Exec.js");
 
 export const { deepmerge } = await import("deepmerge-ts");
 
+export const { resolve } = await import("path");
+
 export const Pipe: string[] = [];
+
+export const Current = (await import("url")).fileURLToPath(
+	(await import("path")).dirname(import.meta.url)
+);

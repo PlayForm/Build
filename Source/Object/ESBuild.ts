@@ -37,7 +37,7 @@ export default {
 					to: "./Notation/",
 				},
 				{
-					from: "./Source/Stylesheet/TypeDoc.css",
+					from: "./Source/Stylesheet/Theme.css",
 					to: "./Stylesheet/",
 				},
 			],
