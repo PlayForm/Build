@@ -3,6 +3,7 @@
  *
  * This module defines the `Load` function, which is used by TypeDoc to load a plugin
  * into the TypeDoc instance.
+ *
  */
 export default interface Type {
     /**
