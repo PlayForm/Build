@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta name="keywords" content="javascript, typescript, esbuild, typedoc"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>typescript-esbuild - v0.2.12</title><meta name="description" content="Documentation for typescript-esbuild"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><link rel="stylesheet" href="assets/custom.css"/><script defer src="assets/main.js"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta name="keywords" content="javascript, typescript, esbuild, typedoc"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>typescript-esbuild - v0.2.13</title><meta name="description" content="Documentation for typescript-esbuild"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><link rel="stylesheet" href="assets/custom.css"/><script defer src="assets/main.js"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
 <div class="tsd-toolbar-contents container">
 <div class="table-cell" id="tsd-search" data-base=".">
 <div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div>
@@ -6,19 +6,19 @@
 <div id="tsd-toolbar-links"></div></div>
 <ul class="results">
 <li class="state loading">Preparing search index...</li>
-<li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">typescript-esbuild - v0.2.12</a></div>
+<li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">typescript-esbuild - v0.2.13</a></div>
 <div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="#icon-menu"></use></svg></a></div></div></header>
 <div class="container container-main">
 <div class="col-content">
 <div class="tsd-page-title">
-<h2>typescript-esbuild - v0.2.12</h2></div>
+<h2>typescript-esbuild - v0.2.13</h2></div>
 <div class="tsd-panel tsd-typography"><a id="md:typescriptesbuild-🌀" class="tsd-anchor"></a><h1><a href="#md:typescriptesbuild-🌀"><a href="https://npmjs.org/typescript-esbuild">TypeScriptESBuild</a> 🌀</a></h1><p>Builds all your TypeScript files into JavaScript and generates documentation for
 it using <a href="https://npmjs.org/typedoc">TypeDoc</a>.</p>
 <a id="md:installation" class="tsd-anchor"></a><h2><a href="#md:installation">Installation</a></h2><p>Add configuration and setup scripts:</p>
 <pre><code class="language-sh"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">install</span><span class="hl-1"> </span><span class="hl-3">-D</span><span class="hl-1"> </span><span class="hl-3">-E</span><span class="hl-1"> </span><span class="hl-2">typescript-esbuild</span>
 </code><button>Copy</button></pre>
 <a id="md:usage" class="tsd-anchor"></a><h2><a href="#md:usage">Usage</a></h2><p><code>package.json</code></p>
-<pre><code class="language-json"><span class="hl-1">{</span><br/><span class="hl-1">    </span><span class="hl-4">&quot;name&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;package&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-4">&quot;scripts&quot;</span><span class="hl-1">: {</span><br/><span class="hl-1">        </span><span class="hl-4">&quot;prepublishOnly&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;TypeScriptESBuild &#39;Source/**/*.ts&#39;&quot;</span><br/><span class="hl-1">    },</span><br/><span class="hl-1">    </span><span class="hl-4">&quot;devDependencies&quot;</span><span class="hl-1">: {</span><br/><span class="hl-1">        </span><span class="hl-4">&quot;typescript-esbuild&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;0.2.12&quot;</span><br/><span class="hl-1">    }</span><br/><span class="hl-1">}</span>
+<pre><code class="language-json"><span class="hl-1">{</span><br/><span class="hl-1">    </span><span class="hl-4">&quot;name&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;package&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-4">&quot;scripts&quot;</span><span class="hl-1">: {</span><br/><span class="hl-1">        </span><span class="hl-4">&quot;prepublishOnly&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;TypeScriptESBuild &#39;Source/**/*.ts&#39;&quot;</span><br/><span class="hl-1">    },</span><br/><span class="hl-1">    </span><span class="hl-4">&quot;devDependencies&quot;</span><span class="hl-1">: {</span><br/><span class="hl-1">        </span><span class="hl-4">&quot;typescript-esbuild&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;0.2.13&quot;</span><br/><span class="hl-1">    }</span><br/><span class="hl-1">}</span>
 </code><button>Copy</button></pre>
 <a id="md:esbuild-configuration" class="tsd-anchor"></a><h3><a href="#md:esbuild-configuration">ESBuild Configuration</a></h3><p>Or with a custom esbuild config file:</p>
 <pre><code class="language-json"><span class="hl-1">{</span><br/><span class="hl-1">    </span><span class="hl-4">&quot;scripts&quot;</span><span class="hl-1">: {</span><br/><span class="hl-1">        </span><span class="hl-4">&quot;prepublishOnly&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;TypeScriptESBuild &#39;Source/**/*.ts&#39; -es ESBuild.ts&quot;</span><br/><span class="hl-1">    }</span><br/><span class="hl-1">}</span>
@@ -59,7 +59,7 @@ it using <a href="https://npmjs.org/typedoc">TypeDoc</a>.</p>
 <li><a href="#md:esbuild-configuration"><span>ESBuild <wbr/>Configuration</span></a></li>
 <li><a href="#md:typescript-configuration"><span>Type<wbr/>Script <wbr/>Configuration</span></a></li></ul></li></ul></li></ul></li></ul></div></details></div>
 <div class="site-menu">
-<nav class="tsd-navigation"><a href="index.html" class="current"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1"></use></svg><span>typescript-esbuild - v0.2.12</span></a>
+<nav class="tsd-navigation"><a href="index.html" class="current"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1"></use></svg><span>typescript-esbuild - v0.2.13</span></a>
 <ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base=".">
 <li><a href="Module/Build.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>Build</a></li>
 <li><a href="Module/ESBuild.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>ESBuild</a></li>
