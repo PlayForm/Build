@@ -63,6 +63,7 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 			"--includeVersion",
 			"--out ./Documentation",
 			`--plugin ${resolve(`${Current}/../../Target/Function/Load.js`)}`,
+			"--plugin typedoc-plugin-remove-references",
 			"--plugin typedoc-plugin-rename-defaults",
 			"--plugin typedoc-plugin-mdn-links",
 			"--plugin typedoc-plugin-zod",
