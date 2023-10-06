@@ -13,7 +13,7 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 
 	Pipe.reverse();
 
-	const Configuration = deepmerge(
+	const Configuration = Merge(
 		(await import("../Object/ESBuild.js")).default,
 		{
 			entryPoints: Object.fromEntries(
@@ -37,7 +37,7 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 					await import("esbuild")
 				).build(
 					Option?.ESBuild
-						? deepmerge(
+						? Merge(
 								Configuration,
 								await (
 									await import("../Function/File.js")
@@ -91,7 +91,7 @@ import type Type from "../Interface/Build.js";
 
 export const { default: Exec } = await import("../Function/Exec.js");
 
-export const { deepmerge } = await import("deepmerge-ts");
+export const { default: Merge } = await import("../Function/Merge.js");
 
 export const { resolve } = await import("path");
 
