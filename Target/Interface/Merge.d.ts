@@ -1,8 +1,21 @@
 /**
  * @module Merge
  *
+ * Represents a generic interface for deep merging objects using merge functions defined in DeepMergeMergeFunctionsURIs.
+ *
+ * @template PMF - A type parameter representing Partial<DeepMergeMergeFunctionsURIs>.
  */
 export default interface Type<PMF extends Partial<DeepMergeMergeFunctionsURIs>> {
-    <Ts extends ReadonlyArray<unknown>>(...objects: Ts): DeepMergeHKT<Ts, GetDeepMergeMergeFunctionsURIs<PMF>, DeepMergeBuiltInMetaData>;
+    /**
+     * Merges multiple objects of type Ts using the provided merge functions and built-in metadata.
+     *
+     * @param ...Objects - An arbitrary number of objects to be merged.
+     *
+     * @returns DeepMergeHKT - A type representing the result of the deep merge operation.
+     */
+    <Ts extends ReadonlyArray<unknown>>(...Objects: Ts): DeepMergeHKT<Ts, GetDeepMergeMergeFunctionsURIs<PMF>, DeepMergeBuiltInMetaData>;
 }
-import type { DeepMergeBuiltInMetaData, DeepMergeHKT, DeepMergeMergeFunctionsURIs, GetDeepMergeMergeFunctionsURIs } from "deepmerge-ts";
+export interface Generic {
+    DeepMergeArraysURI: DeepMergeLeafURI;
+}
+import type { DeepMergeBuiltInMetaData, DeepMergeHKT, DeepMergeLeafURI, DeepMergeMergeFunctionsURIs, GetDeepMergeMergeFunctionsURIs } from "deepmerge-ts";

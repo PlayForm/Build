@@ -2,14 +2,10 @@
  * @module Merge
  *
  */
-export default (await import("deepmerge-ts")).deepmergeCustom<PMF>({
+export default (await import("deepmerge-ts")).deepmergeCustom<Generic>({
 	mergeArrays: false,
-}) satisfies Type<PMF> as Type<PMF>;
-
-export interface PMF {
-	DeepMergeArraysURI: DeepMergeLeafURI;
-}
+}) satisfies Type<Generic> as Type<Generic>;
 
 import type Type from "../Interface/Merge.js";
+import type { Generic } from "../Interface/Merge.js";
 
-import type { DeepMergeLeafURI } from "deepmerge-ts";
