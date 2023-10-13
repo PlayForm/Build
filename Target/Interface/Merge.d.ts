@@ -13,7 +13,7 @@ export default interface Type<PMF extends Partial<DeepMergeMergeFunctionsURIs>> 
      *
      * @returns DeepMergeHKT - A type representing the result of the deep merge operation.
      */
-    <Ts extends ReadonlyArray<unknown>>(...Objects: Ts): DeepMergeHKT<Ts, GetDeepMergeMergeFunctionsURIs<PMF>, DeepMergeBuiltInMetaData>;
+    <Ts extends readonly unknown[]>(...Objects: Ts): DeepMergeHKT<Ts, GetDeepMergeMergeFunctionsURIs<PMF>, DeepMergeBuiltInMetaData>;
 }
 export interface Generic {
     DeepMergeArraysURI: DeepMergeLeafURI;

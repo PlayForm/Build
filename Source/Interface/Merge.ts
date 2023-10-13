@@ -15,7 +15,7 @@ export default interface Type<
 	 *
 	 * @returns DeepMergeHKT - A type representing the result of the deep merge operation.
 	 */
-	<Ts extends ReadonlyArray<unknown>>(
+	<Ts extends readonly unknown[]>(
 		...Objects: Ts
 	): DeepMergeHKT<
 		Ts,
