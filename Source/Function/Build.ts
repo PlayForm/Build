@@ -14,7 +14,7 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 	Pipe.reverse();
 
 	const Configuration = Merge(
-		(await import("../Object/ESBuild.js")).default,
+		(await import("../Variable/ESBuild.js")).default,
 		{
 			entryPoints: Object.fromEntries(
 				Pipe.map((File) => [
