@@ -34,7 +34,7 @@
 	},
 	"dependencies": {
 		"@types/node": "20.8.5",
-		"commander": "11.0.0",
+		"commander": "11.1.0",
 		"deepmerge-ts": "5.1.0",
 		"esbuild": "0.19.4",
 		"esbuild-plugin-copy": "2.1.1",
