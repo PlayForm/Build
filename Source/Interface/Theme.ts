@@ -15,9 +15,9 @@ export default interface Type {
 	 */
 	buildUrls: (
 		Reflection: DeclarationReflection,
-		// rome-ignore lint/suspicious/noExplicitAny:
+		// biome-ignore lint/suspicious/noExplicitAny:
 		URLs: UrlMapping<any>[]
-		// rome-ignore lint/suspicious/noExplicitAny:
+		// biome-ignore lint/suspicious/noExplicitAny:
 	) => UrlMapping<any>[];
 
 	/**

@@ -16,6 +16,6 @@ export default interface Type {
 	 * you want to process.
 	 *
 	 */
-	// rome-ignore lint/suspicious/noExplicitAny:
+	// biome-ignore lint/suspicious/noExplicitAny:
 	(Path: string): Promise<any>;
 }

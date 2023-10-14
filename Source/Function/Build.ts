@@ -3,13 +3,13 @@
  *
  */
 export default (async (...[File, Option]: Parameters<Type>) => {
-	File.forEach(async (File) =>
-		(
-			await (
-				await import("fast-glob")
-			).default(File.replaceAll("'", "").replaceAll('"', ""))
-		).forEach((File) => Pipe.push(File))
-	);
+	for (const _File of File) {
+		for (const __File of await (
+			await import("fast-glob")
+		).default(_File.replaceAll("'", "").replaceAll('"', ""))) {
+			Pipe.push(__File);
+		}
+	}
 
 	Pipe.reverse();
 

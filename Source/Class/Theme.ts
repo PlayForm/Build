@@ -11,8 +11,10 @@ export default class
 
 		if (Directory) {
 			if (
-				!Reflection.url ||
-				!DefaultTheme.URL_PREFIX.test(Reflection.url)
+				!(
+					Reflection.url &&
+					DefaultTheme.URL_PREFIX.test(Reflection.url)
+				)
 			) {
 				const URL = [
 					Directory,
