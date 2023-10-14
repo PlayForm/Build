@@ -53,5 +53,10 @@
 	},
 	"publishConfig": {
 		"access": "public"
+	},
+	"overrides": {
+		"typedoc": {
+			"typescript": "5.2.2"
+		}
 	}
 }
