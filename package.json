@@ -46,17 +46,12 @@
 		"typedoc-plugin-remove-references": "0.0.6",
 		"typedoc-plugin-rename-defaults": "0.6.6",
 		"typedoc-plugin-zod": "1.1.0",
-		"typescript": "next"
+		"typescript": "5.2.2"
 	},
 	"devDependencies": {
 		"ts-node": "10.9.1"
 	},
 	"publishConfig": {
 		"access": "public"
-	},
-	"overrides": {
-		"typedoc": {
-			"typescript": "5.2.2"
-		}
 	}
 }
