@@ -62,7 +62,7 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 			`--customCss ${resolve(`${Current}/../Stylesheet/Theme.css`)}`,
 			"--includeVersion",
 			"--out ./Documentation",
-			`--plugin ${resolve(`${Current}/../../Target/Function/Load.js`)}`,
+			`--plugin ${resolve(`${Current}/../../Target/Variable/Load.js`)}`,
 			"--plugin typedoc-plugin-remove-references",
 			"--plugin typedoc-plugin-rename-defaults",
 			"--plugin typedoc-plugin-mdn-links",
