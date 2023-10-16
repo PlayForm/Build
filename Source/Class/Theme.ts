@@ -80,7 +80,6 @@ export default class
 	];
 }
 
-import type { Renderer } from "typedoc";
 import type Mapping from "../Interface/Mapping.js";
 import type Type from "../Interface/Theme.js";
 
