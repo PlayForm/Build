@@ -80,12 +80,13 @@ export default class
 	];
 }
 
+import type { Renderer } from "typedoc";
 import type Mapping from "../Interface/Mapping.js";
 import type Type from "../Interface/Theme.js";
 
-import {
+export const {
 	DeclarationReflection,
 	DefaultTheme,
 	ReflectionKind,
 	UrlMapping,
-} from "typedoc";
+} = await import("typedoc");
