@@ -1,1 +1,1 @@
-const r=(...[e])=>e.renderer.defineTheme("TypeScriptESBuild",t);var o=r;import t from"../Class/Theme.js";export{o as default,r as load};
+const t=(...[e])=>e.renderer.defineTheme("TypeScriptESBuild",r);var o=t;const{default:r}=await import("../Class/Theme.js");export{r as Theme,o as default,t as load};

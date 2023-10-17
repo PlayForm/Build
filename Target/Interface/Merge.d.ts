@@ -11,7 +11,6 @@ export default interface Type<PMF extends Partial<DeepMergeMergeFunctionsURIs>> 
      *
      * @param ...Objects - An arbitrary number of objects to be merged.
      *
-     * @returns DeepMergeHKT - A type representing the result of the deep merge operation.
      */
     <Ts extends readonly unknown[]>(...Objects: Ts): DeepMergeHKT<Ts, GetDeepMergeMergeFunctionsURIs<PMF>, DeepMergeBuiltInMetaData>;
 }
