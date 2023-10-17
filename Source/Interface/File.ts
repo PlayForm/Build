@@ -12,7 +12,7 @@ export default interface Type {
 	 *
 	 * Finally, it imports and returns the default export of the processed JavaScript module.
 	 *
-	 * @param {string} Path - The 'Path' parameter is a string that represents the file path of the file
+	 * @param Path - The 'Path' parameter is a string that represents the file path of the file
 	 * you want to process.
 	 *
 	 */

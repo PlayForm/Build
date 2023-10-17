@@ -16,8 +16,8 @@ export default interface Type {
      *
      */
     (File: Pattern[], Option?: {
-        ESBuild?: string | undefined;
-        TypeScript?: string | undefined;
+        ESBuild?: string;
+        TypeScript?: string;
     }): Promise<void>;
 }
 import type { Pattern } from "fast-glob";

@@ -10,5 +10,5 @@ export default class extends default_base implements Type {
 }
 import type Mapping from "../Interface/Mapping.js";
 import type Type from "../Interface/Theme.js";
-export declare const DeclarationReflection: typeof import("typedoc").DeclarationReflection, DefaultTheme: typeof import("typedoc").DefaultTheme, ReflectionKind: typeof import("typedoc").ReflectionKind, UrlMapping: typeof import("typedoc").UrlMapping;
+export declare const DeclarationReflection: typeof import("typedoc").DeclarationReflection, URL_PREFIX: RegExp, getUrl: typeof import("typedoc").DefaultTheme.getUrl, applyAnchorUrl: typeof import("typedoc").DefaultTheme.applyAnchorUrl, Interface: import("typedoc").ReflectionKind, Class: import("typedoc").ReflectionKind, Enum: import("typedoc").ReflectionKind, Namespace: import("typedoc").ReflectionKind, Module: import("typedoc").ReflectionKind, TypeAlias: import("typedoc").ReflectionKind, _Function: import("typedoc").ReflectionKind, Variable: import("typedoc").ReflectionKind, UrlMapping: typeof import("typedoc").UrlMapping;
 export {};

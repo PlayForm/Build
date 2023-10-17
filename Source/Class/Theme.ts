@@ -10,16 +10,8 @@ export default class
 		const { Directory } = this._Mapping(Reflection) ?? {};
 
 		if (Directory) {
-			if (
-				!(
-					Reflection.url &&
-					DefaultTheme.URL_PREFIX.test(Reflection.url)
-				)
-			) {
-				const URL = [
-					Directory,
-					`${DefaultTheme.getUrl(Reflection)}.html`,
-				].join("/");
+			if (!(Reflection.url && URL_PREFIX.test(Reflection.url))) {
+				const URL = [Directory, `${getUrl(Reflection)}.html`].join("/");
 
 				URLs.push(
 					new UrlMapping(URL, Reflection, this.reflectionTemplate)
@@ -33,13 +25,13 @@ export default class
 				if (Child instanceof DeclarationReflection) {
 					this.buildUrls(Child, URLs);
 				} else {
-					DefaultTheme.applyAnchorUrl(Child, Reflection);
+					applyAnchorUrl(Child, Reflection);
 				}
 
 				return true;
 			});
 		} else if (Reflection.parent) {
-			DefaultTheme.applyAnchorUrl(Reflection, Reflection.parent);
+			applyAnchorUrl(Reflection, Reflection.parent);
 		}
 
 		return URLs;
@@ -50,31 +42,31 @@ export default class
 
 	Mapping: Mapping[] = [
 		{
-			Kind: [ReflectionKind.Class],
+			Kind: [Class],
 			Directory: "Class",
 		},
 		{
-			Kind: [ReflectionKind.Interface],
+			Kind: [Interface],
 			Directory: "Interface",
 		},
 		{
-			Kind: [ReflectionKind.Enum],
+			Kind: [Enum],
 			Directory: "Enum",
 		},
 		{
-			Kind: [ReflectionKind.Namespace, ReflectionKind.Module],
+			Kind: [Namespace, Module],
 			Directory: "Module",
 		},
 		{
-			Kind: [ReflectionKind.TypeAlias],
+			Kind: [TypeAlias],
 			Directory: "Type",
 		},
 		{
-			Kind: [ReflectionKind.Function],
+			Kind: [_Function],
 			Directory: "Function",
 		},
 		{
-			Kind: [ReflectionKind.Variable],
+			Kind: [Variable],
 			Directory: "Variable",
 		},
 	];
@@ -85,7 +77,16 @@ import type Type from "../Interface/Theme.js";
 
 export const {
 	DeclarationReflection,
-	DefaultTheme,
-	ReflectionKind,
+	DefaultTheme: { URL_PREFIX, getUrl, applyAnchorUrl },
+	ReflectionKind: {
+		Interface,
+		Class,
+		Enum,
+		Namespace,
+		Module,
+		TypeAlias,
+		Function: _Function,
+		Variable,
+	},
 	UrlMapping,
 } = await import("typedoc");
