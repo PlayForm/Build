@@ -2,11 +2,12 @@
  * @module Load
  *
  */
-export default {
-	load: (...[Application]: Parameters<Type>) =>
+export const load = (...[Application]: Parameters<Type["load"]>) =>
 	Application.renderer.defineTheme("TypeScriptESBuild", Theme);
-}
 
+export default {
+	load,
+} satisfies Type as Type;
 
 import type Type from "../Interface/Load.js";
 

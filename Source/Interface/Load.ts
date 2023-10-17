@@ -10,7 +10,7 @@ export default interface Type {
 	 * class, representing the TypeDoc application to which the plugin should be loaded.
 	 *
 	 */
-	(Application: Application): void;
+	load: (Application: Application) => void;
 }
 
 import type { Application } from "typedoc";
