@@ -38,7 +38,8 @@
 		"strictNullChecks": true,
 		"target": "ESNext",
 		"types": ["node", "@types/node"],
-		"verbatimModuleSyntax": true
+		"verbatimModuleSyntax": true,
+		"noImplicitThis": true
 	},
 	"ts-node": {
 		"esm": true
