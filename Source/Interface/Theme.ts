@@ -11,7 +11,6 @@ export default interface Type {
 	 *
 	 * @param URLs - An array of URL mappings with any data type.
 	 *
-	 * @returns An array of URL mappings with any data type.
 	 */
 	buildUrls: (
 		Reflection: DeclarationReflection,
@@ -24,7 +23,7 @@ export default interface Type {
 	 * A function that maps a DeclarationReflection to a Mapping or returns undefined.
 	 *
 	 * @param Reflection - The DeclarationReflection to map to a Mapping.
-	 * @returns The Mapping associated with the DeclarationReflection or undefined.
+	 *
 	 */
 	_Mapping: (Reflection: DeclarationReflection) => Mapping | undefined;
 

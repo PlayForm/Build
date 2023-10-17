@@ -13,7 +13,6 @@ export default interface Type<
 	 *
 	 * @param ...Objects - An arbitrary number of objects to be merged.
 	 *
-	 * @returns DeepMergeHKT - A type representing the result of the deep merge operation.
 	 */
 	<Ts extends readonly unknown[]>(
 		...Objects: Ts
