@@ -33,7 +33,7 @@ export default {
 			resolveFrom: "out",
 			assets: [
 				{
-					from: "./Source/Notation/TypeScript.json",
+					from: "./Source/Notation/TypeScript.json",	
 					to: "./Notation/",
 				},
 				{
