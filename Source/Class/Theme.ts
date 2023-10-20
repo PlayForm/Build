@@ -24,6 +24,8 @@ export default class
 			Reflection.traverse((Child) => {
 				if (Child instanceof DeclarationReflection) {
 					this.buildUrls(Child, URLs);
+				} else {
+					applyAnchorUrl(Child, Reflection);
 				}
 
 				return true;
