@@ -69,6 +69,8 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 			"--plugin typedoc-plugin-zod",
 			"--plugin typedoc-plugin-merge-modules",
 			"--plugin typedoc-plugin-keywords",
+			"--searchInComments",
+			"--cacheBust",
 			`--keywords ${
 				(
 					await (
