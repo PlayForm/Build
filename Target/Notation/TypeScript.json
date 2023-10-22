@@ -39,7 +39,21 @@
 		"target": "ESNext",
 		"types": ["node", "@types/node"],
 		"verbatimModuleSyntax": true,
-		"noImplicitThis": true
+		"noImplicitThis": true,
+		"paths": {
+			"@Asset/*": ["Source/Asset/*"],
+			"@Component/*": ["Source/Component/*"],
+			"@Context/*": ["Source/Context/*"],
+			"@Element/*": ["Source/Element/*"],
+			"@Layout/*": ["Source/Layout/*"],
+			"@Library/*": ["Source/Library/*"],
+			"@Type/*": ["Source/Type/*"],
+			"@Option/*": ["Source/Option/*"],
+			"@Page/*": ["Source/pages/*"],
+			"@Script/*": ["Source/Script/*"],
+			"@Interface/*": ["Source/Interface/*"],
+			"@Style/*": ["Source/Style/*"]
+		}
 	},
 	"ts-node": {
 		"esm": true
