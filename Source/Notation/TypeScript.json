@@ -42,17 +42,21 @@
 		"noImplicitThis": true,
 		"paths": {
 			"@Asset/*": ["Source/Asset/*"],
+			"@Class/*": ["Source/Class/*"],
 			"@Component/*": ["Source/Component/*"],
 			"@Context/*": ["Source/Context/*"],
 			"@Element/*": ["Source/Element/*"],
+			"@Function/*": ["Source/Function/*"],
+			"@Interface/*": ["Source/Interface/*"],
 			"@Layout/*": ["Source/Layout/*"],
 			"@Library/*": ["Source/Library/*"],
-			"@Type/*": ["Source/Type/*"],
+			"@Notation/*": ["Source/Notation/*"],
 			"@Option/*": ["Source/Option/*"],
 			"@Page/*": ["Source/pages/*"],
 			"@Script/*": ["Source/Script/*"],
-			"@Interface/*": ["Source/Interface/*"],
-			"@Style/*": ["Source/Style/*"]
+			"@Stylesheet/*": ["Source/Stylesheet/*"],
+			"@Type/*": ["Source/Type/*"],
+			"@Variable/*": ["Source/Variable/*"]
 		}
 	},
 	"ts-node": {
