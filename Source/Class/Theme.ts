@@ -6,7 +6,9 @@ export default class
 	extends (await import("typedoc")).DefaultTheme
 	implements Type
 {
-	override buildUrls(...[Reflection, URLs]: Parameters<Type["buildUrls"]>) {
+	public override buildUrls(
+		...[Reflection, URLs]: Parameters<Type["buildUrls"]>
+	) {
 		const { Directory } = this._Mapping(Reflection) ?? {};
 
 		if (Directory) {
