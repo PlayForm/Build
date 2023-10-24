@@ -38,8 +38,5 @@ import type Mapping from "./Mapping.js";
 import type {
 	DeclarationReflection,
 	DefaultTheme,
-	DefaultThemeRenderContext,
-	PageEvent,
-	Reflection,
 	UrlMapping,
 } from "typedoc";
