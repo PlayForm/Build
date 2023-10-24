@@ -1,3 +1,8 @@
+## 0.3.0
+
+-   Documentation
+-	Cleanup
+
 ## 0.2.26
 
 -   Cleanup
