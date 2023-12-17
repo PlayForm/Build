@@ -16,7 +16,7 @@ export default class
 				const URL = [Directory, `${getUrl(Reflection)}.html`].join("/");
 
 				URLs.push(
-					new UrlMapping(URL, Reflection, this.reflectionTemplate)
+					new UrlMapping(URL, Reflection, this.reflectionTemplate),
 				);
 
 				Reflection.url = URL;

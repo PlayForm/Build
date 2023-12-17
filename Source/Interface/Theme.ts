@@ -15,7 +15,7 @@ export default interface Type extends DefaultTheme {
 	buildUrls: (
 		Reflection: DeclarationReflection,
 		// biome-ignore lint/suspicious/noExplicitAny:
-		URLs: UrlMapping<any>[]
+		URLs: UrlMapping<any>[],
 		// biome-ignore lint/suspicious/noExplicitAny:
 	) => UrlMapping<any>[];
 
