@@ -39,11 +39,7 @@
 		"esbuild": "0.19.11",
 		"esbuild-plugin-copy": "2.1.1",
 		"fast-glob": "3.3.2",
-<<<<<<< HEAD
-		"typedoc": "0.25.5",
-=======
 		"typedoc": "0.25.6",
->>>>>>> bc84706db4a64de806fc06a9ad1f20066eb37eff
 		"typedoc-plugin-keywords": "1.6.0",
 		"typedoc-plugin-mdn-links": "3.1.10",
 		"typedoc-plugin-merge-modules": "5.1.0",
