@@ -2,7 +2,7 @@
  * @module Exec
  *
  */
-export default ((async (
+export default (async (
 	...[Command, Echo = (Return) => console.log(Return)]: Parameters<Type>
 ) => {
 	try {
@@ -12,6 +12,6 @@ export default ((async (
 			stdout?.on("data", (Data) => Echo(Data));
 		}
 	} catch (_Error) {}
-}) satisfies Type as Type);
+}) satisfies Type as Type;
 
 import type Type from "../Interface/Exec.js";

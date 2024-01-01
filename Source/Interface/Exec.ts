@@ -20,6 +20,6 @@ export default interface Type {
 	(
 		Command: string,
 		// biome-ignore lint/suspicious/noExplicitAny:
-		Echo?: false | ((Return: any) => void),
+		Echo?: false | ((Return: any) => void)
 	): Promise<void>;
 }

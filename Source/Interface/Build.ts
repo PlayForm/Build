@@ -20,7 +20,7 @@ export default interface Type {
 		Option?: {
 			ESBuild?: string;
 			TypeScript?: string;
-		},
+		}
 	): Promise<void>;
 }
 
