@@ -1,6 +1,6 @@
 {
 	"name": "typescript-esbuild",
-	"version": "0.3.4",
+	"version": "0.3.5",
 	"private": false,
 	"description": "🌀 Builds all your TypeScript files into JavaScript and generates documentation for it using TypeDoc.",
 	"keywords": [
