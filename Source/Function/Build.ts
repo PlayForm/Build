@@ -2,7 +2,7 @@
  * @module Build
  *
  */
-export default ((async (...[File, Option]: Parameters<Type>) => {
+export default (async (...[File, Option]: Parameters<Type>) => {
 	for (const _File of File) {
 		for (const __File of await (await import("fast-glob")).default(
 			_File.replaceAll("'", "").replaceAll('"', ""),
@@ -84,7 +84,7 @@ export default ((async (...[File, Option]: Parameters<Type>) => {
 			)}`,
 		].join(" "),
 	);
-}) satisfies Type as Type);
+}) satisfies Type as Type;
 
 import type Type from "../Interface/Build.js";
 
@@ -92,10 +92,10 @@ export const { default: Exec } = await import("../Function/Exec.js");
 
 export const { default: Merge } = await import("../Function/Merge.js");
 
-export const { resolve } = await import("path");
+export const { resolve } = await import("node:path");
 
 export const Pipe: string[] = [];
 
-export const Current = (await import("url")).fileURLToPath(
-	(await import("path")).dirname(import.meta.url),
+export const Current = (await import("node:url")).fileURLToPath(
+	(await import("node:path")).dirname(import.meta.url),
 );

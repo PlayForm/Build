@@ -2,7 +2,7 @@
  * @module File
  *
  */
-export default ((async (...[Path]: Parameters<Type>) => {
+export default (async (...[Path]: Parameters<Type>) => {
 	if (Path.split(".").pop() === "ts") {
 		const { options } = (
 			await import("typescript")
@@ -13,9 +13,11 @@ export default ((async (...[Path]: Parameters<Type>) => {
 				).default(
 					"../Notation/TypeScript.json",
 					(
-						await import("path")
+						await import("node:path")
 					).dirname(
-						(await import("url")).fileURLToPath(import.meta.url),
+						(
+							await import("node:url")
+						).fileURLToPath(import.meta.url),
 					),
 				)
 			)?.compilerOptions,
@@ -32,11 +34,13 @@ export default ((async (...[Path]: Parameters<Type>) => {
 			)
 			.emit();
 
-		await (await import("fs/promises")).writeFile(
+		await (await import("node:fs/promises")).writeFile(
 			Path.replace(".ts", ".js"),
 			(await import("typescript")).default.transpile(
 				(
-					await (await import("fs/promises")).readFile(Path, "utf-8")
+					await (
+						await import("node:fs/promises")
+					).readFile(Path, "utf-8")
 				).toString(),
 				options,
 			),
@@ -46,13 +50,13 @@ export default ((async (...[Path]: Parameters<Type>) => {
 	return (
 		await import(
 			(
-				await import("url")
+				await import("node:url")
 			)
 				.pathToFileURL(Path)
 				.toString()
 				.replace(".ts", ".js")
 		)
 	).default;
-}) satisfies Type as Type);
+}) satisfies Type as Type;
 
 import type Type from "../Interface/File.js";
