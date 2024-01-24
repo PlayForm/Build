@@ -11,7 +11,9 @@ export default (async (
 		if (typeof Echo === "function") {
 			stdout?.on("data", (Data) => Echo(Data));
 		}
-	} catch (_Error) {}
+	} catch (_Error) {
+		console.log(_Error);
+	}
 }) satisfies Type as Type;
 
 import type Type from "../Interface/Exec.js";
