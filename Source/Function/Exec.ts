@@ -6,7 +6,7 @@ export default (async (
 	...[Command, Echo = (Return) => console.log(Return)]: Parameters<Type>
 ) => {
 	try {
-		const { stdout } = (await import("node:child_process")).exec(Command);
+		const { stdout } = (await import("child_process")).exec(Command);
 
 		if (typeof Echo === "function") {
 			stdout?.on("data", (Data) => Echo(Data));

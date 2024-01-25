@@ -13,10 +13,10 @@ export default (async (...[Path]: Parameters<Type>) => {
 				).default(
 					"../Notation/TypeScript.json",
 					(
-						await import("node:path")
+						await import("path")
 					).dirname(
 						(
-							await import("node:url")
+							await import("url")
 						).fileURLToPath(import.meta.url),
 					),
 				)
@@ -34,12 +34,12 @@ export default (async (...[Path]: Parameters<Type>) => {
 			)
 			.emit();
 
-		await (await import("node:fs/promises")).writeFile(
+		await (await import("fs/promises")).writeFile(
 			Path.replace(".ts", ".js"),
 			(await import("typescript")).default.transpile(
 				(
 					await (
-						await import("node:fs/promises")
+						await import("fs/promises")
 					).readFile(Path, "utf-8")
 				).toString(),
 				options,
@@ -50,7 +50,7 @@ export default (async (...[Path]: Parameters<Type>) => {
 	return (
 		await import(
 			(
-				await import("node:url")
+				await import("url")
 			)
 				.pathToFileURL(Path)
 				.toString()
