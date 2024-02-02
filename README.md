@@ -17,12 +17,8 @@ npm install -D -E typescript-esbuild
 
 ```json
 {
-	"name": "package",
 	"scripts": {
 		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'"
-	},
-	"devDependencies": {
-		"typescript-esbuild": "0.3.6"
 	}
 }
 ```
@@ -30,6 +26,8 @@ npm install -D -E typescript-esbuild
 ### ESBuild Configuration
 
 Or with a custom esbuild config file:
+
+`package.json`
 
 ```json
 {
