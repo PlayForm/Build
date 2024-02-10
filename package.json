@@ -1,8 +1,8 @@
 {
 	"name": "typescript-esbuild",
-	"version": "0.3.8",
+	"version": "0.3.9",
 	"private": false,
-	"description": "🌀 Builds all your TypeScript files into JavaScript and generates documentation for it using TypeDoc.",
+	"description": "Builds all your TypeScript files into JavaScript. 🌀 + generates documentation for it using TypeDoc. 📄",
 	"keywords": [
 		"javascript",
 		"typescript",
@@ -39,7 +39,7 @@
 		"esbuild": "0.20.0",
 		"esbuild-plugin-copy": "2.1.1",
 		"fast-glob": "3.3.2",
-		"typedoc": "0.25.7",
+		"typedoc": "0.25.8",
 		"typedoc-plugin-keywords": "1.6.0",
 		"typedoc-plugin-mdn-links": "3.1.15",
 		"typedoc-plugin-merge-modules": "5.1.0",

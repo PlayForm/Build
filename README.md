@@ -1,7 +1,7 @@
 # [TypeScriptESBuild] 🌀
 
-Builds all your TypeScript files into JavaScript and generates documentation for
-it using [TypeDoc][typedoc].
+Builds all your TypeScript files into JavaScript. 🌀 + generates documentation
+for it using [TypeDoc][typedoc]. 📄
 
 ## Installation
 
