@@ -33,20 +33,20 @@
 		"prepublishOnly": "node --no-warnings --loader ts-node/esm Source/Class/TypeScriptESBuild.ts 'Source/**/*.ts'"
 	},
 	"dependencies": {
-		"@types/node": "20.11.24",
+		"@types/node": "20.11.25",
 		"commander": "12.0.0",
 		"deepmerge-ts": "5.1.0",
 		"esbuild": "0.20.1",
 		"esbuild-plugin-copy": "2.1.1",
 		"fast-glob": "3.3.2",
-		"typedoc": "0.25.10",
+		"typedoc": "0.25.11",
 		"typedoc-plugin-keywords": "1.6.0",
 		"typedoc-plugin-mdn-links": "3.1.17",
 		"typedoc-plugin-merge-modules": "5.1.0",
 		"typedoc-plugin-remove-references": "0.0.6",
 		"typedoc-plugin-rename-defaults": "0.7.0",
 		"typedoc-plugin-zod": "1.1.2",
-		"typescript": "5.3.3"
+		"typescript": "5.4.2"
 	},
 	"devDependencies": {
 		"ts-node": "10.9.2"
