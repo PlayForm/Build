@@ -1,2 +1,5 @@
 /*
   Cache-Control: no-cache, must-revalidate, max-age=0
+
+/*.css
+  Cache-Control: no-cache, must-revalidate, max-age=0
