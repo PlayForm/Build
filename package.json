@@ -9,13 +9,13 @@
 		"esbuild",
 		"typedoc"
 	],
-	"homepage": "https://github.com/NikolaRHristov/TypeScriptESBuild#readme",
+	"homepage": "https://github.com/Playform/TypeScriptESBuild#readme",
 	"bugs": {
-		"url": "https://github.com/NikolaRHristov/TypeScriptESBuild/issues"
+		"url": "https://github.com/Playform/TypeScriptESBuild/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/NikolaRHristov/TypeScriptESBuild.git"
+		"url": "git+https://github.com/Playform/TypeScriptESBuild.git"
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
