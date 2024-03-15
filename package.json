@@ -3,12 +3,7 @@
 	"version": "0.4.0",
 	"private": false,
 	"description": "🌀 Builds all your TypeScript files into JavaScript.",
-	"keywords": [
-		"javascript",
-		"typescript",
-		"esbuild",
-		"typedoc"
-	],
+	"keywords": ["javascript", "typescript", "esbuild", "typedoc"],
 	"homepage": "https://github.com/Playform/TypeScriptESBuild#readme",
 	"bugs": {
 		"url": "https://github.com/Playform/TypeScriptESBuild/issues"
@@ -20,7 +15,7 @@
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
 		"name": "Nikola R. Hristov",
-		"email": "nikola@nikolahristov.tech",
+		"email": "Nikola@Playform.Cloud",
 		"url": "https://nikolahristov.tech"
 	},
 	"type": "module",
@@ -36,7 +31,7 @@
 		"@types/node": "20.11.27",
 		"commander": "12.0.0",
 		"deepmerge-ts": "5.1.0",
-		"esbuild": "0.20.1",
+		"esbuild": "0.20.2",
 		"esbuild-plugin-copy": "2.1.1",
 		"fast-glob": "3.3.2",
 		"typedoc": "0.25.12",
