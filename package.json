@@ -2,7 +2,7 @@
 	"name": "typescript-esbuild",
 	"version": "0.4.1",
 	"private": false,
-	"description": "🌀 Builds all your TypeScript files into JavaScript.",
+	"description": "🌀 ESBuild Wrapper.",
 	"keywords": ["javascript", "typescript", "esbuild", "typedoc"],
 	"homepage": "https://github.com/Playform/TypeScriptESBuild#readme",
 	"bugs": {
