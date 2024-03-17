@@ -3,7 +3,12 @@
 	"version": "0.4.1",
 	"private": false,
 	"description": "🌀 ESBuild Wrapper.",
-	"keywords": ["javascript", "typescript", "esbuild", "typedoc"],
+	"keywords": [
+		"javascript",
+		"typescript",
+		"esbuild",
+		"typedoc"
+	],
 	"homepage": "https://github.com/Playform/TypeScriptESBuild#readme",
 	"bugs": {
 		"url": "https://github.com/Playform/TypeScriptESBuild/issues"
