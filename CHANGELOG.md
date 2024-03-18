@@ -234,7 +234,7 @@
 
 ## 0.1.0
 
--   Custom esbuild file
+-   Custom ESBuild file
 
 ## 0.0.11
 

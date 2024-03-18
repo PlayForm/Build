@@ -6,8 +6,7 @@
 	"keywords": [
 		"javascript",
 		"typescript",
-		"esbuild",
-		"typedoc"
+		"esbuild"
 	],
 	"homepage": "https://github.com/Playform/TypeScriptESBuild#readme",
 	"bugs": {
@@ -19,9 +18,9 @@
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
-		"name": "Nikola R. Hristov",
-		"email": "Nikola@Playform.Cloud",
-		"url": "https://nikolahristov.tech"
+		"name": "Playform",
+		"email": "Hello@Playform.Cloud",
+		"url": "https://playform.cloud"
 	},
 	"type": "module",
 	"main": "./Target/Class/TypeScriptESBuild.js",

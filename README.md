@@ -1,6 +1,6 @@
 # 🌀 [TypeScriptESBuild]
 
-Builds all your TypeScript files into JavaScript.
+Build all your TypeScript files into JavaScript.
 
 ## Installation
 
@@ -12,7 +12,13 @@ npm install -D -E typescript-esbuild
 
 ## Usage
 
-`package.json`
+Through a command line run:
+
+```sh
+npx typescript-esbuild 'Source/**/*.ts'
+```
+
+or in a `package.json` file:
 
 ```json
 {
@@ -24,7 +30,7 @@ npm install -D -E typescript-esbuild
 
 ### ESBuild Configuration
 
-Or with a custom esbuild config file:
+Or with a custom ESBuild config file:
 
 `package.json`
 
@@ -53,6 +59,6 @@ See an example of a configuration file in
 }
 ```
 
-[esbuild]: https://npmjs.org/esbuild
-[typedoc]: https://npmjs.org/typedoc
+[ESBuild]: https://npmjs.org/esbuild
+[TypeDoc]: https://npmjs.org/typedoc
 [TypeScriptESBuild]: https://npmjs.org/typescript-esbuild

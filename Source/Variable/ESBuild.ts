@@ -36,10 +36,6 @@ export default {
 					from: "./Source/Notation/TypeScript.json",
 					to: "./Notation/",
 				},
-				{
-					from: "./Source/Stylesheet/Theme.css",
-					to: "./Stylesheet/",
-				},
 			],
 		}),
 	],
