@@ -1,6 +1,6 @@
 {
 	"name": "typescript-esbuild",
-	"version": "0.4.3",
+	"version": "0.4.4",
 	"private": false,
 	"description": "🌀 ESBuild Wrapper.",
 	"keywords": [
@@ -29,6 +29,7 @@
 		"TypeScriptESBuild": "Target/Class/TypeScriptESBuild.js"
 	},
 	"scripts": {
+		"Document": "TypeScriptDocument 'Source/**/*.ts'",
 		"prepublishOnly": "node --no-warnings --loader ts-node/esm Source/Class/TypeScriptESBuild.ts 'Source/**/*.ts'"
 	},
 	"dependencies": {
@@ -41,7 +42,8 @@
 		"typescript": "5.4.2"
 	},
 	"devDependencies": {
-		"ts-node": "10.9.2"
+		"ts-node": "10.9.2",
+		"typescript-document": "0.0.2"
 	},
 	"publishConfig": {
 		"access": "public"
