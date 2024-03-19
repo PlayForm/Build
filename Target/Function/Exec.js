@@ -1,1 +1,1 @@
-var r=async(...[o,t=e=>console.log(e)])=>{try{const{stdout:e}=(await import("child_process")).exec(o);typeof t=="function"&&e?.on("data",a=>t(a))}catch(e){console.log(e)}};export{r as default};
+var s=async(...[a,t=e=>console.log(e)])=>{try{const{stdout:e,stderr:r}=(await import("child_process")).exec(a);typeof t=="function"&&(e?.on("data",o=>t(o)),r?.on("data",o=>t(o)))}catch(e){console.log(e)}};export{s as default};
