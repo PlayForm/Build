@@ -2,6 +2,10 @@
 
 -   Split Documentation
 
+## 0.4.2
+
+-   Split Documentation
+
 ## 0.4.1
 
 -   Cleanup
