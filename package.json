@@ -42,7 +42,9 @@
 		"typescript": "5.4.3"
 	},
 	"devDependencies": {
-		"ts-node": "10.9.2",
+		"ts-node": "10.9.2"
+	},
+	"peerDependencies": {
 		"typescript-document": "0.0.4"
 	},
 	"publishConfig": {
