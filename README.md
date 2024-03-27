@@ -59,6 +59,6 @@ See an example of a configuration file in
 }
 ```
 
-[ESBuild]: https://NPMJS.Org/esbuild
-[TypeDoc]: https://NPMJS.Org/typedoc
-[TypeScriptESBuild]: https://NPMJS.Org/typescript-esbuild
+[ESBuild]: https://npmjs.org/esbuild
+[TypeDoc]: https://npmjs.org/typedoc
+[TypeScriptESBuild]: https://npmjs.org/typescript-esbuild
