@@ -41,7 +41,7 @@
 		"ts-node": "10.9.2"
 	},
 	"peerDependencies": {
-		"typescript-document": "0.0.6"
+		"typescript-document": "0.0.7"
 	},
 	"publishConfig": {
 		"access": "public"
