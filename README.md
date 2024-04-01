@@ -7,7 +7,7 @@ Build all your TypeScript files into JavaScript.
 Add configuration and setup scripts:
 
 ```sh
-npm install -D -E typescript-esbuild
+npm install -D -E @playform/build
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ npm install -D -E typescript-esbuild
 Through a command line run:
 
 ```sh
-npx typescript-esbuild 'Source/**/*.ts'
+npx @playform/build 'Source/**/*.ts'
 ```
 
 or in a `package.json` file:
@@ -54,11 +54,11 @@ See an example of a configuration file in
 	"compilerOptions": {
 		"outDir": "Target"
 	},
-	"extends": "typescript-esbuild/Target/Notation/TypeScript",
+	"extends": "@playform/build/Target/Notation/TypeScript",
 	"include": ["Source"]
 }
 ```
 
 [ESBuild]: https://npmjs.org/esbuild
 [TypeDoc]: https://npmjs.org/typedoc
-[TypeScriptESBuild]: https://npmjs.org/typescript-esbuild
+[TypeScriptESBuild]: https://npmjs.org/@playform/build

@@ -1,9 +1,13 @@
 {
-	"name": "typescript-esbuild",
-	"version": "0.4.10",
+	"name": "@playform/build",
+	"version": "0.0.1",
 	"private": false,
 	"description": "🌀 ESBuild Wrapper.",
-	"keywords": ["javascript", "typescript", "esbuild"],
+	"keywords": [
+		"javascript",
+		"typescript",
+		"esbuild"
+	],
 	"homepage": "https://github.com/Playform/TypeScriptESBuild#readme",
 	"bugs": {
 		"url": "https://github.com/Playform/TypeScriptESBuild/issues"
@@ -40,8 +44,8 @@
 	"devDependencies": {
 		"ts-node": "10.9.2"
 	},
-	"peerDependencies": {
-		"typescript-document": "0.0.7"
+	"optionalDependencies": {
+		"@playform/document": "0.0.1"
 	},
 	"publishConfig": {
 		"access": "public"
