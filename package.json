@@ -8,13 +8,13 @@
 		"typescript",
 		"esbuild"
 	],
-	"homepage": "https://github.com/Playform/TypeScriptESBuild#readme",
+	"homepage": "https://github.com/Playform/Build#readme",
 	"bugs": {
-		"url": "https://github.com/Playform/TypeScriptESBuild/issues"
+		"url": "https://github.com/Playform/Build/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Playform/TypeScriptESBuild.git"
+		"url": "git+https://github.com/Playform/Build.git"
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
