@@ -1,4 +1,4 @@
-# 🌀 [TypeScriptESBuild]
+# 🌀 [Build]
 
 Build all your TypeScript files into JavaScript.
 
@@ -23,7 +23,7 @@ or in a `package.json` file:
 ```json
 {
 	"scripts": {
-		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'"
+		"prepublishOnly": "Build 'Source/**/*.ts'"
 	}
 }
 ```
@@ -37,7 +37,7 @@ Or with a custom ESBuild config file:
 ```json
 {
 	"scripts": {
-		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts' -es ESBuild.ts"
+		"prepublishOnly": "Build 'Source/**/*.ts' -es ESBuild.ts"
 	}
 }
 ```
@@ -61,4 +61,4 @@ See an example of a configuration file in
 
 [ESBuild]: https://npmjs.org/esbuild
 [TypeDoc]: https://npmjs.org/typedoc
-[TypeScriptESBuild]: https://npmjs.org/@playform/build
+[Build]: https://npmjs.org/@playform/build
