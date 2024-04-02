@@ -44,7 +44,7 @@
 	"devDependencies": {
 		"ts-node": "10.9.2"
 	},
-	"optionalDependencies": {
+	"peerDependencies": {
 		"@playform/document": "0.0.2"
 	},
 	"publishConfig": {
