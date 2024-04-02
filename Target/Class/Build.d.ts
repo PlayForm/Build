@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * @module TypeScriptESBuild
+ * @module Build
  *
  */
 declare const _default: import("commander").Command;
