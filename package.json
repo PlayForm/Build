@@ -2,7 +2,7 @@
 	"name": "@playform/build",
 	"version": "0.0.1",
 	"private": false,
-	"description": "🌀 ESBuild Wrapper.",
+	"description": "🌀 Build.",
 	"keywords": [
 		"javascript",
 		"typescript",
