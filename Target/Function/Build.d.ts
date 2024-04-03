@@ -1,5 +1,5 @@
 /**
- * ../module Build
+ * @module Build
  *
  */
 declare const _default: Type;

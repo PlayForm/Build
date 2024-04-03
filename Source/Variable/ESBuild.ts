@@ -31,15 +31,6 @@ export default {
 				});
 			},
 		},
-		(await import("@playform/copy")).copy({
-			resolveFrom: "out",
-			assets: [
-				{
-					from: "./Source/Notation/TypeScript.json",
-					to: "./Notation/",
-				},
-			],
-		}),
 	],
 	define: {
 		"process.env.VERSION_PACKAGE": `'${

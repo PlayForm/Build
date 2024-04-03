@@ -2,7 +2,7 @@
  * @module File
  *
  */
-export default interface Type {
+export default interface Interface {
 	/**
 	 * This function asynchronously processes a file located at the given path. If the file is a TypeScript
 	 * (.ts) file, it performs the following steps:

@@ -2,7 +2,7 @@
  * @module Build
  *
  */
-export default interface Type {
+export default interface Interface {
     /**
      * Represents a function that processes file patterns.
      *

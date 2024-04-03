@@ -2,7 +2,7 @@
  * @module JSON
  *
  */
-export default interface Type {
+export default interface Interface {
 	/**
 	 * The function 'JSON' is a TypeScript function that reads a JSON file and returns its
 	 * parsed content.

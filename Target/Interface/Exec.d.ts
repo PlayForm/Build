@@ -2,7 +2,7 @@
  * @module Exec
  *
  */
-export default interface Type {
+export default interface Interface {
     /**
      * The 'Exec' function is an asynchronous function that executes a command and logs the
      * stdout and stderr of the child process.
