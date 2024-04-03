@@ -19,4 +19,4 @@ export default (async (
 	}
 }) satisfies Type as Type;
 
-import type Type from "../Interface/Exec.js";
+import type Type from "@Interface/Exec.js";

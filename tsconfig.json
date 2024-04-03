@@ -1,4 +1,5 @@
 {
+	"baseUrl": "./",
 	"compilerOptions": {
 		"outDir": "Target"
 	},
