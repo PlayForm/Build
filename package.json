@@ -33,11 +33,11 @@
 		"prepublishOnly": "node --no-warnings --loader ts-node/esm Source/Class/Build.ts 'Source/**/*.ts'"
 	},
 	"dependencies": {
+		"@playform/copy": "2.1.1",
 		"@types/node": "20.12.3",
 		"commander": "12.0.0",
 		"deepmerge-ts": "5.1.0",
 		"esbuild": "0.20.2",
-		"esbuild-plugin-copy": "2.1.1",
 		"fast-glob": "3.3.2",
 		"typescript": "5.4.3"
 	},
