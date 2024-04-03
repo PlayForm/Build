@@ -1,6 +1,6 @@
 {
-	"baseUrl": "./",
 	"compilerOptions": {
+		"baseUrl": "./",
 		"outDir": "Target"
 	},
 	"extends": "./Source/Notation/TypeScript",
