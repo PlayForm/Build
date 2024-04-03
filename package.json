@@ -30,7 +30,7 @@
 	},
 	"scripts": {
 		"Document": "Document 'Source/**/*.ts'",
-		"prepublishOnly": "node --no-warnings --loader ts-node/esm Source/Class/Build.ts 'Source/**/*.ts' --ESBuild Configuration/ESBuild.ts"
+		"prepublishOnly": "node --no-warnings --loader ts-node/esm Source/Class/Build.ts 'Source/**/*.ts'"
 	},
 	"dependencies": {
 		"@types/node": "20.12.3",
@@ -44,7 +44,6 @@
 		"ts-node": "10.9.2"
 	},
 	"peerDependencies": {
-		"@playform/copy": "0.0.1",
 		"@playform/document": "0.0.2"
 	},
 	"publishConfig": {

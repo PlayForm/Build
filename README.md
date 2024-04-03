@@ -54,7 +54,7 @@ See an example of a configuration file in
 	"compilerOptions": {
 		"outDir": "Target"
 	},
-	"extends": "@playform/build/Target/Notation/TypeScript",
+	"extends": "@playform/build/tsconfig",
 	"include": ["Source"]
 }
 ```

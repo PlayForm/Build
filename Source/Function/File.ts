@@ -4,14 +4,14 @@
  */
 export default (async (...[Path]: Parameters<Type>) => {
 	if (Path.split(".").pop() === "ts") {
-		const { options } = (
+		const { options: Option } = (
 			await import("typescript")
 		).default.convertCompilerOptionsFromJson(
 			(
 				await (
 					await import("../Function/JSON.js")
 				).default(
-					"../Notation/TypeScript.json",
+					"../../tsconfig.json",
 					(await import("path")).dirname(
 						(await import("url")).fileURLToPath(import.meta.url)
 					)
@@ -23,8 +23,8 @@ export default (async (...[Path]: Parameters<Type>) => {
 		(await import("typescript")).default
 			.createProgram(
 				[Path],
-				options,
-				(await import("typescript")).default.createCompilerHost(options)
+				Option,
+				(await import("typescript")).default.createCompilerHost(Option)
 			)
 			.emit();
 
@@ -36,7 +36,7 @@ export default (async (...[Path]: Parameters<Type>) => {
 				(
 					await (await import("fs/promises")).readFile(Path, "utf-8")
 				).toString(),
-				options
+				Option
 			)
 		);
 	}
