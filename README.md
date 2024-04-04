@@ -23,7 +23,7 @@ or in a `package.json` file:
 ```json
 {
 	"scripts": {
-		"prepublishOnly": "Build 'Source/**/*.ts'"
+		"Build": "Build 'Source/**/*.ts'"
 	}
 }
 ```
@@ -37,7 +37,7 @@ Or with a custom ESBuild config file:
 ```json
 {
 	"scripts": {
-		"prepublishOnly": "Build 'Source/**/*.ts' -es ESBuild.ts"
+		"Build": "Build 'Source/**/*.ts' -es ESBuild.ts"
 	}
 }
 ```
