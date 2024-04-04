@@ -29,7 +29,6 @@
 		"Build": "Target/Class/Build.js"
 	},
 	"scripts": {
-		"Document": "Document 'Source/**/*.ts'",
 		"prepublishOnly": "node --no-warnings --loader ts-node/esm Source/Class/Build.ts 'Source/**/*.ts'"
 	},
 	"dependencies": {
@@ -43,9 +42,6 @@
 	},
 	"devDependencies": {
 		"ts-node": "10.9.2"
-	},
-	"peerDependencies": {
-		"@playform/document": "0.0.3"
 	},
 	"publishConfig": {
 		"access": "public"
