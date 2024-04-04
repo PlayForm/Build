@@ -11,5 +11,5 @@ export default new (await import("commander")).Command()
 	.argument("<File...>", "File.")
 	.option("-ES, --ESBuild <File>", "ESBuild.")
 	.option("-TS, --TypeScript <File>", "TypeScript.")
-	.action((await import("@Function/Build.js")).default)
+	.action((await import("../Function/Build.js")).default)
 	.parse();

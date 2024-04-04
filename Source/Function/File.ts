@@ -9,7 +9,7 @@ export default (async (...[Path]: Parameters<Type>) => {
 		).default.convertCompilerOptionsFromJson(
 			(
 				await (
-					await import("@Function/JSON.js")
+					await import("../Function/JSON.js")
 				).default(
 					"../../tsconfig.json",
 					(await import("path")).dirname(
@@ -51,4 +51,4 @@ export default (async (...[Path]: Parameters<Type>) => {
 	).default;
 }) satisfies Type as Type;
 
-import type Type from "@Interface/File.js";
+import type Type from "../Interface/File.js";
