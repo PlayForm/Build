@@ -10,6 +10,6 @@ export default new (await import("commander")).Command()
 	.description("🌀 Build.")
 	.argument("<File...>", "File.")
 	.option("-ES, --ESBuild <File>", "ESBuild.")
-	.option("-TS, --TypeScript <File>", "TypeScript.")
+	.option("-TS, --TypeScript <File>", "TypeScript.", "tsconfig.json")
 	.action((await import("../Function/Build.js")).default)
 	.parse();

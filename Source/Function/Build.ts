@@ -25,6 +25,7 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 					File,
 				])
 			),
+			tsconfig: Option?.TypeScript ?? "tsconfig.json",
 		}
 	);
 
@@ -52,8 +53,8 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 		)
 	);
 
-	Exec(`tsc -p ${Option?.TypeScript ?? "tsconfig.json"}`);
-	Exec(`tsc-alias -p ${Option?.TypeScript ?? "tsconfig.json"}`);
+	Exec(`tsc -p ${Configuration.tsconfig}`);
+	Exec(`tsc-alias -p ${Configuration.tsconfig}`);
 }) satisfies Type as Type;
 
 import type Type from "../Interface/Build.js";
