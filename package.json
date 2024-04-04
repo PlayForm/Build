@@ -29,8 +29,8 @@
 		"Build": "Target/Class/Build.js"
 	},
 	"scripts": {
-		"Document": "Document 'Source/**/*.ts'",
-		"Build": "node --no-warnings --loader ts-node/esm Source/Class/Build.ts 'Source/**/*.ts'"
+		"Build": "node --no-warnings --loader ts-node/esm Source/Class/Build.ts 'Source/**/*.ts'",
+		"Document": "Document 'Source/**/*.ts'"
 	},
 	"dependencies": {
 		"@types/node": "20.12.4",
