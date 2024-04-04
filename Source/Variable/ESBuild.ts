@@ -5,13 +5,14 @@
 export default {
 	color: true,
 	format: "esm",
+	logLevel: "debug",
 	metafile: true,
 	minify: true,
 	outdir: "Target",
 	platform: "node",
 	target: "esnext",
+	tsconfig: "tsconfig.json",
 	write: true,
-	logLevel: "debug",
 	plugins: [
 		{
 			name: "Target",
