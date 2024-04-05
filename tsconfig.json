@@ -1,7 +1,6 @@
 {
 	"$schema": "https://json.schemastore.org/tsconfig",
 	"compilerOptions": {
-		"outDir": "Target",
 		"allowArbitraryExtensions": true,
 		"allowImportingTsExtensions": true,
 		"allowJs": true,
@@ -27,20 +26,12 @@
 		"noFallthroughCasesInSwitch": true,
 		"noImplicitOverride": true,
 		"noImplicitReturns": true,
+		"noImplicitThis": true,
 		"noPropertyAccessFromIndexSignature": true,
 		"noUncheckedIndexedAccess": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
-		"resolveJsonModule": true,
-		"skipLibCheck": true,
-		"strict": true,
-		"strictBindCallApply": true,
-		"strictFunctionTypes": true,
-		"strictNullChecks": true,
-		"target": "ESNext",
-		"types": ["node", "@types/node"],
-		"verbatimModuleSyntax": true,
-		"noImplicitThis": true,
+		"outDir": "Target",
 		"paths": {
 			"@Asset/*": ["Source/Asset/*"],
 			"@Class/*": ["Source/Class/*"],
@@ -56,12 +47,23 @@
 			"@Page/*": ["Source/pages/*"],
 			"@Script/*": ["Source/Script/*"],
 			"@Stylesheet/*": ["Source/Stylesheet/*"],
+			"@Target/*": ["Source/Target/*"],
+			"@Test/*": ["Source/Test/*"],
 			"@Type/*": ["Source/Type/*"],
 			"@Variable/*": ["Source/Variable/*"]
-		}
+		},
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"strict": true,
+		"strictBindCallApply": true,
+		"strictFunctionTypes": true,
+		"strictNullChecks": true,
+		"target": "ESNext",
+		"types": ["node", "@types/node"],
+		"verbatimModuleSyntax": true
 	},
+	"include": ["Source"],
 	"ts-node": {
 		"esm": true
-	},
-	"include": ["Source"]
+	}
 }
