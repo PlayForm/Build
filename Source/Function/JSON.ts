@@ -11,4 +11,4 @@ export default (async (...[File, From]: Parameters<Type>) =>
 		).toString(),
 	)) satisfies Type as Type;
 
-import type Type from "../Interface/JSON.js";
+import type Type from "@Interface/JSON.js";
