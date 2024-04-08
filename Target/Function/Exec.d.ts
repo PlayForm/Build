@@ -2,6 +2,6 @@
  * @module Exec
  *
  */
-declare const _default: Type;
+declare const _default: Interface;
 export default _default;
-import type Type from "@Interface/Exec.js";
+import type Interface from "@Interface/Exec.js";

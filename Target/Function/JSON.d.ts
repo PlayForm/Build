@@ -2,6 +2,6 @@
  * @module JSON
  *
  */
-declare const _default: Type;
+declare const _default: Interface;
 export default _default;
-import type Type from "@Interface/JSON.js";
+import type Interface from "@Interface/JSON.js";
