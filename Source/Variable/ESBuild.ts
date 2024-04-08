@@ -35,7 +35,7 @@ export default {
 	],
 	define: {
 		"process.env.VERSION_PACKAGE": `'${
-			(await (await import("@Function/JSON.js")).default("package.json"))
+			(await (await import("../Function/JSON.js")).default("package.json"))
 				?.version
 		}'`,
 	},

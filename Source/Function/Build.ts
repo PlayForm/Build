@@ -14,7 +14,7 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 	Pipe.reverse();
 
 	const Configuration = Merge(
-		(await import("@Variable/ESBuild.js")).default,
+		(await import("../Variable/ESBuild.js")).default,
 		{
 			entryPoints: Object.fromEntries(
 				Pipe.map((File) => [
@@ -59,9 +59,9 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 
 import type Type from "@Interface/Build.js";
 
-export const { default: Exec } = await import("@Function/Exec.js");
+export const { default: Exec } = await import("../Function/Exec.js");
 
-export const { default: Merge } = await import("@Function/Merge.js");
+export const { default: Merge } = await import("../Function/Merge.js");
 
 export const { resolve } = await import("path");
 
