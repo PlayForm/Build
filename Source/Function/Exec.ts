@@ -3,7 +3,7 @@
  *
  */
 export default (async (
-	...[Command, Echo = (Return) => console.log(Return)]: Parameters<Type>
+	...[Command, Echo = (Return) => console.log(Return)]: Parameters<Interface>
 ) => {
 	try {
 		const { stdout, stderr } = (await import("child_process")).exec(
@@ -17,6 +17,6 @@ export default (async (
 	} catch (_Error) {
 		console.log(_Error);
 	}
-}) satisfies Type as Type;
+}) satisfies Interface as Interface;
 
-import type Type from "@Interface/Exec.js";
+import type Interface from "@Interface/Exec.js";

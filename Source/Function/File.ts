@@ -2,7 +2,7 @@
  * @module File
  *
  */
-export default (async (...[Path]: Parameters<Type>) => {
+export default (async (...[Path]: Parameters<Interface>) => {
 	if (Path.split(".").pop() === "ts") {
 		const { options: Option } = (
 			await import("typescript")
@@ -49,6 +49,6 @@ export default (async (...[Path]: Parameters<Type>) => {
 				.replace(".ts", ".js")
 		)
 	).default;
-}) satisfies Type as Type;
+}) satisfies Interface as Interface;
 
-import type Type from "@Interface/File.js";
+import type Interface from "@Interface/File.js";

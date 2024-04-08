@@ -2,7 +2,7 @@
  * @module Build
  *
  */
-export default (async (...[File, Option]: Parameters<Type>) => {
+export default (async (...[File, Option]: Parameters<Interface>) => {
 	for (const _File of File) {
 		for (const __File of await (
 			await import("fast-glob")
@@ -55,9 +55,9 @@ export default (async (...[File, Option]: Parameters<Type>) => {
 
 	Exec(`tsc -p ${Configuration.tsconfig}`);
 	Exec(`tsc-alias -p ${Configuration.tsconfig}`);
-}) satisfies Type as Type;
+}) satisfies Interface as Interface;
 
-import type Type from "@Interface/Build.js";
+import type Interface from "@Interface/Build.js";
 
 export const { default: Exec } = await import("../Function/Exec.js");
 

@@ -2,13 +2,13 @@
  * @module JSON
  *
  */
-export default (async (...[File, From]: Parameters<Type>) =>
+export default (async (...[File, From]: Parameters<Interface>) =>
 	JSON.parse(
 		(
 			await (
 				await import("fs/promises")
 			).readFile(`${From ?? "."}/${File}`, "utf-8")
 		).toString(),
-	)) satisfies Type as Type;
+	)) satisfies Interface as Interface;
 
-import type Type from "@Interface/JSON.js";
+import type Interface from "@Interface/JSON.js";
