@@ -55,7 +55,7 @@ export default (async (...[File, Option]: Parameters<Interface>) => {
 
 	Exec(`tsc -p ${Configuration.tsconfig}`);
 	Exec(`tsc-alias -p ${Configuration.tsconfig}`);
-	Exec("resolve-tspaths");
+	Exec(`resolve-tspaths -p ${Configuration.tsconfig}`);
 }) satisfies Interface as Interface;
 
 import type Interface from "@Interface/Build.js";
