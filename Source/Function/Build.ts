@@ -54,8 +54,10 @@ export default (async (...[File, Option]: Parameters<Interface>) => {
 	);
 
 	Exec(`tsc -p ${Configuration.tsconfig}`);
-	Exec(`tsc-alias -p ${Configuration.tsconfig}`);
-	Exec(`resolve-tspaths -p ${Configuration.tsconfig}`);
+	Exec(`tsc-alias -f -p ${Configuration.tsconfig}`);
+	Exec(
+		`Resolve --verbose -p ${Configuration.tsconfig} --ext js mjs cjs d.ts d.mts d.cts`
+	);
 }) satisfies Interface as Interface;
 
 import type Interface from "@Interface/Build.js";
@@ -63,8 +65,6 @@ import type Interface from "@Interface/Build.js";
 export const { default: Exec } = await import("../Function/Exec.js");
 
 export const { default: Merge } = await import("../Function/Merge.js");
-
-export const { resolve } = await import("path");
 
 export const Pipe: string[] = [];
 
