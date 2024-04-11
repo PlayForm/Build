@@ -48,6 +48,11 @@
 	"peerDependencies": {
 		"@playform/document": "0.0.6"
 	},
+	"peerDependenciesMeta": {
+		"@playform/document": {
+			"optional": true
+		}
+	},
 	"publishConfig": {
 		"access": "public"
 	}
