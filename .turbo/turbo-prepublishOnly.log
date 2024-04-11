@@ -1,0 +1,51 @@
+
+> @playform/build@0.0.5 prepublishOnly D:\Developer\Application\Playform\NPM\Build
+> node --no-warnings --loader ts-node/esm Source/Class/Build.ts 'Source/**/*.ts'
+
+● [DEBUG] This "import" expression will not be bundled because the argument is not a string literal [unsupported-dynamic-import]
+
+    Source/Function/File.ts:45:8:
+      45 │     await import(
+         ╵           ~~~~~~
+
+
+  Target\Function\Build.js    893b 
+  Target\Function\File.js     755b 
+  Target\Variable\ESBuild.js  471b 
+  Target\Class\Build.js       358b 
+  Target\Function\Exec.js     227b 
+  ...and 7 more output files...
+
+⚡ Done in 54ms
+
+  Target/Function/Build.js ────── 893b ── 100.0%
+   └ Source/Function/Build.ts ─── 827b ─── 92.6%
+
+  Target/Function/File.js ─────── 755b ── 100.0%
+   └ Source/Function/File.ts ──── 733b ─── 97.1%
+
+  Target/Variable/ESBuild.js ──── 471b ── 100.0%
+   └ Source/Variable/ESBuild.ts ─ 449b ─── 95.3%
+
+  Target/Class/Build.js ───────── 358b ── 100.0%
+   └ Source/Class/Build.ts ────── 316b ─── 88.3%
+
+  Target/Function/Exec.js ─────── 227b ── 100.0%
+   └ Source/Function/Exec.ts ──── 205b ─── 90.3%
+
+  Target/Function/JSON.js ─────── 140b ── 100.0%
+   └ Source/Function/JSON.ts ──── 118b ─── 84.3%
+
+  Target/Function/Merge.js ─────── 93b ── 100.0%
+   └ Source/Function/Merge.ts ──── 71b ─── 76.3%
+
+  Target/Interface/Build.js ─────── 0b ── 100.0%
+
+  Target/Interface/Exec.js ──────── 0b ── 100.0%
+
+  Target/Interface/File.js ──────── 0b ── 100.0%
+
+  Target/Interface/JSON.js ──────── 0b ── 100.0%
+
+  Target/Interface/Merge.js ─────── 0b ── 100.0%
+
