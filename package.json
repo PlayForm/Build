@@ -2,7 +2,7 @@
 	"name": "@playform/build",
 	"version": "0.0.5",
 	"private": false,
-	"description": "🌀 Build.",
+	"description": "🌀 Build",
 	"keywords": [
 		"javascript",
 		"typescript",
