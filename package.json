@@ -18,9 +18,9 @@
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
-		"name": "Playform",
-		"email": "hello@playform.cloud",
-		"url": "https://playform.cloud"
+		"name": "Source/Open",
+		"email": "Source/Open@Playform.Cloud",
+		"url": "HTTPS://Playform.Cloud"
 	},
 	"type": "module",
 	"main": "./Target/Class/Build.js",
@@ -33,7 +33,6 @@
 		"prepublishOnly": "node --no-warnings --loader ts-node/esm Source/Class/Build.ts 'Source/**/*.ts'"
 	},
 	"dependencies": {
-		"@playform/resolve": "0.0.1",
 		"@types/node": "20.12.7",
 		"commander": "12.0.0",
 		"deepmerge-ts": "5.1.0",
