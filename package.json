@@ -14,7 +14,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+HTTPS://GitHub.Com/Playform/Build.git"
+		"url": "git+HTTPS://github.com/Playform/Build.git"
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
