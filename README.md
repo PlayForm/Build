@@ -61,4 +61,4 @@ See an example of a configuration file in
 
 [ESBuild]: https://npmjs.org/esbuild
 [TypeDoc]: https://npmjs.org/typedoc
-[Build]: https://npmjs.org/@playform/build
+[Build.]: https://npmjs.org/@playform/build
