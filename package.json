@@ -1,12 +1,13 @@
 {
 	"name": "@playform/build",
-	"version": "0.0.7",
+	"version": "0.0.8",
 	"private": false,
 	"description": "🌀 Build —",
 	"keywords": [
 		"javascript",
 		"typescript",
-		"esbuild"
+		"esbuild",
+		"playform"
 	],
 	"homepage": "HTTPS://GitHub.Com/Playform/Build#ReadMe",
 	"bugs": {
@@ -18,7 +19,7 @@
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
-		"name": "Source/Open",
+		"name": "⛲ Source ⁄ 🚪 Open —",
 		"email": "Source/Open@Playform.Cloud",
 		"url": "HTTPS://Playform.Cloud"
 	},
