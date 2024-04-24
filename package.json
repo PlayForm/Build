@@ -9,19 +9,19 @@
 		"esbuild",
 		"playform"
 	],
-	"homepage": "HTTPS://GitHub.Com/Playform/Build#ReadMe",
+	"homepage": "HTTPS://GitHub.Com/PlayForm/Build#ReadMe",
 	"bugs": {
-		"url": "HTTPS://GitHub.Com/Playform/Build/issues"
+		"url": "HTTPS://GitHub.Com/PlayForm/Build/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+HTTPS://github.com/Playform/Build.git"
+		"url": "git+HTTPS://github.com/PlayForm/Build.git"
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
 		"name": "⛲ Source ⁄ 🚪 Open —",
-		"email": "Source/Open@Playform.Cloud",
-		"url": "HTTPS://Playform.Cloud"
+		"email": "Source/Open@PlayForm.Cloud",
+		"url": "HTTPS://PlayForm.Cloud"
 	},
 	"type": "module",
 	"main": "./Target/Class/Build.js",
