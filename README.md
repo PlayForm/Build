@@ -1,4 +1,4 @@
-# 🌀 [Build —]
+# 🌀 [Build] —
 
 Build all your TypeScript files into JavaScript.
 
@@ -61,4 +61,4 @@ See an example of a configuration file in
 
 [ESBuild]: HTTPS://npmjs.org/esbuild
 [TypeDoc]: HTTPS://npmjs.org/typedoc
-[Build —]: httpS://npmjs.org/@playform/build
+[Build]: HTTPS://npmjs.org/@playform/build
