@@ -1,4 +1,4 @@
-# 🌀 [Build] —
+# 🌀 — [Build] —
 
 Build all your TypeScript files into JavaScript.
 
