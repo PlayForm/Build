@@ -2,7 +2,7 @@
 	"name": "@playform/build",
 	"version": "0.0.7",
 	"private": false,
-	"description": "🌀 — Build —",
+	"description": "🌀 Build —",
 	"keywords": [
 		"javascript",
 		"typescript",
@@ -19,7 +19,7 @@
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
-		"name": "⛲ Source ⁄ 🚪 — Open —",
+		"name": "⛲ Source ⁄ 🚪 Open —",
 		"email": "Source/Open@PlayForm.Cloud",
 		"url": "HTTPS://PlayForm.Cloud"
 	},
