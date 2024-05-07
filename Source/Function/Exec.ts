@@ -19,4 +19,4 @@ export default (async (
 	}
 }) satisfies Interface as Interface;
 
-import type Interface from "@Interface/Exec.js";
+import type Interface from "../Interface/Exec.js";

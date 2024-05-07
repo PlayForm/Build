@@ -11,4 +11,4 @@ export default (async (...[File, From]: Parameters<Interface>) =>
 		).toString()
 	)) satisfies Interface as Interface;
 
-import type Interface from "@Interface/JSON.js";
+import type Interface from "../Interface/JSON.js";

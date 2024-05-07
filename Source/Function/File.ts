@@ -51,4 +51,4 @@ export default (async (...[Path]: Parameters<Interface>) => {
 	).default;
 }) satisfies Interface as Interface;
 
-import type Interface from "@Interface/File.js";
+import type Interface from "../Interface/File.js";
