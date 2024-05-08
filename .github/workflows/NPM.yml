@@ -24,11 +24,11 @@ jobs:
             id-token: write
 
         steps:
-            - uses: actions/checkout@v4.1.4
+            - uses: actions/checkout@v4.1.5
 
             - uses: actions/setup-node@v4.0.2
               with:
-                  node-version: "20"
+                  node-version: "18"
                   registry-url: "https://registry.npmjs.org"
 
             - run: npm install -g npm
