@@ -1,7 +1,7 @@
-name: NPM
+name: NPM2
 
 concurrency:
-    group: NPM-${{ github.workflow }}-${{ github.ref }}
+    group: NPM2-${{ github.workflow }}-${{ github.ref }}
     cancel-in-progress: true
 
 permissions:
