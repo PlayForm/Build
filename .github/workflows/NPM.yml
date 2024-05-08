@@ -15,6 +15,9 @@ on:
         types: [created]
     workflow_call:
 
+runs:
+    using: "node20"
+
 jobs:
     Publish:
         runs-on: ubuntu-latest
