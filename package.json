@@ -37,9 +37,9 @@
 		"@types/node": "20.12.11",
 		"commander": "12.0.0",
 		"deepmerge-ts": "5.1.0",
-		"esbuild": "0.21.1",
+		"esbuild": "0.21.2",
 		"fast-glob": "3.3.2",
-		"tsc-alias": "1.8.9",
+		"tsc-alias": "1.8.10",
 		"typescript": "5.4.5"
 	},
 	"devDependencies": {
