@@ -34,11 +34,7 @@
 		"prepublishOnly": "node --no-warnings --loader ts-node/esm Source/Class/Build.ts 'Source/**/*.ts'"
 	},
 	"dependencies": {
-<<<<<<< HEAD
-		"@types/node": "20.12.11",
-=======
 		"@types/node": "20.12.12",
->>>>>>> 29bf467a92a2285d5c44b73ab530cbf8834184d0
 		"commander": "12.0.0",
 		"deepmerge-ts": "5.1.0",
 		"esbuild": "0.21.2",
