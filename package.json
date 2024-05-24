@@ -1,6 +1,6 @@
 {
 	"name": "@playform/build",
-	"version": "0.0.8",
+	"version": "0.0.9",
 	"private": false,
 	"description": "🌀 Build —",
 	"keywords": [
@@ -42,9 +42,17 @@
 		"tsc-alias": "1.8.10",
 		"typescript": "5.4.5"
 	},
-	"devDependencies": {
+	"peerDependencies": {
 		"@playform/document": "0.0.6",
 		"ts-node": "10.9.2"
+	},
+	"peerDependenciesMeta": {
+		"@playform/document": {
+			"optional": true
+		},
+		"ts-node": {
+			"optional": true
+		}
 	},
 	"publishConfig": {
 		"access": "public"
