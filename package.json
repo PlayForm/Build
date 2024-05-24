@@ -43,7 +43,7 @@
 		"typescript": "5.4.5"
 	},
 	"peerDependencies": {
-		"@playform/document": "0.0.6",
+		"@playform/document": "0.0.7",
 		"ts-node": "10.9.2"
 	},
 	"peerDependenciesMeta": {
