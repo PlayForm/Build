@@ -7,7 +7,7 @@ export default (async (
 ) => {
 	try {
 		const { stdout, stderr } = (await import("child_process")).exec(
-			Command
+			Command,
 		);
 
 		if (typeof Echo === "function") {

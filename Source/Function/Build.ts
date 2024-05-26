@@ -4,9 +4,9 @@
  */
 export default (async (...[File, Option]: Parameters<Interface>) => {
 	for (const _File of File) {
-		for (const __File of await (
-			await import("fast-glob")
-		).default(_File.replaceAll("'", "").replaceAll('"', ""))) {
+		for (const __File of await (await import("fast-glob")).default(
+			_File.replaceAll("'", "").replaceAll('"', ""),
+		)) {
 			Pipe.push(__File);
 		}
 	}
@@ -23,16 +23,14 @@ export default (async (...[File, Option]: Parameters<Interface>) => {
 						.slice(0, -1.0)
 						.join("."),
 					File,
-				])
+				]),
 			),
 			tsconfig: Option?.TypeScript ?? "tsconfig.json",
-		}
+		},
 	);
 
 	console.log(
-		await (
-			await import("esbuild")
-		).analyzeMetafile(
+		await (await import("esbuild")).analyzeMetafile(
 			(
 				await (
 					await import("esbuild")
@@ -42,15 +40,15 @@ export default (async (...[File, Option]: Parameters<Interface>) => {
 								Configuration,
 								await (
 									await import("@Function/File.js")
-								).default(Option.ESBuild)
+								).default(Option.ESBuild),
 							)
-						: Configuration
+						: Configuration,
 				)
 			)?.metafile ?? "",
 			{
 				verbose: true,
-			}
-		)
+			},
+		),
 	);
 
 	Exec(`tsc -p ${Configuration.tsconfig}`);
@@ -66,5 +64,5 @@ export const { default: Merge } = await import("../Function/Merge.js");
 export const Pipe: string[] = [];
 
 export const Current = (await import("url")).fileURLToPath(
-	(await import("path")).dirname(import.meta.url)
+	(await import("path")).dirname(import.meta.url),
 );
