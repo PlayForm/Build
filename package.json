@@ -42,17 +42,8 @@
 		"tsc-alias": "1.8.10",
 		"typescript": "5.4.5"
 	},
-	"peerDependencies": {
-		"@playform/document": "0.0.7",
+	"devDependencies": {
 		"ts-node": "10.9.2"
-	},
-	"peerDependenciesMeta": {
-		"@playform/document": {
-			"optional": true
-		},
-		"ts-node": {
-			"optional": true
-		}
 	},
 	"publishConfig": {
 		"access": "public"
