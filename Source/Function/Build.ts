@@ -51,8 +51,8 @@ export default (async (...[File, Option]: Parameters<Interface>) => {
 		),
 	);
 
-	Exec(`tsc -p ${Configuration.tsconfig}`);
-	Exec(`tsc-alias -f -p ${Configuration.tsconfig}`);
+	await Exec(`tsc -p ${Configuration.tsconfig}`);
+	await Exec(`tsc-alias -f -p ${Configuration.tsconfig}`);
 }) satisfies Interface as Interface;
 
 import type Interface from "../Interface/Build.js";
