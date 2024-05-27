@@ -30,7 +30,6 @@
 		"Build": "Target/Class/Build.js"
 	},
 	"scripts": {
-		"Document": "Document 'Source/**/*.ts'",
 		"prepublishOnly": "node --no-warnings --loader ts-node/esm Source/Class/Build.ts 'Source/**/*.ts'"
 	},
 	"dependencies": {
