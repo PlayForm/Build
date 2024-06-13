@@ -14,9 +14,7 @@ export default (async (...[Path]: Parameters<Interface>) => {
 					"../../tsconfig.json",
 					(
 						await import("path")
-					).dirname(
-						(await import("url")).fileURLToPath(import.meta.url),
-					),
+					).dirname((await import("url")).fileURLToPath(import.meta.url)),
 				)
 			)?.compilerOptions,
 			".",
@@ -43,12 +41,7 @@ export default (async (...[Path]: Parameters<Interface>) => {
 
 	return (
 		await import(
-			(
-				await import("url")
-			)
-				.pathToFileURL(Path)
-				.toString()
-				.replace(".ts", ".js")
+			(await import("url")).pathToFileURL(Path).toString().replace(".ts", ".js")
 		)
 	).default;
 }) satisfies Interface as Interface;

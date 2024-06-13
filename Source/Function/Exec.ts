@@ -6,9 +6,7 @@ export default (async (
 	...[Command, Echo = (Return) => console.log(Return)]: Parameters<Interface>
 ) => {
 	try {
-		const { stdout, stderr } = (await import("child_process")).exec(
-			Command,
-		);
+		const { stdout, stderr } = (await import("child_process")).exec(Command);
 
 		if (typeof Echo === "function") {
 			stdout?.on("data", (Data) => Echo(Data));
