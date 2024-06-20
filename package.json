@@ -39,7 +39,7 @@
 		"esbuild": "0.21.5",
 		"fast-glob": "3.3.2",
 		"tsc-alias": "1.8.10",
-		"typescript": "5.4.5"
+		"typescript": "5.5.2"
 	},
 	"devDependencies": {
 		"ts-node": "10.9.2"
