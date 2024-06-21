@@ -6,6 +6,7 @@
  */
 export default new (await import("commander")).Command()
 	.name("Build")
+	// biome-ignore lint/complexity/useLiteralKeys:
 	.version(process.env["VERSION_PACKAGE"] ?? "0.0.1")
 	.description("🌀 Build —")
 	.argument("<File...>", "📂 File —")
