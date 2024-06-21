@@ -18,7 +18,10 @@ export default (async (...[File, Option]: Parameters<Interface>) => {
 		{
 			entryPoints: Object.fromEntries(
 				Pipe.map((File) => [
-					File.replace("Source/", "").split(".").slice(0, -1.0).join("."),
+					File.replace("Source/", "")
+						.split(".")
+						.slice(0, -1.0)
+						.join("."),
 					File,
 				]),
 			),
@@ -35,9 +38,9 @@ export default (async (...[File, Option]: Parameters<Interface>) => {
 					Option?.ESBuild
 						? Merge(
 								Configuration,
-								await (await import("@Function/File.js")).default(
-									Option.ESBuild,
-								),
+								await (
+									await import("@Function/File.js")
+								).default(Option.ESBuild),
 							)
 						: Configuration,
 				)
