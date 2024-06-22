@@ -1,0 +1,1 @@
+var n=async(...[r,t=e=>console.log(e)])=>{try{const{stdout:e,stderr:o}=(await import("node:child_process")).exec(r);typeof t=="function"&&(e?.on("data",a=>t(a)),o?.on("data",a=>t(a)))}catch(e){console.log(e)}};export{n as default};
