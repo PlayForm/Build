@@ -14,7 +14,11 @@ export default (async (...[Path]: Parameters<Interface>) => {
 					"../../tsconfig.json",
 					(
 						await import("node:path")
-					).dirname((await import("node:url")).fileURLToPath(import.meta.url)),
+					).dirname(
+						(
+							await import("node:url")
+						).fileURLToPath(import.meta.url),
+					),
 				)
 			)?.compilerOptions,
 			".",
@@ -32,7 +36,9 @@ export default (async (...[Path]: Parameters<Interface>) => {
 			Path.replace(".ts", ".js"),
 			(await import("typescript")).default.transpile(
 				(
-					await (await import("node:fs/promises")).readFile(Path, "utf-8")
+					await (
+						await import("node:fs/promises")
+					).readFile(Path, "utf-8")
 				).toString(),
 				Option,
 			),
@@ -41,7 +47,12 @@ export default (async (...[Path]: Parameters<Interface>) => {
 
 	return (
 		await import(
-			(await import("node:url")).pathToFileURL(Path).toString().replace(".ts", ".js")
+			(
+				await import("node:url")
+			)
+				.pathToFileURL(Path)
+				.toString()
+				.replace(".ts", ".js")
 		)
 	).default;
 }) satisfies Interface as Interface;

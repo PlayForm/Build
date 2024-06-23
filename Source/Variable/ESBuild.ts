@@ -20,9 +20,12 @@ export default {
 				onStart(async () => {
 					try {
 						outdir
-							? await (await import("node:fs/promises")).rm(outdir, {
-									recursive: true,
-								})
+							? await (await import("node:fs/promises")).rm(
+									outdir,
+									{
+										recursive: true,
+									},
+								)
 							: {};
 					} catch (_Error) {
 						console.log(_Error);
@@ -33,8 +36,11 @@ export default {
 	],
 	define: {
 		"process.env.VERSION_PACKAGE": `'${
-			(await (await import("../Function/JSON.js")).default("package.json"))
-				?.version
+			(
+				await (
+					await import("../Function/JSON.js")
+				).default("package.json")
+			)?.version
 		}'`,
 	},
 } satisfies BuildOptions as BuildOptions;
