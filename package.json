@@ -36,10 +36,10 @@
 		"@types/node": "20.14.9",
 		"commander": "12.1.0",
 		"deepmerge-ts": "7.0.3",
-		"esbuild": "0.22.0",
+		"esbuild": "0.23.0",
 		"fast-glob": "3.3.2",
 		"tsc-alias": "1.8.10",
-		"typescript": "5.5.2"
+		"typescript": "5.5.3"
 	},
 	"devDependencies": {
 		"ts-node": "10.9.2"
