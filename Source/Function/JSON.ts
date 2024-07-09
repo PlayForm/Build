@@ -6,7 +6,7 @@ export default (async (...[File, From]: Parameters<Interface>) =>
 	JSON.parse(
 		(
 			await (
-				await import("node:fs/promises")
+				await import("fs/promises")
 			).readFile(`${From ?? "."}/${File}`, "utf-8")
 		).toString(),
 	)) satisfies Interface as Interface;
