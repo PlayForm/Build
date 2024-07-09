@@ -11,5 +11,6 @@ export default new (await import("commander")).Command()
 	.argument("<File...>", "📝 File —")
 	.option("-ES, --ESBuild <File>", "📜 ESBuild —")
 	.option("-TS, --TypeScript <File>", "📜 TypeScript —", "tsconfig.json")
+	.option("-W --Watch", "👁️ Watch —")
 	.action((await import("../Function/Build.js")).default)
 	.parse();

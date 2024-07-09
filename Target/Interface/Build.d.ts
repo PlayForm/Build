@@ -18,6 +18,7 @@ export default interface Interface {
     (File: Pattern[], Option?: {
         ESBuild?: string;
         TypeScript?: string;
+        Watch?: boolean;
     }): Promise<void>;
 }
 import type { Pattern } from "fast-glob";

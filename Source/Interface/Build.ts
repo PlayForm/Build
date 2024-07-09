@@ -20,6 +20,7 @@ export default interface Interface {
 		Option?: {
 			ESBuild?: string;
 			TypeScript?: string;
+			Watch?: boolean;
 		},
 	): Promise<void>;
 }

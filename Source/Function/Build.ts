@@ -13,7 +13,7 @@ export default (async (...[File, Option]: Parameters<Interface>) => {
 
 	Pipe.reverse();
 
-	const Configuration = Merge(
+	let Configuration: BuildOptions = Merge(
 		(await import("../Variable/ESBuild.js")).default,
 		{
 			entryPoints: Object.fromEntries(
@@ -29,31 +29,43 @@ export default (async (...[File, Option]: Parameters<Interface>) => {
 		},
 	);
 
-	console.log(
-		await (await import("esbuild")).analyzeMetafile(
-			(
-				await (
-					await import("esbuild")
-				).build(
-					Option?.ESBuild
-						? Merge(
-								Configuration,
-								await (
-									await import("@Function/File.js")
-								).default(Option.ESBuild),
-							)
-						: Configuration,
-				)
-			)?.metafile ?? "",
-			{
-				verbose: true,
-			},
-		),
-	);
+	Configuration = Option?.ESBuild
+		? Merge(
+				Configuration,
+				await (await import("@Function/File.js")).default(
+					Option.ESBuild,
+				),
+			)
+		: Configuration;
 
-	await Exec(`tsc -p ${Configuration.tsconfig}`);
-	await Exec(`tsc-alias -f -p ${Configuration.tsconfig}`);
+	Configuration.plugins?.push({
+		name: "TypeScript",
+		setup({ onEnd }) {
+			onEnd(async () => {
+				await Exec(`tsc -p ${Configuration.tsconfig}`);
+				await Exec(`tsc-alias -f -p ${Configuration.tsconfig}`);
+			});
+		},
+	});
+
+	if (Option?.Watch) {
+		const Context = await (await import("esbuild")).context(Configuration);
+
+		await Context.watch();
+	} else {
+		console.log(
+			await (await import("esbuild")).analyzeMetafile(
+				(await (await import("esbuild")).build(Configuration))
+					?.metafile ?? "",
+				{
+					verbose: true,
+				},
+			),
+		);
+	}
 }) satisfies Interface as Interface;
+
+import type { BuildOptions } from "esbuild";
 
 import type Interface from "../Interface/Build.js";
 
