@@ -15,9 +15,7 @@ export default (async (...[Path]: Parameters<Interface>) => {
 					(
 						await import("path")
 					).dirname(
-						(
-							await import("url")
-						).fileURLToPath(import.meta.url),
+						(await import("url")).fileURLToPath(import.meta.url),
 					),
 				)
 			)?.compilerOptions,
@@ -36,9 +34,7 @@ export default (async (...[Path]: Parameters<Interface>) => {
 			Path.replace(".ts", ".js"),
 			(await import("typescript")).default.transpile(
 				(
-					await (
-						await import("fs/promises")
-					).readFile(Path, "utf-8")
+					await (await import("fs/promises")).readFile(Path, "utf-8")
 				).toString(),
 				Option,
 			),
