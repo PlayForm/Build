@@ -1,6 +1,6 @@
 # 🌀 [Build] —
 
-Build all your TypeScript files into JavaScript.
+Builds all your TypeScript files into JavaScript.
 
 ## Installation
 
