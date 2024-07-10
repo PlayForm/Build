@@ -30,7 +30,7 @@
 		"Build": "Target/Class/Build.js"
 	},
 	"scripts": {
-		"Run": "node --no-warnings --loader ts-node/esm Source/Class/Build.ts 'Source/**/*.ts' -W",
+		"Run": "node --no-warnings --loader ts-node/esm Source/Class/Build.ts 'Source/**/*.ts' --Watch",
 		"prepublishOnly": "node --no-warnings --loader ts-node/esm Source/Class/Build.ts 'Source/**/*.ts'"
 	},
 	"dependencies": {
