@@ -39,6 +39,7 @@ or in a `package.json` file:
 ```json
 {
 	"scripts": {
+		"Run": "Build 'Source/**/*.ts' --Watch",
 		"prepublishOnly": "Build 'Source/**/*.ts'"
 	}
 }
