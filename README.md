@@ -18,6 +18,8 @@ Through a command line run:
 npx @playform/build 'Source/**/*.ts'
 ```
 
+Help:
+
 ```sh
 Usage: Build [options] <File...>
 
