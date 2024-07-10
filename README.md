@@ -45,7 +45,7 @@ or in a `package.json` file:
 }
 ```
 
-### ESBuild Configuration
+### 📜 ESBuild Configuration
 
 Or with a custom ESBuild config file:
 
@@ -62,7 +62,7 @@ Or with a custom ESBuild config file:
 See an example of a configuration file in
 [ESBuild.ts](Source/Variable/ESBuild.ts)
 
-### TypeScript Configuration
+### 📜 TypeScript Configuration
 
 `tsconfig.json`
 
