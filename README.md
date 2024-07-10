@@ -24,12 +24,13 @@ Usage: Build [options] <File...>
 🌀 Build —
 
 Arguments:
-  File                      📂 File —
+  File                      📝 File —
 
 Options:
   -V, --version             output the version number
-  -ES, --ESBuild <File>     👷🏻‍♀️ ESBuild —
-  -TS, --TypeScript <File>  👨🏻‍💻 TypeScript — (default: "tsconfig.json")
+  -ES, --ESBuild <File>     📜 ESBuild —
+  -TS, --TypeScript <File>  📜 TypeScript — (default: "tsconfig.json")
+  -W --Watch                👁️ Watch —
   -h, --help                display help for command
 ```
 
