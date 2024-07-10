@@ -18,6 +18,21 @@ Through a command line run:
 npx @playform/build 'Source/**/*.ts'
 ```
 
+```sh
+Usage: Build [options] <File...>
+
+🌀 Build —
+
+Arguments:
+  File                      📂 File —
+
+Options:
+  -V, --version             output the version number
+  -ES, --ESBuild <File>     👷🏻‍♀️ ESBuild —
+  -TS, --TypeScript <File>  👨🏻‍💻 TypeScript — (default: "tsconfig.json")
+  -h, --help                display help for command
+```
+
 or in a `package.json` file:
 
 ```json
@@ -55,6 +70,20 @@ See an example of a configuration file in
 		"outDir": "Target"
 	},
 	"extends": "@playform/build/tsconfig",
+	"include": ["Source"]
+}
+```
+
+### JSConfig Configuration (optional)
+
+`jsconfig.json`
+
+```json
+{
+	"compilerOptions": {
+		"outDir": "Target"
+	},
+	"extends": "@playform/build/jsconfig",
 	"include": ["Source"]
 }
 ```
