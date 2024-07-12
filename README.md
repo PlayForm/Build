@@ -36,7 +36,7 @@ Options:
   -h, --help                display help for command
 ```
 
-or in a `package.json` file:
+Or in a `package.json` file:
 
 ```json
 {
