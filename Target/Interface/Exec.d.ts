@@ -17,5 +17,5 @@ export default interface Interface {
      * logging. If not provided, stdout and stderr will be logged to the console by default.
      *
      */
-    (Command: string, Echo?: false | ((Return: any) => void)): Promise<void>;
+    (Command: string, Echo?: false | ((Return: any, _Error?: boolean) => Promise<void>)): Promise<void>;
 }

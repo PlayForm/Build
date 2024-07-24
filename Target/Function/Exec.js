@@ -1,1 +1,1 @@
-var n=async(...[r,t=e=>console.log(e)])=>{try{const{stdout:e,stderr:o}=(await import("child_process")).exec(r);typeof t=="function"&&(e?.on("data",a=>t(a)),o?.on("data",a=>t(a)))}catch(e){console.log(e)}};export{n as default};
+var c=async(...[r,a=async t=>console.log(t)])=>{try{const{stdout:t,stderr:n}=(await import("child_process")).exec(r);typeof a=="function"&&(t?.on("data",async e=>await a(e.trim())),n?.on("data",async e=>await a(e.trim(),!0)))}catch(t){console.log(t)}};export{c as default};

@@ -3,7 +3,10 @@
  *
  */
 export default (async (
-	...[Command, Echo = (Return) => console.log(Return)]: Parameters<Interface>
+	...[
+		Command,
+		Echo = async (Return) => console.log(Return),
+	]: Parameters<Interface>
 ) => {
 	try {
 		const { stdout, stderr } = (await import("child_process")).exec(
@@ -11,8 +14,8 @@ export default (async (
 		);
 
 		if (typeof Echo === "function") {
-			stdout?.on("data", (Data) => Echo(Data));
-			stderr?.on("data", (Data) => Echo(Data));
+			stdout?.on("data", async (Data) => await Echo(Data.trim()));
+			stderr?.on("data", async (Data) => await Echo(Data.trim(), true));
 		}
 	} catch (_Error) {
 		console.log(_Error);
