@@ -4,9 +4,9 @@
  */
 export default (async (...[File, Option]: Parameters<Interface>) => {
 	for (const _File of File) {
-		for (const __File of await (await import("fast-glob")).default(
-			_File.replaceAll("'", "").replaceAll('"', ""),
-		)) {
+		for (const __File of await (
+			await import("fast-glob")
+		).default(_File.replaceAll("'", "").replaceAll('"', ""))) {
 			Pipe.push(__File);
 		}
 	}
@@ -32,9 +32,9 @@ export default (async (...[File, Option]: Parameters<Interface>) => {
 	Configuration = Option?.ESBuild
 		? Merge(
 				Configuration,
-				await (await import("@Function/File.js")).default(
-					Option.ESBuild,
-				),
+				await (
+					await import("@Function/File.js")
+				).default(Option.ESBuild),
 			)
 		: Configuration;
 
@@ -54,7 +54,9 @@ export default (async (...[File, Option]: Parameters<Interface>) => {
 		await Context.watch();
 	} else {
 		console.log(
-			await (await import("esbuild")).analyzeMetafile(
+			await (
+				await import("esbuild")
+			).analyzeMetafile(
 				(await (await import("esbuild")).build(Configuration))
 					?.metafile ?? "",
 				{
