@@ -12,7 +12,9 @@ export default (async (...[Path]: Parameters<Interface>) => {
 					await import("../Function/JSON.js")
 				).default(
 					"../../tsconfig.json",
-					(await import("path")).dirname(
+					(
+						await import("path")
+					).dirname(
 						(await import("url")).fileURLToPath(import.meta.url),
 					),
 				)
@@ -28,9 +30,7 @@ export default (async (...[Path]: Parameters<Interface>) => {
 			)
 			.emit();
 
-		await (
-			await import("fs/promises")
-		).writeFile(
+		await (await import("fs/promises")).writeFile(
 			Path.replace(".ts", ".js"),
 			(await import("typescript")).default.transpile(
 				(
@@ -43,7 +43,9 @@ export default (async (...[Path]: Parameters<Interface>) => {
 
 	return (
 		await import(
-			(await import("url"))
+			(
+				await import("url")
+			)
 				.pathToFileURL(Path)
 				.toString()
 				.replace(".ts", ".js")
