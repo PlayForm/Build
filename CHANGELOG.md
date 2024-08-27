@@ -6,6 +6,7 @@
 -   Updated `esbuild` to version 0.23.1
 -   Updated `typescript` to version 5.5.4
 -   Reverted `ts-node` to version 10.9.2
+-   Improved file path handling in the build process.
 
 ### Added
 
@@ -57,6 +58,8 @@
 -   Updated dependencies
 -   Modified Build function to support watch mode
 -   Updated TypeScript configuration
+-   Updated command-line interface with clearer descriptions.
+-   Expanded README.md with detailed usage instructions and examples.
 
 ### Added
 
@@ -102,6 +105,7 @@
 -   Updated homepage and repository URLs
 -   Updated repository and author information
 -   Updated dependencies
+-   Improved command-line interface descriptions.
 
 ## 0.0.7
 
@@ -146,32 +150,37 @@
 
 -   Updated version to 0.0.3
 -   Updated dependencies
--   Modified Build function
+-   Modified Build function to incorporate `tsc-alias`.
+-   Set `logLevel` in ESBuild configuration to "debug" for enhanced debugging.
 
 ### Added
 
--   Added tsc-alias to dependencies
+-   Added `tsc-alias` to dependencies
 
 ## 0.0.2
 
 ### Changed
 
--   Major refactoring and restructuring of the project
--   Updated package name to "@playform/build"
--   Updated version to 0.0.2
--   Updated package description, keywords, and metadata
--   Updated dependencies
--   Modified source files structure and content
--   Changed main and types file paths
--   Updated scripts in package.json
+-   Major refactoring and restructuring of the project.
+-   Updated package name to "@playform/build".
+-   Updated version to 0.0.2.
+-   Updated package description, keywords, and metadata.
+-   Updated dependencies.
+-   Modified source files structure and content.
+-   Changed main and types file paths.
+-   Updated scripts in package.json.
+-   Simplified configuration by integrating `TypeScript.json` settings into
+    `tsconfig.json`.
+-   Removed `esbuild-plugin-copy`.
 
 ### Added
 
--   Added new source files and interfaces
+-   Added new source files and interfaces.
 
 ### Removed
 
--   Removed several old source files and configurations
+-   Removed several old source files and configurations.
+-   Removed `TypeScriptESBuild.ts` and shifted core logic to `Build.ts`.
 
 ## 0.0.1
 
