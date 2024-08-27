@@ -1,64 +1,83 @@
 # 🌀 [Build] —
 
-Builds all your TypeScript files into JavaScript.
+Build is a powerful tool that compiles all your `TypeScript` files into
+JavaScript, leveraging the speed of `esbuild` and the type-checking capabilities
+of the `TypeScript` compiler.
 
-## Installation
+## 📦 Features
 
-Add configuration and setup scripts:
+-   Fast compilation using `esbuild`
+-   `TypeScript` support with type-checking
+-   Watch mode for development
+-   Customizable `ESBuild` configuration
+-   Supports both CommonJS and ES modules
+
+## 🚀 Installation
+
+Install the package as a development dependency:
 
 ```sh
 npm install -D -E @playform/build
 ```
 
-## Usage
+## 🛠️ Usage
 
-Through a command line run:
+### Command Line
+
+Run the build tool from the command line:
 
 ```sh
 npx @playform/build 'Source/**/*.ts'
 ```
 
-Help:
+### CLI Options
 
-```sh
+```
 Usage: Build [options] <File...>
 
-🌀 Build —
-
 Arguments:
-  File                      📝 File —
+  File                      📝 File patterns to build
 
 Options:
-  -V, --version             output the version number
-  -ES, --ESBuild <File>     📜 ESBuild —
-  -TS, --TypeScript <File>  📜 TypeScript — (default: "tsconfig.json")
-  -W --Watch                👁️ Watch —
-  -h, --help                display help for command
+  -V, --version             Output the version number
+  -ES, --ESBuild <File>     📜 Custom `ESBuild` configuration file
+  -TS, --TypeScript <File>  📜 Custom `TypeScript` configuration file (default: "tsconfig.json")
+  -W, --Watch               👁️ Watch mode: rebuild on file changes
+  -h, --help                Display help information
 ```
 
-Or in a `package.json` file:
+### NPM Scripts
+
+Add Build to your `package.json` scripts:
 
 ```json
 {
 	"scripts": {
+		"build": "Build 'Source/**/*.ts'",
 		"Run": "Build 'Source/**/*.ts' --Watch",
 		"prepublishOnly": "Build 'Source/**/*.ts'"
 	}
 }
 ```
 
+## ⚙️ Configuration
+
 ### 📜 ESBuild Configuration
 
-Or with a custom ESBuild config file:
+Create a custom `ESBuild` configuration file (e.g., `ESBuild.ts`):
 
-`package.json`
+```javascript
+export default {
+	minify: true,
+	sourcemap: true,
+	// Add other esbuild options here
+};
+```
 
-```json
-{
-	"scripts": {
-		"prepublishOnly": "Build 'Source/**/*.ts' --ESBuild ESBuild.ts"
-	}
-}
+Use the custom configuration:
+
+```sh
+npx @playform/build 'Source/**/*.ts' --ESBuild ESBuild.ts
 ```
 
 See an example of a configuration file in
@@ -66,31 +85,48 @@ See an example of a configuration file in
 
 ### 📜 TypeScript Configuration
 
-`tsconfig.json`
+Create a `tsconfig.json` file in your project root:
 
 ```json
 {
 	"compilerOptions": {
-		"outDir": "Target"
+		"outDir": "Target",
+		"rootDir": "Source",
+		"strict": true
 	},
 	"extends": "@playform/build/tsconfig",
 	"include": ["Source"]
 }
 ```
 
-### JSConfig Configuration (optional)
+### 📜 JSConfig Configuration (optional)
 
-`jsconfig.json`
+For JavaScript projects using JSDoc comments, create a `jsconfig.json`:
 
 ```json
 {
 	"compilerOptions": {
-		"outDir": "Target"
+		"outDir": "Target",
+		"rootDir": "Source",
+		"checkJs": true
 	},
 	"extends": "@playform/build/jsconfig",
 	"include": ["Source"]
 }
 ```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for
+guidelines and feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is licensed under the MIT [LICENSE](LICENSE).
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for a history of changes to this component.
 
 [ESBuild]: HTTPS://NPMJS.Org/esbuild
 [TypeDoc]: HTTPS://NPMJS.Org/typedoc
