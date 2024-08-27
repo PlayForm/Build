@@ -1,12 +1,12 @@
 # 🌀 [Build] —
 
 Build is a powerful tool that compiles all your `TypeScript` files into
-JavaScript, leveraging the speed of `esbuild` and the type-checking capabilities
+`JavaScript`, leveraging the speed of `ESBuild` and the type-checking capabilities
 of the `TypeScript` compiler.
 
 ## 📦 Features
 
--   Fast compilation using `esbuild`
+-   Fast compilation using `ESBuild`
 -   `TypeScript` support with type-checking
 -   Watch mode for development
 -   Customizable `ESBuild` configuration
@@ -101,7 +101,7 @@ Create a `tsconfig.json` file in your project root:
 
 ### 📜 JSConfig Configuration (optional)
 
-For JavaScript projects using JSDoc comments, create a `jsconfig.json`:
+For `JavaScript` projects using `JSDoc` comments, create a `jsconfig.json`:
 
 ```json
 {
