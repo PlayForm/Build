@@ -1,6 +1,6 @@
 # 🌀 [Build] —
 
-Build is a powerful tool that compiles all your `TypeScript` files into
+`Build` is a powerful tool that compiles all your `TypeScript` files into
 `JavaScript`, leveraging the speed of `ESBuild` and the type-checking capabilities
 of the `TypeScript` compiler.
 
@@ -10,7 +10,7 @@ of the `TypeScript` compiler.
 -   `TypeScript` support with type-checking
 -   Watch mode for development
 -   Customizable `ESBuild` configuration
--   Supports both CommonJS and ES modules
+-   Supports both `CommonJS` and `ES` modules
 
 ## 🚀 Installation
 
@@ -48,7 +48,7 @@ Options:
 
 ### NPM Scripts
 
-Add Build to your `package.json` scripts:
+Add `Build` to your `package.json` scripts:
 
 ```json
 {
