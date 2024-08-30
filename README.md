@@ -53,7 +53,7 @@ Add `Build` to your `package.json` scripts:
 ```json
 {
 	"scripts": {
-		"build": "Build 'Source/**/*.ts'",
+		"Build": "Build 'Source/**/*.ts'",
 		"Run": "Build 'Source/**/*.ts' --Watch",
 		"prepublishOnly": "Build 'Source/**/*.ts'"
 	}
