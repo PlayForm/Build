@@ -1,3 +1,7 @@
+import type { BuildOptions } from "esbuild";
+
+import type Interface from "../Interface/Build.js";
+
 /**
  * @module Build
  *
@@ -50,9 +54,7 @@ export default (async (...[File, Option]: Parameters<Interface>) => {
 	});
 
 	if (Option?.Watch) {
-		const Context = await (await import("esbuild")).context(Configuration);
-
-		await Context.watch();
+		await (await (await import("esbuild")).context(Configuration)).watch();
 	} else {
 		console.log(
 			await (
@@ -67,10 +69,6 @@ export default (async (...[File, Option]: Parameters<Interface>) => {
 		);
 	}
 }) satisfies Interface as Interface;
-
-import type { BuildOptions } from "esbuild";
-
-import type Interface from "../Interface/Build.js";
 
 export const { default: Exec } = await import("../Function/Exec.js");
 
