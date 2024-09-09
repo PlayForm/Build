@@ -1,6 +1,6 @@
 {
 	"name": "@playform/build",
-	"version": "0.1.4",
+	"version": "0.1.5",
 	"private": false,
 	"description": "🌀 Build —",
 	"keywords": [
@@ -30,8 +30,8 @@
 		"Build": "Target/Class/Build.js"
 	},
 	"scripts": {
-		"Run": "node --no-warnings --loader ts-node/esm Source/Class/Build.ts 'Source/**/*.ts' --Watch",
-		"prepublishOnly": "node --no-warnings --loader ts-node/esm Source/Class/Build.ts 'Source/**/*.ts'"
+		"Run": "node --no-warnings --loader ts-node/esm Source/Class/Build.ts 'Source/**/*.{ts,css}' --Watch",
+		"prepublishOnly": "node --no-warnings --loader ts-node/esm Source/Class/Build.ts 'Source/**/*.{ts,css}'"
 	},
 	"dependencies": {
 		"@types/node": "22.5.4",

@@ -19,35 +19,34 @@ export default (async (...[File, Option]: Parameters<Interface>) => {
 
 	Pipe.reverse();
 
-	console.log(Pipe);
-
 	let Configuration: BuildOptions = Merge(
 		(await import("../Variable/ESBuild.js")).default,
 		{
 			entryPoints: Object.fromEntries(
 				Pipe.map((File) => [
-					File.replace("Source/", "")
-						.replace("src/", "")
-						.split(".")
-						.slice(0, -1.0)
-						.join("."),
+					`${dirname(File)}/${basename(File, extname(File))}`.replace(
+						normalize(File).split(sep).at(0) ?? "",
+						"",
+					),
 					File,
 				]),
 			),
 		},
 	);
 
-
-	Configuration = Merge(Option?.ESBuild
-		? Merge(
-				Configuration,
-				await (
-					await import("@Function/File.js")
-				).default(Option.ESBuild),
-			)
-		: Configuration, {
-		tsconfig: Option?.TypeScript ?? "tsconfig.json",
-	});
+	Configuration = Merge(
+		Option?.ESBuild
+			? Merge(
+					Configuration,
+					await (
+						await import("@Function/File.js")
+					).default(Option.ESBuild),
+				)
+			: Configuration,
+		{
+			tsconfig: Option?.TypeScript ?? "tsconfig.json",
+		},
+	);
 
 	Configuration.plugins?.push({
 		name: "TypeScript",
@@ -82,6 +81,9 @@ export const { default: Merge } = await import("../Function/Merge.js");
 
 export const Pipe: string[] = [];
 
+export const { extname, basename, relative, dirname, normalize, sep } =
+	await import("path");
+
 export const Current = (await import("url")).fileURLToPath(
-	(await import("path")).dirname(import.meta.url),
+	dirname(import.meta.url),
 );

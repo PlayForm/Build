@@ -18,4 +18,5 @@ export declare const Merge: <Ts extends readonly unknown[]>(...objects: Ts) => i
     parents: ReadonlyArray<Readonly<Record<PropertyKey, unknown>>>;
 }>>;
 export declare const Pipe: string[];
+export declare const extname: (path: string) => string, basename: (path: string, suffix?: string) => string, relative: (from: string, to: string) => string, dirname: (path: string) => string, normalize: (path: string) => string, sep: "\\" | "/";
 export declare const Current: string;
