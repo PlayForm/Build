@@ -30,8 +30,8 @@
 		"Build": "Target/Class/Build.js"
 	},
 	"scripts": {
-		"Run": "node --no-warnings --loader ts-node/esm Source/Class/Build.ts 'Source/**/*.{ts,css}' --Watch",
-		"prepublishOnly": "node --no-warnings --loader ts-node/esm Source/Class/Build.ts 'Source/**/*.{ts,css}'"
+		"Run": "node --no-warnings --loader ts-node/esm Source/Class/Build.ts 'Source/**/*.ts' --Watch",
+		"prepublishOnly": "node --no-warnings --loader ts-node/esm Source/Class/Build.ts 'Source/**/*.ts'"
 	},
 	"dependencies": {
 		"@types/node": "22.5.4",
