@@ -1,5 +1,20 @@
 ## 0.1.5
 
+### Changed
+
+-   Updated @types/node to version 22.5.4
+-   Improved build process to include CSS files.
+-   Enhanced file path handling in the build process using path module
+    functions.
+-   Updated dependencies:
+    -   esbuild
+    -   ts-node
+
+### Added
+
+-   Added the ability to exclude files/folders from the build process.
+-   Added `ignore` option to the Build interface.
+
 ## 0.1.4
 
 ### Changed
