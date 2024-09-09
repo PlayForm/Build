@@ -10,12 +10,16 @@ export default (async (...[File, Option]: Parameters<Interface>) => {
 	for (const _File of File) {
 		for (const __File of await (
 			await import("fast-glob")
-		).default(_File.replaceAll("'", "").replaceAll('"', ""))) {
+		).default(_File.replaceAll("'", "").replaceAll('"', ""), {
+			ignore: Option?.Exclude ?? [],
+		})) {
 			Pipe.push(__File);
 		}
 	}
 
 	Pipe.reverse();
+
+	console.log(Pipe);
 
 	let Configuration: BuildOptions = Merge(
 		(await import("../Variable/ESBuild.js")).default,
@@ -30,18 +34,20 @@ export default (async (...[File, Option]: Parameters<Interface>) => {
 					File,
 				]),
 			),
-			tsconfig: Option?.TypeScript ?? "tsconfig.json",
 		},
 	);
 
-	Configuration = Option?.ESBuild
+
+	Configuration = Merge(Option?.ESBuild
 		? Merge(
 				Configuration,
 				await (
 					await import("@Function/File.js")
 				).default(Option.ESBuild),
 			)
-		: Configuration;
+		: Configuration, {
+		tsconfig: Option?.TypeScript ?? "tsconfig.json",
+	});
 
 	Configuration.plugins?.push({
 		name: "TypeScript",

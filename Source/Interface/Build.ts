@@ -21,6 +21,7 @@ export default interface Interface {
 			ESBuild?: string;
 			TypeScript?: string;
 			Watch?: boolean;
+			Exclude?: Pattern[];
 		},
 	): Promise<void>;
 }
