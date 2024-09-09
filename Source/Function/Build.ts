@@ -22,15 +22,7 @@ export default (async (...[File, Option]: Parameters<Interface>) => {
 	let Configuration: BuildOptions = Merge(
 		(await import("../Variable/ESBuild.js")).default,
 		{
-			entryPoints: Object.fromEntries(
-				Pipe.map((File) => [
-					`${dirname(File)}/${basename(File, extname(File))}`.replace(
-						normalize(File).split(sep).at(0) ?? "",
-						"",
-					),
-					File,
-				]),
-			),
+			entryPoints: Pipe,
 		},
 	);
 
