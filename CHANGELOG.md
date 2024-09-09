@@ -1,5 +1,10 @@
 ## 0.1.6
 
+### Changed
+
+-   Simplified build process to improve performance.
+-   Updated dependencies.
+
 ## 0.1.5
 
 ### Changed
