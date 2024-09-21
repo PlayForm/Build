@@ -62,16 +62,16 @@
 		"types": ["node", "@types/node"],
 		"verbatimModuleSyntax": true
 	},
-	"include": ["Source"],
 	"exclude": [
-		".git",
-		"node_modules",
-		"Target",
 		"**/.git/**",
-		"**/node_modules/**",
 		"**/Target/**",
-		"**/samples/**"
+		"**/node_modules/**",
+		"**/samples/**",
+		".git",
+		"Target",
+		"node_modules"
 	],
+	"include": ["Source"],
 	"jshint.options": {
 		"esversion": 6
 	}
