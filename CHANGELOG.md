@@ -1,5 +1,10 @@
 ## 0.1.7
 
+### Changed
+
+-   Updated dependencies.
+-   Simplified documentation folder structure.
+
 ## 0.1.6
 
 ### Changed
