@@ -1,3 +1,5 @@
+import type Interface from "../Interface/Exec.js";
+
 /**
  * @module Exec
  *
@@ -21,5 +23,3 @@ export default (async (
 		console.log(_Error);
 	}
 }) satisfies Interface as Interface;
-
-import type Interface from "../Interface/Exec.js";

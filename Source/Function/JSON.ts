@@ -1,3 +1,5 @@
+import type Interface from "../Interface/JSON.js";
+
 /**
  * @module JSON
  *
@@ -10,5 +12,3 @@ export default (async (...[File, From]: Parameters<Interface>) =>
 			).readFile(`${From ?? "."}/${File}`, "utf-8")
 		).toString(),
 	)) satisfies Interface as Interface;
-
-import type Interface from "../Interface/JSON.js";

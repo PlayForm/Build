@@ -1,3 +1,5 @@
+import type { Pattern } from "fast-glob";
+
 /**
  * @module Build
  *
@@ -25,5 +27,3 @@ export default interface Interface {
 		},
 	): Promise<void>;
 }
-
-import type { Pattern } from "fast-glob";
