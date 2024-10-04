@@ -36,7 +36,7 @@
 	"dependencies": {
 		"@types/node": "22.7.4",
 		"commander": "12.1.0",
-		"deepmerge-ts": "7.1.0",
+		"deepmerge-ts": "7.1.1",
 		"esbuild": "0.24.0",
 		"fast-glob": "3.3.2",
 		"tsc-alias": "1.8.10",
