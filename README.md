@@ -1,8 +1,8 @@
 # 🌀 [Build] —
 
 `Build` is a powerful tool that compiles all your `TypeScript` files into
-`JavaScript`, leveraging the speed of `ESBuild` and the type-checking capabilities
-of the `TypeScript` compiler.
+`JavaScript`, leveraging the speed of `ESBuild` and the type-checking
+capabilities of the `TypeScript` compiler.
 
 ## 📦 Features
 
