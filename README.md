@@ -81,7 +81,7 @@ npx @playform/build 'Source/**/*.ts' --ESBuild ESBuild.ts
 ```
 
 See an example of a configuration file in
-[ESBuild.ts](Source/Variable/ESBuild.ts)
+[`ESBuild.ts`](Source/Variable/ESBuild.ts)
 
 ### 📜 TypeScript Configuration
 
@@ -117,16 +117,16 @@ For `JavaScript` projects using `JSDoc` comments, create a `jsconfig.json`:
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for
+Contributions are welcome! Please see [`CONTRIBUTING.md`](CONTRIBUTING.md) for
 guidelines and feel free to submit a Pull Request.
 
 ## 📄 License
 
-This project is licensed under the MIT [LICENSE](LICENSE).
+This project is licensed under the MIT [`LICENSE`](LICENSE).
 
 ## Changelog
 
-See [CHANGELOG.md](CHANGELOG.md) for a history of changes to this component.
+See [`CHANGELOG.md`](CHANGELOG.md) for a history of changes to this component.
 
 [ESBuild]: HTTPS://NPMJS.Org/esbuild
 [TypeDoc]: HTTPS://NPMJS.Org/typedoc
