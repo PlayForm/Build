@@ -120,10 +120,6 @@ For `JavaScript` projects using `JSDoc` comments, create a `jsconfig.json`:
 Contributions are welcome! Please see [`CONTRIBUTING.md`](CONTRIBUTING.md) for
 guidelines and feel free to submit a Pull Request.
 
-## 📄 License
-
-This project is licensed under the MIT [`LICENSE`](LICENSE).
-
 ## Changelog
 
 See [`CHANGELOG.md`](CHANGELOG.md) for a history of changes to this component.
