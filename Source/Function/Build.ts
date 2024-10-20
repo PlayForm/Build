@@ -6,7 +6,7 @@ import type Interface from "../Interface/Build.js";
  * @module Build
  *
  */
-export default (async (...[File, Option]: Parameters<Interface>) => {
+export default (async (...[File, Option]) => {
 	for (const _File of File) {
 		for (const __File of await (
 			await import("fast-glob")

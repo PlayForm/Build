@@ -8,7 +8,7 @@ export default (async (
 	...[
 		Command,
 		Echo = async (Return) => console.log(Return),
-	]: Parameters<Interface>
+	]
 ) => {
 	try {
 		const { stdout, stderr } = (await import("child_process")).exec(

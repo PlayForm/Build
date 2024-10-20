@@ -4,7 +4,7 @@ import type Interface from "../Interface/JSON.js";
  * @module JSON
  *
  */
-export default (async (...[File, From]: Parameters<Interface>) =>
+export default (async (...[File, From]) =>
 	JSON.parse(
 		(
 			await (
