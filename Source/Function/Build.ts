@@ -1,5 +1,3 @@
-import type { BuildOptions } from "esbuild";
-
 import type Interface from "../Interface/Build.js";
 
 /**
@@ -19,26 +17,26 @@ export default (async (...[File, Option]) => {
 
 	Pipe.reverse();
 
-	let Configuration: BuildOptions = Merge(
-		(await import("../Variable/ESBuild.js")).default,
-		{
-			entryPoints: Pipe,
-		},
-	);
+	const Configuration = (await import("../Variable/ESBuild.js")).default;
 
-	Configuration = Merge(
-		Option?.ESBuild
-			? Merge(
-					Configuration,
-					await (
-						await import("@Function/File.js")
-					).default(Option.ESBuild),
-				)
-			: Configuration,
-		{
-			tsconfig: Option?.TypeScript ?? "tsconfig.json",
-		},
-	);
+	Merge(Configuration, {
+		entryPoints: Pipe,
+	});
+
+	if (Option?.ESBuild) {
+		Merge(
+			Configuration,
+			await (await import("@Function/File.js")).default(Option.ESBuild),
+		);
+	}
+
+	Merge(Configuration, {
+		tsconfig: Option?.TypeScript ?? "tsconfig.json",
+	});
+
+	if (!Configuration.plugins && !Array.isArray(Configuration.plugins)) {
+		Configuration.plugins = [];
+	}
 
 	Configuration.plugins?.push({
 		name: "TypeScript",
