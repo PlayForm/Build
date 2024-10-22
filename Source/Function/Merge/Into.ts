@@ -5,7 +5,11 @@ import type Interface from "../../Interface/Merge/Into.js";
  *
  */
 export default (await import("deepmerge-ts")).deepmergeIntoCustom({
-	// mergeOthers(m_target, values, utils, meta) {
-	// 	// don't merge arrays only keep entryPoints
-	// },
+	mergeArrays(...[_Target, Value, Util, Meta]) {
+		if (Meta?.key !== "entryPoints") {
+			_Target.value = Value.flatMap((Value) => Value);
+		}
+
+		return Util.actions.defaultMerge;
+	},
 }) satisfies Interface as Interface;
