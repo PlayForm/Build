@@ -1,5 +1,14 @@
 ## 0.1.8
 
+### Changed
+
+-   Updated dependencies.
+-   Migrated from `deepmerge-ts`'s `deepmergeCustom` to a custom merge function
+    for more control.
+-   Improved the merging logic for `entryPoints` in the
+    [ESBuild](https://esbuild.github.io/api/#plugins) configuration to prevent
+    unwanted array flattening.
+
 ## 0.1.7
 
 ### Changed
