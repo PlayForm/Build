@@ -15,7 +15,7 @@ export default (async (...[Path]) => {
 				).default(
 					"../../tsconfig.json",
 					(await import("node:path")).dirname(
-						(await import("url")).fileURLToPath(import.meta.url),
+						(await import("node:url")).fileURLToPath(import.meta.url),
 					),
 				)
 			)?.compilerOptions,
@@ -45,7 +45,7 @@ export default (async (...[Path]) => {
 
 	return (
 		await import(
-			(await import("url"))
+			(await import("node:url"))
 				.pathToFileURL(Path)
 				.toString()
 				.replace(".ts", ".js")
