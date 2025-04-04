@@ -1,6 +1,28 @@
+## 0.2.2
+
+### Change
+
+- Updated version to 0.2.2
+- Updated dependencies:
+    - `@types/node` from 22.10.5 to 22.14.0
+    - `commander` from 13.0.0 to 13.1.0
+    - `deepmerge-ts` from 7.1.3 to 7.1.5
+    - `esbuild` from 0.24.2 to 0.25.2
+    - `tsc-alias` from 1.8.10 to 1.8.13
+    - `typescript` from 5.7.2 to 5.8.2
+- Improved command-line interface descriptions and emoji formatting
+- Migrated to Node.js core module imports using `node:` protocol
+    - Updated imports in `Build.ts`, `File.ts`, and `JSON.ts`
+    - Changed `import("path")` to `import("node:path")`
+    - Changed `import("fs/promises")` to `import("node:fs/promises")`
+    - Changed `import("url")` to `import("node:url")`
+- Enhanced type safety in ESBuild configuration:
+    - Added explicit `Plugin` type import from esbuild
+    - Added type assertion for ESBuild plugin configuration
+
 ## 0.2.1
 
-### Changed
+### Change
 
 - Updated version to 0.2.1
 - Updated @types/node from 22.10.1 to 22.10.5
@@ -9,14 +31,14 @@
 - Updated fast-glob from 3.3.2 to 3.3.3
 - Simplified command options naming
 
-### Added
+### Add
 
 - Added DEPENDENTS.md
 - Added .npmignore to exclude DEPENDENTS.md from published package
 
 ## 0.2.0
 
-### Changed
+### Change
 
 - Updated version to 0.2.0
 - Updated `@types/node` from 22.9.0 to 22.10.1
@@ -26,7 +48,7 @@
 
 ## 0.1.9
 
-### Changed
+### Change
 
 - Updated version to 0.1.9
 - Updated email in package.json from "Source/Open@PlayForm.Cloud" to
@@ -37,7 +59,7 @@
 
 ## 0.1.8
 
-### Changed
+### Change
 
 - Updated dependencies.
 - Migrated from `deepmerge-ts`'s `deepmergeCustom` to a custom merge function
@@ -48,21 +70,21 @@
 
 ## 0.1.7
 
-### Changed
+### Change
 
 - Updated dependencies.
 - Simplified documentation folder structure.
 
 ## 0.1.6
 
-### Changed
+### Change
 
 - Simplified build process to improve performance.
 - Updated dependencies.
 
 ## 0.1.5
 
-### Changed
+### Change
 
 - Updated `@types/node` to version 22.5.4
 - Improved build process to include CSS files.
@@ -71,14 +93,14 @@
     - `esbuild`
     - `ts-node`
 
-### Added
+### Add
 
 - Added the ability to exclude files/folders from the build process.
 - Added `ignore` option to the Build interface.
 
 ## 0.1.4
 
-### Changed
+### Change
 
 - Updated `@types/node` to version 22.5.0
 - Updated `esbuild` to version 0.23.1
@@ -86,27 +108,27 @@
 - Reverted `ts-node` to version 10.9.2
 - Improved file path handling in the build process.
 
-### Added
+### Add
 
 - Added `experimentalDecorators` option to tsconfig.json
 
 ## 0.1.3
 
-### Changed
+### Change
 
 - Updated version to 0.1.3
 - Updated dependencies:
     - `@types/node` from 20.14.12 to 22.0.2
 - Minor code formatting changes
 
-### Added
+### Add
 
 - Added `provenance: true` to publishConfig in package.json
 - Added `access: public` to publishConfig in package.json
 
 ## 0.1.2
 
-### Changed
+### Change
 
 - Updated version to 0.1.2
 - Updated dependencies:
@@ -117,20 +139,20 @@
     - `ts-node` to 11.0.0-beta.1
 - Improved error handling in Exec function
 
-### Added
+### Add
 
 - Added `provenance: true` to publishConfig in package.json
 
 ## 0.1.1
 
-### Changed
+### Change
 
 - Updated version to 0.1.1
 - Updated "Run" script to include "--Watch" option instead of "-W"
 
 ## 0.1.0
 
-### Changed
+### Change
 
 - Updated version to 0.1.0
 - Updated dependencies
@@ -139,7 +161,7 @@
 - Updated command-line interface with clearer descriptions.
 - Expanded `README.md` with detailed usage instructions and examples.
 
-### Added
+### Add
 
 - Added `Watch` option to `Build` command
 
@@ -149,34 +171,34 @@
 
 ## 0.0.11
 
-### Changed
+### Change
 
 - Updated `dependencies`
 
 ## 0.0.10
 
-### Changed
+### Change
 
 - Removed `Document` script
 - Updated `dependencies`
 
 ## 0.0.9
 
-### Changed
+### Change
 
 - Updated version to 0.0.9
 - Updated `package.json` metadata
 - Updated dependencies
 - Modified `package.json` structure
 
-### Added
+### Add
 
 - Added `peerDependencies`
 - Added `peerDependenciesMeta` for optional dependencies
 
 ## 0.0.8
 
-### Changed
+### Change
 
 - Updated version to 0.0.8
 - Updated package description and keywords
@@ -187,14 +209,14 @@
 
 ## 0.0.7
 
-### Changed
+### Change
 
 - Updated version to 0.0.7
 - Updated repository URLs to use HTTPS
 
 ## 0.0.6
 
-### Changed
+### Change
 
 - Updated version to 0.0.6
 - Updated package description
@@ -204,18 +226,18 @@
 
 ## 0.0.5
 
-### Changed
+### Change
 
 - Updated version to 0.0.5
 - Updated `package.json` scripts
 
-### Added
+### Add
 
 - Added `@playform/document` as a peer dependency
 
 ## 0.0.4
 
-### Changed
+### Change
 
 - Updated version to 0.0.4 (corrected from 0.0.5 in the summary)
 - Added "Document" script
@@ -224,20 +246,20 @@
 
 ## 0.0.3
 
-### Changed
+### Change
 
 - Updated version to 0.0.3
 - Updated dependencies
 - Modified Build function to incorporate `tsc-alias`.
 - Set `logLevel` in ESBuild configuration to "debug" for enhanced debugging.
 
-### Added
+### Add
 
 - Added `tsc-alias` to dependencies
 
 ## 0.0.2
 
-### Changed
+### Change
 
 - Major refactoring and restructuring of the project.
 - Updated package name to `@playform/build`.
@@ -251,7 +273,7 @@
   `tsconfig.json`.
 - Removed `esbuild-plugin-copy`.
 
-### Added
+### Add
 
 - Added new source files and interfaces.
 
@@ -262,6 +284,6 @@
 
 ## 0.0.1
 
-### Added
+### Add
 
 - Initial release
