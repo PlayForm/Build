@@ -1,5 +1,25 @@
 ## 0.2.2
 
+### Change
+
+- Updated version to 0.2.2
+- Updated dependencies:
+    - `@types/node` from 22.10.5 to 22.14.0
+    - `commander` from 13.0.0 to 13.1.0
+    - `deepmerge-ts` from 7.1.3 to 7.1.5
+    - `esbuild` from 0.24.2 to 0.25.2
+    - `tsc-alias` from 1.8.10 to 1.8.13
+    - `typescript` from 5.7.2 to 5.8.2
+- Improved command-line interface descriptions and emoji formatting
+- Migrated to Node.js core module imports using `node:` protocol
+    - Updated imports in `Build.ts`, `File.ts`, and `JSON.ts`
+    - Changed `import("path")` to `import("node:path")`
+    - Changed `import("fs/promises")` to `import("node:fs/promises")`
+    - Changed `import("url")` to `import("node:url")`
+- Enhanced type safety in ESBuild configuration:
+    - Added explicit `Plugin` type import from esbuild
+    - Added type assertion for ESBuild plugin configuration
+
 ## 0.2.1
 
 ### Change
