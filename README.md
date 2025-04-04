@@ -20,7 +20,7 @@ Install the package as a development dependency:
 npm install -D -E @playform/build
 ```
 
-## 🛠️ Usage
+## Usage 🛠️
 
 ### Command Line
 
@@ -36,13 +36,13 @@ npx @playform/build 'Source/**/*.ts'
 Usage: Build [options] <File...>
 
 Arguments:
-  File                      📝 File patterns to build
+  File                      File patterns to build 📝
 
 Options:
   -V, --version             Output the version number
-  -ES, --ESBuild <File>     📜 Custom `ESBuild` configuration file
-  -TS, --TypeScript <File>  📜 Custom `TypeScript` configuration file (default: "tsconfig.json")
-  -W, --Watch               👁️ Watch mode: rebuild on file changes
+  -ES, --ESBuild <File>     Custom `ESBuild` configuration file 📜
+  -TS, --TypeScript <File>  Custom `TypeScript` configuration file (default: "tsconfig.json") 📜
+  -W, --Watch               Watch mode: rebuild on file changes 👁️
   -h, --help                Display help information
 ```
 
@@ -60,7 +60,7 @@ Add `Build` to your `package.json` scripts:
 }
 ```
 
-## ⚙️ Configuration
+## Configuration ⚙️
 
 ### ESBuild Configuration 📜
 
@@ -99,7 +99,7 @@ Create a `tsconfig.json` file in your project root:
 }
 ```
 
-### JSConfig Configuration  📜(optional)
+### JSConfig Configuration 📜 (optional)
 
 For `JavaScript` projects using `JSDoc` comments, create a `jsconfig.json`:
 
