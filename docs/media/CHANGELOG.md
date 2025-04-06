@@ -1,3 +1,25 @@
+## 0.2.3
+
+### Change
+
+- Updated version to 0.2.3
+- Refactored configuration merging logic for ESBuild:
+    - Added support for function-based configuration exports
+    - Improved type safety with new `Build/Set` interface
+    - Enhanced merge handling for entryPoints and plugins arrays
+- Modified ESBuild configuration based on NODE_ENV:
+    - Toggle minification based on environment
+    - Adjust sourcemaps, legal comments, and debug statements
+    - Configure asset naming and bundle settings
+- Simplified deepmerge implementation using standard deepmerge-ts
+- Improved type checking for tsconfig path validation
+- Updated metafile analysis to use build results directly
+
+### Remove
+
+- Remove custom merge implementation (Merge/Into.ts)
+- Remove obsolete Merge/Into interface
+
 ## 0.2.2
 
 ### Change
