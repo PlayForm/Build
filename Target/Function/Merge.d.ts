@@ -2,6 +2,5 @@
  * @module Merge
  *
  */
-declare const _default: <T extends object>(Target: T, Source: T) => T;
+declare const _default: <Target extends object, Ts extends readonly unknown[]>(target: Target, ...objects: Ts) => void;
 export default _default;
-export declare const Into: import("../Interface/Merge/Into.js").default;
