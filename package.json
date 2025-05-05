@@ -20,8 +20,8 @@
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
 		"name": "Source ✍🏻 Open 👐🏻",
-		"email": "Source/Open@PlayForm.LTD",
-		"url": "HTTPS://PlayForm.LTD"
+		"email": "Source/Open@PlayForm.Cloud",
+		"url": "HTTPS://PlayForm.Cloud"
 	},
 	"type": "module",
 	"main": "./Target/Class/Build.js",
@@ -34,12 +34,12 @@
 		"prepublishOnly": "node --no-warnings --loader ts-node/esm Source/Class/Build.ts 'Source/**/*.ts'"
 	},
 	"dependencies": {
-		"@types/node": "22.15.2",
+		"@types/node": "22.15.3",
 		"commander": "13.1.0",
 		"deepmerge-ts": "7.1.5",
 		"esbuild": "0.25.3",
 		"fast-glob": "3.3.3",
-		"tsc-alias": "1.8.15",
+		"tsc-alias": "1.8.16",
 		"typescript": "5.8.3"
 	},
 	"devDependencies": {

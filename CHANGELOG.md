@@ -74,9 +74,9 @@
 
 - Updated version to 0.1.9
 - Updated email in package.json from "Source/Open@PlayForm.Cloud" to
-  "Source/Open@PlayForm.LTD"
+  "Source/Open@PlayForm.Cloud"
 - Updated URL in package.json from "HTTPS://PlayForm.Cloud" to
-  "HTTPS://PlayForm.LTD"
+  "HTTPS://PlayForm.Cloud"
 - Updated `@types/node` from version 22.7.7 to 22.9.0
 
 ## 0.1.8
