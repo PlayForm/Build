@@ -1,3 +1,31 @@
+## 0.2.4
+
+### Change
+
+- Updated version to 0.2.4
+- Updated contact information in package.json:
+    - Changed email from "Source/Open@PlayForm.LTD" to
+      "Source/Open@PlayForm.Cloud"
+    - Updated URL from "HTTPS://PlayForm.LTD" to "HTTPS://PlayForm.Cloud"
+- Updated dependencies:
+    - `@types/node` from 22.14.0 to 22.15.14
+    - `esbuild` from 0.25.2 to 0.25.4
+    - `tsc-alias` from 1.8.13 to 1.8.16
+- Improved path handling in ESBuild configuration:
+    - Added proper path normalization using node:path's posix separator
+    - Enhanced type safety for entry point filtering
+
+### Add
+
+- New entry point filtering system:
+    - Added Entry.ts module for handling ESBuild entry point configuration
+    - Added Exclude.ts with advanced pattern matching:
+        - Supports simple string inclusion
+        - Handles basic glob patterns (\* and \*\*)
+        - Implements path normalization
+    - Added Regex.ts for converting glob patterns to regular expressions
+    - Improved exclusion logic for build entry points
+
 ## 0.2.3
 
 ### Change
@@ -74,9 +102,9 @@
 
 - Updated version to 0.1.9
 - Updated email in package.json from "Source/Open@PlayForm.Cloud" to
-  "Source/Open@PlayForm.LTD"
+  "Source/Open@PlayForm.Cloud"
 - Updated URL in package.json from "HTTPS://PlayForm.Cloud" to
-  "HTTPS://PlayForm.LTD"
+  "HTTPS://PlayForm.Cloud"
 - Updated `@types/node` from version 22.7.7 to 22.9.0
 
 ## 0.1.8
