@@ -102,7 +102,7 @@ export default (async (...[File, Option]) => {
 					await import("esbuild")
 				).analyzeMetafile(Result.metafile, {
 					verbose: true,
-					color: false,
+					color: true,
 				}),
 			);
 		}
