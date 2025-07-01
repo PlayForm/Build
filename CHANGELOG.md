@@ -1,5 +1,14 @@
 ## 0.2.5
 
+### Change
+
+- Updated version to 0.2.5
+- Updated dependencies:
+    - `@types/node` from 22.15.14 to 24.0.8
+    - `commander` from 13.1.0 to 14.0.0
+    - `esbuild` from 0.25.4 to 0.25.5
+- Enabled color output in ESBuild configuration
+
 ## 0.2.4
 
 ### Change
