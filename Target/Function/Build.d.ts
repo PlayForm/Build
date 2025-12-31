@@ -8,4 +8,4 @@ export default _default;
 export declare const Exec: import("../Interface/Exec.js").default;
 export declare const Merge: <Target extends object, Ts extends readonly unknown[]>(target: Target, ...objects: Ts) => void;
 export declare const Pipe: string[];
-export declare const extname: (path: string) => string, basename: (path: string, suffix?: string) => string, relative: (from: string, to: string) => string, dirname: (path: string) => string, normalize: (path: string) => string, sep: "\\" | "/";
+export declare const extname: typeof import("node:path").extname, basename: typeof import("node:path").basename, relative: typeof import("node:path").relative, dirname: typeof import("node:path").dirname, normalize: typeof import("node:path").normalize, sep: "\\" | "/";

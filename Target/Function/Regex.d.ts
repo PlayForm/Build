@@ -9,4 +9,4 @@
  */
 declare const _default: (Glob: string) => RegExp;
 export default _default;
-export declare const posix: import("path").PlatformPath;
+export declare const posix: typeof import("node:path");
