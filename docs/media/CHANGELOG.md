@@ -1,3 +1,14 @@
+## 0.2.6
+
+### Change
+
+- Updated version to 0.2.6
+- Updated dependencies:
+    - `@types/node` from 24.0.8 to 25.0.3
+    - `commander` from 14.0.0 to 14.0.2
+    - `esbuild` from 0.25.5 to 0.27.2
+    - `typescript` from 5.8.3 to 5.9.3
+
 ## 0.2.5
 
 ### Change
