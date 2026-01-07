@@ -18,7 +18,7 @@ on:
 jobs:
     Publish:
         runs-on: ubuntu-latest
-
+        environment: Release
         env:
             ADBLOCK: true
             ASTRO_TELEMETRY_DISABLED: 1
