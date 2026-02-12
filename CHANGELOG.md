@@ -1,3 +1,30 @@
+## 0.3.0
+
+### Added
+
+- **Log level filtering**: Added `Level` environment variable to control
+  TypeScript error output independently from `NODE_ENV`
+- New `Level` variable using esbuild's
+  [`LogLevel`](node_modules/.pnpm/esbuild@0.27.2/node_modules/esbuild/lib/main.d.ts)
+  type (`'verbose' | 'debug' | 'info' | 'warning' | 'error' | 'silent'`)
+- New shared [`Echo`](Source/Function/Echo.ts) function for filtering output
+- New [`Level`](Source/Variable/Level.ts) variable for log level configuration
+- New [`Echo`](Source/Interface/Echo.ts) interface for the Echo callback type
+
+### Changed
+
+- Update all [`@module`](Source) JSDoc annotations to use file path-based module
+  names
+- Refactored interface files to use TypeScript (.ts) files with proper type
+  exports
+- Updated [`Exec`](Source/Function/Exec.ts) and
+  [`Build`](Source/Function/Build.ts) functions to use shared Echo function
+
+### Fixed
+
+- Fixed JSDoc example comment issues with glob patterns using HTML entity
+  encoding
+
 ## 0.2.6
 
 ### Change

@@ -1,6 +1,38 @@
 /**
  * @module JSON
  *
+ * Interface representing a function that reads and parses JSON files.
+ *
+ * @param File - The name or path of the JSON file to parse.
+ *
+ * @param From - An optional string representing the directory path from which the JSON file should be loaded.
+ *               If provided, it will be used as the base directory path. If not provided, the current directory
+ *               will be used as the base directory path.
+ *
+ * @returns Promise<any> The parsed JSON content.
+ *
+ * @example
+ * Reading a configuration file:
+ * ```typescript
+ * import JSONInterface from "./Interface/JSON.js";
+ *
+ * const readConfig: JSONInterface = async (File, From) => {
+ *   const content = await JSON.parse(await readFile(`${From ?? "."}/${File}`, "utf-8"));
+ *   return content;
+ * };
+ * ```
+ *
+ * @example
+ * Reading from current directory:
+ * ```typescript
+ * const config = await readConfig("package.json");
+ * ```
+ *
+ * @example
+ * Reading from specific directory:
+ * ```typescript
+ * const config = await readConfig("tsconfig.json", "./Source");
+ * ```
  */
 export default interface Interface {
     /**
