@@ -1,5 +1,19 @@
 ## 0.3.1
 
+### Changed
+
+- Updated version to 0.3.1
+- Updated dependencies:
+    - `@types/node` from 25.2.3 to 25.5.2
+    - `esbuild` from 0.27.3 to 0.28.0
+    - `typescript` from 5.9.3 to 6.0.2
+
+### Added
+
+- Added `Documentation/` to `.npmignore` to exclude from published package
+- Added `ignoreDeprecations` option to tsconfig.json
+- Added `rootDir` option to tsconfig.json
+
 ## 0.3.0
 
 ### Added
