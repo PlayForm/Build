@@ -1,71 +1,134 @@
 {
 	"$schema": "https://json.schemastore.org/tsconfig",
+
 	"compilerOptions": {
 		"allowArbitraryExtensions": true,
+
 		"allowImportingTsExtensions": true,
+
 		"allowJs": true,
+
 		"allowSyntheticDefaultImports": true,
+
 		"allowUmdGlobalAccess": false,
+
 		"allowUnreachableCode": false,
+
 		"allowUnusedLabels": false,
+
 		"alwaysStrict": true,
+
 		"assumeChangesOnlyAffectDirectDependencies": true,
+
 		"baseUrl": "./",
+
 		"checkJs": true,
+
 		"declaration": true,
+
 		"disableReferencedProjectLoad": false,
+
 		"emitDeclarationOnly": true,
+
 		"esModuleInterop": true,
+
 		"exactOptionalPropertyTypes": true,
+
 		"experimentalDecorators": true,
+
 		"forceConsistentCasingInFileNames": true,
+
 		"ignoreDeprecations": "6.0",
+
 		"isolatedModules": true,
+
 		"jsx": "preserve",
+
 		"lib": ["ESNext"],
+
 		"module": "ESNext",
+
 		"moduleResolution": "Bundler",
+
 		"noFallthroughCasesInSwitch": true,
+
 		"noImplicitOverride": true,
+
 		"noImplicitReturns": true,
+
 		"noImplicitThis": true,
+
 		"noPropertyAccessFromIndexSignature": true,
+
 		"noUncheckedIndexedAccess": true,
+
 		"noUnusedLocals": true,
+
 		"noUnusedParameters": true,
+
 		"outDir": "Target",
+
 		"paths": {
 			"@Asset/*": ["Source/Asset/*"],
+
 			"@Class/*": ["Source/Class/*"],
+
 			"@Component/*": ["Source/Component/*"],
+
 			"@Context/*": ["Source/Context/*"],
+
 			"@Element/*": ["Source/Element/*"],
+
 			"@Function/*": ["Source/Function/*"],
+
 			"@Interface/*": ["Source/Interface/*"],
+
 			"@Layout/*": ["Source/Layout/*"],
+
 			"@Library/*": ["Source/Library/*"],
+
 			"@Notation/*": ["Source/Notation/*"],
+
 			"@Option/*": ["Source/Option/*"],
+
 			"@Page/*": ["Source/pages/*"],
+
 			"@Script/*": ["Source/Script/*"],
+
 			"@Stylesheet/*": ["Source/Stylesheet/*"],
+
 			"@Target/*": ["Source/Target/*"],
+
 			"@Test/*": ["Source/Test/*"],
+
 			"@Type/*": ["Source/Type/*"],
+
 			"@Variable/*": ["Source/Variable/*"]
 		},
+
 		"resolveJsonModule": true,
+
 		"rootDir": "./Source",
+
 		"skipLibCheck": true,
+
 		"strict": true,
+
 		"strictBindCallApply": true,
+
 		"strictFunctionTypes": true,
+
 		"strictNullChecks": true,
+
 		"target": "ESNext",
+
 		"types": ["node", "@types/node"],
+
 		"verbatimModuleSyntax": true
 	},
+
 	"include": ["Source"],
+
 	"ts-node": {
 		"esm": true
 	}
