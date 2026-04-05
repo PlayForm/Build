@@ -1,7 +1,6 @@
 {
 	"$schema": "https://json.schemastore.org/tsconfig",
 	"compilerOptions": {
-		"ignoreDeprecations": "6.0",
 		"allowArbitraryExtensions": true,
 		"allowImportingTsExtensions": true,
 		"allowJs": true,
@@ -20,6 +19,7 @@
 		"exactOptionalPropertyTypes": true,
 		"experimentalDecorators": true,
 		"forceConsistentCasingInFileNames": true,
+		"ignoreDeprecations": "6.0",
 		"isolatedModules": true,
 		"jsx": "preserve",
 		"lib": ["ESNext"],
@@ -55,6 +55,7 @@
 			"@Variable/*": ["Source/Variable/*"]
 		},
 		"resolveJsonModule": true,
+		"rootDir": "./Source",
 		"skipLibCheck": true,
 		"strict": true,
 		"strictBindCallApply": true,
