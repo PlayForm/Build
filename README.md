@@ -170,7 +170,7 @@ A typical `tsconfig.json` might look like this:
 	"compilerOptions": {
 		// --- Essential for tsc/tsc-alias ---
 		"outDir": "Target", // Must match esbuild's outdir/outfile directory
-		"rootDir": "Source", // Or your source root
+		"rootDir": "./Source", // Or your source root
 		"baseUrl": ".", // Often needed for path aliases
 		"paths": {
 			// Example alias - must match esbuild alias config if used
@@ -215,7 +215,7 @@ If you are working with JavaScript and JSDoc for type checking, you can use a
 {
 	"compilerOptions": {
 		"outDir": "Target",
-		"rootDir": "Source",
+		"rootDir": "./Source",
 		"checkJs": true, // Enable type checking for JS files
 		"target": "ES2020",
 		"module": "ESNext", // or CommonJS
