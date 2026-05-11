@@ -1,5 +1,17 @@
 ## 0.3.2
 
+### Changed
+
+- Updated version to 0.3.2
+- Updated dependencies:
+    - `@types/node` from 25.5.2 to 25.6.2
+    - `tsc-alias` from 1.8.16 to 1.8.17
+    - `typescript` from 6.0.2 to 6.0.3
+
+### Added
+
+- Added `Configuration/` to `.npmignore` to exclude from published package
+
 ## 0.3.1
 
 ### Changed
