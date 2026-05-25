@@ -34,6 +34,7 @@
 		"prepublishOnly": "node --no-warnings --loader ts-node/esm Source/Class/Build.ts 'Source/**/*.ts'"
 	},
 	"dependencies": {
+		"@playform/build": "link:",
 		"@types/node": "25.9.1",
 		"commander": "14.0.3",
 		"deepmerge-ts": "7.1.5",
