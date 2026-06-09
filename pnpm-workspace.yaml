@@ -1,4 +1,6 @@
 allowBuilds:
   esbuild: true
+minimumReleaseAgeExclude:
+  - commander@15.0.0
 overrides:
   '@playform/build': 'link:'
