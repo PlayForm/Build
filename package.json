@@ -34,13 +34,13 @@
 		"prepublishOnly": "node --no-warnings --loader ts-node/esm Source/Class/Build.ts 'Source/**/*.ts'"
 	},
 	"dependencies": {
-		"@types/node": "25.9.1",
+		"@types/node": "26.1.1",
 		"commander": "15.0.0",
 		"deepmerge-ts": "7.1.5",
-		"esbuild": "0.28.0",
+		"esbuild": "0.28.1",
 		"fast-glob": "3.3.3",
-		"tsc-alias": "1.8.17",
-		"typescript": "6.0.3"
+		"tsc-alias": "1.9.0",
+		"typescript": "7.0.2"
 	},
 	"devDependencies": {
 		"ts-node": "10.9.2"
