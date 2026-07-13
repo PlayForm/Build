@@ -39,7 +39,7 @@
 		"deepmerge-ts": "7.1.5",
 		"esbuild": "0.28.1",
 		"fast-glob": "3.3.3",
-		"tsc-alias": "1.9.0",
+		"tsc-alias": "1.9.1",
 		"typescript": "7.0.2"
 	},
 	"devDependencies": {
