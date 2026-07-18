@@ -1,6 +1,6 @@
 {
 	"name": "@playform/build",
-	"version": "0.3.2",
+	"version": "0.3.3",
 	"private": false,
 	"description": "Build 🌀",
 	"keywords": [
@@ -30,8 +30,8 @@
 		"Build": "Target/Class/Build.js"
 	},
 	"scripts": {
-		"Run": "node --no-warnings --loader ts-node/esm Source/Class/Build.ts 'Source/**/*.ts' --Watch",
-		"prepublishOnly": "node --no-warnings --loader ts-node/esm Source/Class/Build.ts 'Source/**/*.ts'"
+		"Run": "node --no-warnings --import tsx/esm Source/Class/Build.ts 'Source/**/*.ts' --Watch",
+		"prepublishOnly": "node --no-warnings --import tsx/esm Source/Class/Build.ts 'Source/**/*.ts'"
 	},
 	"dependencies": {
 		"@types/node": "26.1.1",
@@ -39,11 +39,11 @@
 		"deepmerge-ts": "7.1.5",
 		"esbuild": "0.28.1",
 		"fast-glob": "3.3.3",
-		"tsc-alias": "1.9.0",
+		"tsc-alias": "1.9.1",
 		"typescript": "7.0.2"
 	},
 	"devDependencies": {
-		"ts-node": "10.9.2"
+		"tsx": "4.23.1"
 	},
 	"publishConfig": {
 		"access": "public",

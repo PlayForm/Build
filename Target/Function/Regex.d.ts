@@ -1,3 +1,4 @@
+export default _default;
 /**
  * @module Regex
  *
@@ -7,6 +8,5 @@
  * @param Glob The glob pattern string.
  * @returns A RegExp object.
  */
-declare const _default: (Glob: string) => RegExp;
-export default _default;
+declare function _default(Glob: string): RegExp;
 export declare const posix: typeof import("node:path");

@@ -1,4 +1,5 @@
 import type { BuildOptions } from "esbuild";
+export default _default;
 /**
  * @module Entry
  *
@@ -41,6 +42,5 @@ import type { BuildOptions } from "esbuild";
  * // Result: [{ in: "src/main/index.ts", out: "main" }]
  * ```
  */
-declare const _default: (Current: BuildOptions, From: string[]) => any[];
-export default _default;
+declare function _default(Current: BuildOptions, From: string[]): any[];
 export declare const Exclude: (Path: string, From: string[]) => boolean;

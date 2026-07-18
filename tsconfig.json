@@ -20,8 +20,6 @@
 
 		"assumeChangesOnlyAffectDirectDependencies": true,
 
-		"baseUrl": "./",
-
 		"checkJs": true,
 
 		"declaration": true,
@@ -69,41 +67,41 @@
 		"outDir": "Target",
 
 		"paths": {
-			"@Asset/*": ["Source/Asset/*"],
+			"@Asset/*": ["./Source/Asset/*"],
 
-			"@Class/*": ["Source/Class/*"],
+			"@Class/*": ["./Source/Class/*"],
 
-			"@Component/*": ["Source/Component/*"],
+			"@Component/*": ["./Source/Component/*"],
 
-			"@Context/*": ["Source/Context/*"],
+			"@Context/*": ["./Source/Context/*"],
 
-			"@Element/*": ["Source/Element/*"],
+			"@Element/*": ["./Source/Element/*"],
 
-			"@Function/*": ["Source/Function/*"],
+			"@Function/*": ["./Source/Function/*"],
 
-			"@Interface/*": ["Source/Interface/*"],
+			"@Interface/*": ["./Source/Interface/*"],
 
-			"@Layout/*": ["Source/Layout/*"],
+			"@Layout/*": ["./Source/Layout/*"],
 
-			"@Library/*": ["Source/Library/*"],
+			"@Library/*": ["./Source/Library/*"],
 
-			"@Notation/*": ["Source/Notation/*"],
+			"@Notation/*": ["./Source/Notation/*"],
 
-			"@Option/*": ["Source/Option/*"],
+			"@Option/*": ["./Source/Option/*"],
 
-			"@Page/*": ["Source/pages/*"],
+			"@Page/*": ["./Source/pages/*"],
 
-			"@Script/*": ["Source/Script/*"],
+			"@Script/*": ["./Source/Script/*"],
 
-			"@Stylesheet/*": ["Source/Stylesheet/*"],
+			"@Stylesheet/*": ["./Source/Stylesheet/*"],
 
-			"@Target/*": ["Source/Target/*"],
+			"@Target/*": ["./Source/Target/*"],
 
-			"@Test/*": ["Source/Test/*"],
+			"@Test/*": ["./Source/Test/*"],
 
-			"@Type/*": ["Source/Type/*"],
+			"@Type/*": ["./Source/Type/*"],
 
-			"@Variable/*": ["Source/Variable/*"]
+			"@Variable/*": ["./Source/Variable/*"]
 		},
 
 		"resolveJsonModule": true,

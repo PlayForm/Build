@@ -2,15 +2,14 @@ import type Interface from "../Interface/File.js";
 /**
  * @module File
  *
- * Function that processes and loads files, with special TypeScript transpilation support.
+ * Function that dynamically imports and returns the default export of a module.
  *
- * This function processes files based on their extension:
- * - For TypeScript (.ts) files: transpiles to JavaScript using TypeScript compiler and writes the .js file
- * - For all files: imports and returns the default export of the module
+ * With tsx as the ESM loader, TypeScript (.ts) files are transpiled
+ * transparently — no manual TypeScript API compilation is needed.
  *
- * @param Path - The file path to process.
+ * @param Path - The file path to import.
  *
- * @returns Promise<any> The default export of the processed module.
+ * @returns Promise<any> The default export of the module.
  *
  * @example
  * Loading a TypeScript configuration file:
@@ -18,13 +17,7 @@ import type Interface from "../Interface/File.js";
  * import File from "./Function/File.js";
  *
  * const esbuildConfig = await File("./ESBuild.ts");
- * // Returns the default export of the transpiled ESBuild.js
- * ```
- *
- * @example
- * Loading a JSON configuration (will be imported as-is):
- * ```typescript
- * const config = await File("./config.json");
+ * // Returns the default export directly, transpiled by tsx
  * ```
  *
  * @example

@@ -1,3 +1,23 @@
+## 0.3.3
+
+### Fixed
+
+- Fixed `TypeError: Cannot read properties of undefined (reading 'fileExists')`
+  crash in `prepublishOnly` script caused by TypeScript 7.x incompatibility
+- Replaced `ts-node` (`10.9.2`) with `tsx` (`^4.23.1`) — ts-node depends on
+  `ts.sys` which was removed in TypeScript 7.x, while tsx bundles its own
+  transpiler
+
+### Changed
+
+- Updated tsconfig.json for TypeScript 7.x compatibility:
+    - Removed deprecated `baseUrl` option
+    - Added `./` prefix to all path values (TS 7.x requires relative paths)
+- Simplified `Source/Function/File.ts` — removed manual TypeScript compilation
+  API calls (`convertCompilerOptionsFromJson`, `createProgram`,
+  `createCompilerHost`, `transpile`) which were removed in TS 7.x. With tsx as
+  the loader, `.ts` files are now imported directly without manual transpilation.
+
 ## 0.3.2
 
 ### Changed
