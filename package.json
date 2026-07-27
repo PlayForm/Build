@@ -34,7 +34,7 @@
 		"prepublishOnly": "node --no-warnings --import tsx/esm Source/Class/Build.ts 'Source/**/*.ts'"
 	},
 	"dependencies": {
-		"@types/node": "26.1.1",
+		"@types/node": "26.1.2",
 		"commander": "15.0.0",
 		"deepmerge-ts": "7.1.5",
 		"esbuild": "0.28.1",
