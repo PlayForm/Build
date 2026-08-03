@@ -1,3 +1,16 @@
+## 0.3.4
+
+### Changed
+
+- Updated version to 0.3.4
+- Updated dependencies:
+    - `@types/node` from 26.1.1 to 26.1.2
+    - `tsx` from 4.23.1 to 4.23.4
+- Updated GitHub Actions workflows:
+    - `actions/checkout` from 7.0.0 to 7.0.1
+    - `pnpm/action-setup` from 6.0.8 to 6.0.9
+    - `pozil/auto-assign-issue` from 3.0.0 to 4.0.1
+
 ## 0.3.3
 
 ### Fixed
@@ -16,7 +29,8 @@
 - Simplified `Source/Function/File.ts` — removed manual TypeScript compilation
   API calls (`convertCompilerOptionsFromJson`, `createProgram`,
   `createCompilerHost`, `transpile`) which were removed in TS 7.x. With tsx as
-  the loader, `.ts` files are now imported directly without manual transpilation.
+  the loader, `.ts` files are now imported directly without manual
+  transpilation.
 
 ## 0.3.2
 
