@@ -1,3 +1,51 @@
+## 0.3.4
+
+### Changed
+
+- Updated version to 0.3.4
+- Updated dependencies:
+    - `@types/node` from 26.1.1 to 26.1.2
+    - `tsx` from 4.23.1 to 4.23.4
+- Updated GitHub Actions workflows:
+    - `actions/checkout` from 7.0.0 to 7.0.1
+    - `pnpm/action-setup` from 6.0.8 to 6.0.9
+    - `pozil/auto-assign-issue` from 3.0.0 to 4.0.1
+
+## 0.3.3
+
+### Fixed
+
+- Fixed `TypeError: Cannot read properties of undefined (reading 'fileExists')`
+  crash in `prepublishOnly` script caused by TypeScript 7.x incompatibility
+- Replaced `ts-node` (`10.9.2`) with `tsx` (`^4.23.1`) — ts-node depends on
+  `ts.sys` which was removed in TypeScript 7.x, while tsx bundles its own
+  transpiler
+
+### Changed
+
+- Updated tsconfig.json for TypeScript 7.x compatibility:
+    - Removed deprecated `baseUrl` option
+    - Added `./` prefix to all path values (TS 7.x requires relative paths)
+- Simplified `Source/Function/File.ts` — removed manual TypeScript compilation
+  API calls (`convertCompilerOptionsFromJson`, `createProgram`,
+  `createCompilerHost`, `transpile`) which were removed in TS 7.x. With tsx as
+  the loader, `.ts` files are now imported directly without manual
+  transpilation.
+
+## 0.3.2
+
+### Changed
+
+- Updated version to 0.3.2
+- Updated dependencies:
+    - `@types/node` from 25.5.2 to 25.6.2
+    - `tsc-alias` from 1.8.16 to 1.8.17
+    - `typescript` from 6.0.2 to 6.0.3
+
+### Added
+
+- Added `Configuration/` to `.npmignore` to exclude from published package
+
 ## 0.3.1
 
 ### Changed
