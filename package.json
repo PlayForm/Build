@@ -43,7 +43,7 @@
 		"typescript": "7.0.2"
 	},
 	"devDependencies": {
-		"tsx": "4.23.4"
+		"tsx": "4.23.5"
 	},
 	"publishConfig": {
 		"access": "public",
