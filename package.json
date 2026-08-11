@@ -37,7 +37,7 @@
 		"@types/node": "26.1.2",
 		"commander": "15.0.0",
 		"deepmerge-ts": "7.1.5",
-		"esbuild": "0.28.1",
+		"esbuild": "0.28.2",
 		"fast-glob": "3.3.3",
 		"tsc-alias": "1.9.1",
 		"typescript": "7.0.2"
