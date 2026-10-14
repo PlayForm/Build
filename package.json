@@ -34,16 +34,16 @@
 		"prepublishOnly": "node --no-warnings --import tsx/esm Source/Class/Build.ts 'Source/**/*.ts'"
 	},
 	"dependencies": {
-		"@types/node": "26.1.2",
+		"@types/node": "26.4.1",
 		"commander": "15.0.0",
-		"deepmerge-ts": "7.1.5",
-		"esbuild": "0.28.1",
+		"deepmerge-ts": "8.0.2",
+		"esbuild": "0.28.2",
 		"fast-glob": "3.3.3",
-		"tsc-alias": "1.9.1",
+		"tsc-alias": "1.9.4",
 		"typescript": "7.0.2"
 	},
 	"devDependencies": {
-		"tsx": "4.23.5"
+		"tsx": "4.23.13"
 	},
 	"publishConfig": {
 		"access": "public",
