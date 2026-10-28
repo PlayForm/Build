@@ -1,3 +1,14 @@
+## 0.3.5
+
+### Fixed
+
+- `Exec` now resolves when the child process exits. It previously resolved as soon as the stdout/stderr listeners were attached, so the `tsc` and `tsc-alias` passes in `Build`'s TypeScript plugin ran concurrently: `tsc-alias` rewrote `Target/**` while `tsc` was still emitting declarations, leaving a nondeterministic subset of `Target/*.d.ts` with unrewritten `@Function`/`@Interface`/`@Variable` aliases.
+- `pnpm-workspace.yaml` now declares `packages`, so the recursive install in `Node.yml` no longer fails with `ERR_PNPM_INVALID_WORKSPACE_CONFIGURATION`.
+
+### Changed
+
+- Updated version to 0.3.5
+
 ## 0.3.4
 
 ### Changed

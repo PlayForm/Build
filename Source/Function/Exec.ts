@@ -58,14 +58,14 @@ export const { default: EchoFn } = await import("../Function/Echo.js");
  */
 export default (async (...[Command, Echo = EchoFn]) => {
 	try {
-		const { stdout, stderr } = (await import("child_process")).exec(
-			Command,
-		);
+		const Child = (await import("child_process")).exec(Command);
 
 		if (typeof Echo === "function") {
-			stdout?.on("data", async (Data) => await Echo(Data.trim()));
-			stderr?.on("data", async (Data) => await Echo(Data.trim(), true));
+			Child.stdout?.on("data", async (Data) => await Echo(Data.trim()));
+			Child.stderr?.on("data", async (Data) => await Echo(Data.trim(), true));
 		}
+
+		await new Promise((Resolve) => Child.on("close", () => Resolve(undefined)));
 	} catch (_Error) {
 		console.log(_Error);
 	}
